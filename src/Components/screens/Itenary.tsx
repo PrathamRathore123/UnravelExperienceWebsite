@@ -1,5 +1,5 @@
 import { ChevronRightIcon} from "lucide-react";
-import React,{useState,useEffect} from "react";
+import {useState,useEffect} from "react";
 import { Navbartwo } from "../ui/Navbar";
 import { useParams } from "react-router-dom";
 import { Button } from "../ui/buttons";
@@ -7,59 +7,7 @@ import { Calendar } from "../ui/Calendar";
 import { Card, CardContent } from "../ui/card";
 import { itenaryData } from "../data/itenaryData";
 
-const journeyDays = [
-  {
-    day: "Day 1 — Arrival & Royal Beginnings",
-    description: "Welcome to London.",
-    image:
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/picture---64c8004b-b620-4666-885a-505770c8e121-jpeg.png",
-  },
-  {
-    day: "Day 2 — A British Christmas",
-    description:
-      "The morning is yours. Covent Garden. A quiet café. Your call.",
-    image:
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/picture---6e231363-bc06-4099-b173-b736f0a14333-jpeg.png",
-  },
-  {
-    day: "Day 3 — The Markets Trail",
-    description: "Today, you're chasing London's markets.",
-    image:
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/picture---6e231363-bc06-4099-b173-b736f0a14333-jpeg-4.png",
-  },
-  {
-    day: "Day 4 — Art, Adventure & Winter Wonderland",
-    description:
-      "Start at Frameless, where digital art surrounds you in light and color.",
-    image:
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/picture---6e231363-bc06-4099-b173-b736f0a14333-jpeg-1.png",
-  },
-  {
-    day: "Day 5 — The Countryside & Blenheim Palace",
-    description: "Leave the city behind.",
-    image:
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/picture---6e231363-bc06-4099-b173-b736f0a14333-jpeg-5.png",
-  },
-  {
-    day: "Day 6 — Your Day",
-    description: "A free day.",
-    image:
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/picture---6e231363-bc06-4099-b173-b736f0a14333-jpeg-2.png",
-  },
-  {
-    day: "Day 7 — Icons & A Musical Night",
-    description:
-      "Morning: Big Ben. Buckingham Palace. Trafalgar Square. The classics",
-    image:
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/picture---6e231363-bc06-4099-b173-b736f0a14333-jpeg-6.png",
-  },
-  {
-    day: "Day 8 — Afternoon Tea Bus & Christmas Carols",
-    description: "Hop aboard a vintage double-decker for moving afternoon tea.",
-    image:
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/picture---6e231363-bc06-4099-b173-b736f0a14333-jpeg-3.png",
-  },
-];
+
 
 const thingsToKnowCards = [
   {

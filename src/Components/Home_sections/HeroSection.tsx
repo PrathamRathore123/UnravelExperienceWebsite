@@ -1,5 +1,5 @@
 import { Button } from "../ui/buttons";
-import { Link } from "react-router-dom";
+
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center mt-[218px] mb-32">

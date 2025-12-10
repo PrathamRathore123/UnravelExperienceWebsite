@@ -1,4 +1,4 @@
-import React from "react";
+
 import {FolderCard} from "./../ui/Folder";
 
 export function MomentsDump() {

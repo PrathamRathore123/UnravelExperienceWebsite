@@ -1,4 +1,4 @@
-import React from "react";
+
 import first from "../../assets/1.png";
 import second from "../../assets/2.png";
 import third from "../../assets/3.png";

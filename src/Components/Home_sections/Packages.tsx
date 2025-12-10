@@ -1,4 +1,4 @@
-import React from "react";
+
 import pck from "../../assets/untitled-design--9--1-1.png"
 import pck1 from "../../assets/untitled-design--9--1-2.png"
 import pck2 from "../../assets/untitled-design--9--1.png"

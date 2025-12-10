@@ -1,4 +1,4 @@
-import React from "react";
+
 import image from "../../assets/a-man-wearing-a-brown-coat-and-a-brown-hat-.png"
 export const TestimonialsSection = () => {
   return (

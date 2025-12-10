@@ -1,4 +1,4 @@
-import React from "react";
+
 import stickerfirst from '../../assets/rectangle-239-1.png'
 import stickersecond from '../../assets/big-ben-handdrawn-london-travel-sticker-6188449-removebg-preview.png'
 import image1 from '../../assets/rectangle-239-9.png'

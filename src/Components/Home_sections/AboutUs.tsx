@@ -1,4 +1,4 @@
-import React from "react";
+
 import  Starry from "../../assets/rectangle-256.png"
 
 export const AboutSection = () => {
