@@ -1,10 +1,11 @@
 import { ChevronRightIcon} from "lucide-react";
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import { Navbartwo } from "../ui/Navbar";
-
+import { useParams } from "react-router-dom";
 import { Button } from "../ui/buttons";
 import { Calendar } from "../ui/Calendar";
 import { Card, CardContent } from "../ui/card";
+import { itenaryData } from "../data/itenaryData";
 
 const journeyDays = [
   {
@@ -102,52 +103,62 @@ const thingsToKnowCards = [
 
 
 export  const Itenary = () => {
-  
-const [selectedDay, setSelectedDay] = useState<any| null>(null);
+  const { id } = useParams();
+  const data = itenaryData[id || 'london'];
+  const [selectedDay, setSelectedDay] = useState<any| null>(null);
 
+ useEffect(() => {
+    const firstSection = document.getElementById("start");
+    if (firstSection) {
+      firstSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
   return (
-    <div className="relative w-full bg-white min-h-screen" data-model-id="462:506">
+    <>
+  <Navbartwo/>
+  <br /><br /><br /><br /><br />
+    <div id="start" className="relative w-full bg-white min-h-screen" data-model-id="462:506">
       <div className="w-full">
         {/* Navigation */}
-        <Navbartwo></Navbartwo>
+     
         {/* Hero Section */}
         <section className="flex gap-10 container mx-auto px-8 py-12">
           <div className="grid grid-cols-2 gap-4 max-w-[1100px] mx-auto mb-16">
             <img
               className="w-full h-[250px] rounded-tl-[150px] object-cover"
-              alt="London scene"
-              src="https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-15.png"
+              alt={data.title}
+              src={data.heroImages[0]}
             />
             <img
               className="w-full h-[250px] object-cover rounded-tr-[20px]"
-              alt="London scene"
-              src="https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-18.png"
+              alt={data.title}
+              src={data.heroImages[1]}
             />
             <img
               className="w-full h-[250px] object-cover rounded-bl-[20px]"
-              alt="London scene"
-              src="https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-17.png"
+              alt={data.title}
+              src={data.heroImages[2]}
             />
             <img
               className="w-full h-[250px] rounded-br-[150px] object-cover"
-              alt="London scene"
-              src="https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-16.png"
+              alt={data.title}
+              src={data.heroImages[3]}
             />
           </div>
 
           <div className=" grid-cols-2 gap-16 max-w-[1200px] mx-auto">
             <div>
               <h1 className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-[64px] tracking-[-3.50px] leading-[68px] mb-6">
-                A London Christmas
+                {data.title}
               </h1>
               <p className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-[#9b9b9b] text-xl tracking-[-0.32px] leading-[28px] mb-8">
-                London in December doesn't try to impress you. It just is
+                {data.subtitle}
               </p>
               <div className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-black text-xl tracking-[-0.32px] leading-[26px] mb-2">
-                8 Nights | 9 Days
+                {data.duration}
               </div>
               <div className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-black text-lg tracking-[-0.32px] leading-[26px]">
-                London, United Kingdom
+                {data.location}
               </div>
             </div>
 
@@ -171,7 +182,7 @@ const [selectedDay, setSelectedDay] = useState<any| null>(null);
 
           <div className="max-w-[1200px] mx-auto flex gap-12">
             <div className="flex-1">
-              {journeyDays.map((day, index) => (
+              {data.journeyDays.map((day: any, index: number) => (
                 
                 <Card 
                   key={index}
@@ -249,15 +260,15 @@ const [selectedDay, setSelectedDay] = useState<any| null>(null);
           <div className=" justify-between gap-12 max-w-[1200px] mx-auto">
             <div className="flex-1">
               <h2 className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#222222] text-[56px] tracking-[-1.00px] leading-[60px] text-center mb-6">
-                A London Dump
+                {data.galleryTitle}
               </h2>
               <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#383838] text-[28px] text-center tracking-[-0.50px] leading-[40px] mb-12">
-                Quiet Scenes That Stay With You.
+                {data.gallerySubtitle}
               </p>
               <img
                 className="w-full h-auto"
-                alt="London gallery"
-                src="https://c.animaapp.com/mirmmjt1sI61N8/img/group-118.png"
+                alt={data.galleryTitle}
+                src={data.galleryImage}
               />
             </div>
           </div>
@@ -318,5 +329,6 @@ const [selectedDay, setSelectedDay] = useState<any| null>(null);
       
       </div>
     </div>
+    </>
   );
 };

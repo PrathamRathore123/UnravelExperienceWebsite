@@ -1,19 +1,12 @@
 import React from "react";
-
+import image from "../../assets/WhatsApp.jpg"
 
 export const Travellers=()=> {
   return (
     <section
-      className="relative w-full h-[80vh] flex items-center justify-center text-white"
-      style={{
-        backgroundImage:"url('../../assets/Whatsapp.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
-
+      className="relative w-full h-[80vh]   flex items-center justify-center text-white">
+      <img className="absolute w-[100%] bg" src={image} alt="" />
+    
       {/* CONTENT */}
       <div className="relative z-10 text-center max-w-3xl px-4">
         <h1 className="text-4xl md:text-5xl font-semibold leading-snug">

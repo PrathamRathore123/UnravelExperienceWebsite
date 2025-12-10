@@ -5,15 +5,15 @@ import pck2 from "../../assets/untitled-design--9--1.png"
 import { Link } from "react-router-dom";
 const packages = [
   {
-    title: "A London christmas",
-    image: pck, // replace with your actual image
+    id: "paris",
+    image: pck, 
   },
   {
-    title: "A parisian noel",
+    id: "london",
     image:pck1,
   },
   {
-    title: "A WEEK WITH Santa",
+    id: "lapland",
     image: pck2,
   },
 ];
@@ -28,15 +28,16 @@ whether you're chasing a destination or a feeling, every journey is hand-built. 
       {/* Cards Row */}
      <div className="flex flex-col items-center gap-10 w-full mb-10">
         {packages.map((pkg, index) => (
-          <div
-            key={index}
-            className="w-[50%] h-[20%] rounded-2xl overflow-hidden shadow-lg cursor-pointer group relative"
-          >
-            <img
-              src={pkg.image}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+          <Link key={index} to={`/itenary/${pkg.id}`}>
+            <div
+              className="w-[50%] h-[20%] rounded-2xl overflow-hidden shadow-lg cursor-pointer group relative"
+            >
+              <img
+                src={pkg.image}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </Link>
         ))}
       </div>
 
