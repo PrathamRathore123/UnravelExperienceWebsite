@@ -1,28 +1,27 @@
 // UNRAVEL Motion Tokens & Utilities
-import type { Variants } from 'framer-motion';
 
 // Easing curves
 export const easings = {
-  power3: [0.65, 0, 0.35, 1],
-  spring: { type: 'spring', stiffness: 100, damping: 15 },
-  smooth: [0.43, 0.13, 0.23, 0.96],
+  power3: [0.65, 0, 0.35, 1] as const,
+  spring: { type: 'spring' as const, stiffness: 100, damping: 15 },
+  smooth: [0.43, 0.13, 0.23, 0.96] as const,
 };
 
 // Page transition variants
 export const pageTransition = {
   initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easings.power3 } },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   exit: { opacity: 0, y: -20, transition: { duration: 0.4 } },
 };
 
 // Hero entry animations
 export const heroVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: (delay = 0) => ({
+  visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, delay, ease: easings.power3 },
-  }),
+    transition: { duration: 0.7 },
+  },
 };
 
 // Stagger children
@@ -40,7 +39,7 @@ export const cardHover = {
   hover: {
     scale: 1.03,
     y: -8,
-    transition: { duration: 0.3, ease: easings.power3 },
+    transition: { duration: 0.3 },
   },
 };
 
@@ -54,13 +53,13 @@ export const buttonVariants = {
 // Fade up animation
 export const fadeUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: easings.power3 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 // Scale fade animation
 export const scaleFade = {
   hidden: { opacity: 0, scale: 0.95 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: easings.power3 } },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
 };
 
 // Slide animations
@@ -74,6 +73,6 @@ export const slideIn = (direction: 'left' | 'right' | 'up' | 'down' = 'up') => {
   
   return {
     hidden: { opacity: 0, ...directions[direction] },
-    visible: { opacity: 1, x: 0, y: 0, transition: { duration: 0.5, ease: easings.power3 } },
+    visible: { opacity: 1, x: 0, y: 0, transition: { duration: 0.5 } },
   };
 };

@@ -1,12 +1,11 @@
 import { ArrowRightIcon } from "lucide-react";
-import React from "react";
 import { Button } from "../ui/buttons";
 import { Card, CardContent } from "../ui/card";
 import { Navbartwo } from "../ui/Navbar";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { heroVariants, staggerContainer, fadeUp, cardHover } from "../lib/animations";
+import { heroVariants, staggerContainer, fadeUp } from "../lib/animations";
 import { useScrollAnimations } from "../lib/useScrollAnimations";
 const experienceData = [
   {
