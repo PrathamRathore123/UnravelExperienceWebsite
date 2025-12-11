@@ -1,12 +1,5 @@
 // UNRAVEL Motion Tokens & Utilities
 
-// Easing curves
-export const easings = {
-  power3: [0.65, 0, 0.35, 1] as const,
-  spring: { type: 'spring' as const, stiffness: 100, damping: 15 },
-  smooth: [0.43, 0.13, 0.23, 0.96] as const,
-};
-
 // Page transition variants
 export const pageTransition = {
   initial: { opacity: 0, y: 20 },
