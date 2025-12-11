@@ -24,13 +24,13 @@ export const PackagesSection = () => {
    <p className="text-center text-gray-700 max-w-2xl mx-auto mb-12 text-lg md:text-base">
 whether you're chasing a destination or a feeling, every journey is hand-built. culture. comfort. curiosity.
 </p>
-   <div className="w-full flex flex-col items-center py-16 px-6">
+   <div className="w-full flex flex-col  items-center py-16 px-6">
       {/* Cards Row */}
      <div className="flex flex-col items-center gap-10 w-full mb-10">
         {packages.map((pkg, index) => (
-          <Link key={index} to={`/itenary/${pkg.id}`}>
+          <Link className="w-[50%] h-[20%]" key={index} to={`/itenary/${pkg.id}`}>
             <div
-              className="w-[50%] h-[20%] rounded-2xl overflow-hidden shadow-lg cursor-pointer group relative"
+              className="w-[100%] h-[100%] rounded-2xl overflow-hidden shadow-lg cursor-pointer group relative"
             >
               <img
                 src={pkg.image}
