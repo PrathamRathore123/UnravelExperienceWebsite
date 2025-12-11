@@ -2,10 +2,42 @@ import { Button } from "../ui/buttons";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/Textarea";
 import { Navbartwo } from "../ui/Navbar";
+import { useState } from "react";
 
 
 
 export const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    destination: '',
+    people: '',
+    dates: '',
+    notes: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('http://localhost:8000/api/contact/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      if (response.ok) {
+        alert('Form submitted successfully!');
+        setFormData({ name: '', email: '', phone: '', destination: '', people: '', dates: '', notes: '' });
+      } else {
+        alert('Failed to submit form');
+      }
+    } catch (error) {
+      alert('Error submitting form');
+    }
+    setIsSubmitting(false);
+  };
+
   return (
     <>  
     <Navbartwo></Navbartwo> 
@@ -138,6 +170,8 @@ export const Contact = () => {
                 </label>
                 <Input
                   placeholder="John Doe"
+                  value={formData.name}
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
                   className="h-[63px] bg-white rounded-xl border border-[#00000080] shadow-[0px_4px_40px_#00000005] [font-family:'BDO_Grotesk-Regular',Helvetica] text-[#10101080] text-lg"
                 />
               </div>
@@ -148,6 +182,8 @@ export const Contact = () => {
                 </label>
                 <Input
                   placeholder="johndoe@gmail.com"
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
                   className="h-[63px] bg-white rounded-xl border border-[#00000080] shadow-[0px_4px_40px_#00000005] [font-family:'BDO_Grotesk-Regular',Helvetica] text-[#10101080] text-lg"
                 />
               </div>
@@ -158,6 +194,8 @@ export const Contact = () => {
                 </label>
                 <Input
                   placeholder="+91 1234567890"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
                   className="h-[63px] bg-white rounded-xl border border-[#00000080] shadow-[0px_4px_40px_#00000005] [font-family:'BDO_Grotesk-Regular',Helvetica] text-[#10101080] text-lg"
                 />
               </div>
@@ -168,6 +206,8 @@ export const Contact = () => {
                 </label>
                 <Textarea
                   placeholder="Hi, I want you to curate a trip to Italy i would really love if it will be start from Rome"
+                  value={formData.destination}
+                  onChange={(e) => setFormData({...formData, destination: e.target.value})}
                   className="min-h-[155px] bg-white rounded-xl border border-[#00000080] shadow-[0px_4px_40px_#00000005] [font-family:'BDO_Grotesk-Regular',Helvetica] text-[#10101080] text-lg resize-none"
                 />
               </div>
@@ -178,6 +218,8 @@ export const Contact = () => {
                 </label>
                 <Input
                   placeholder="2, 3, 4 .eg."
+                  value={formData.people}
+                  onChange={(e) => setFormData({...formData, people: e.target.value})}
                   className="h-[63px] bg-white rounded-xl border border-[#00000080] shadow-[0px_4px_40px_#00000005] [font-family:'BDO_Grotesk-Regular',Helvetica] text-[#10101080] text-lg"
                 />
               </div>
@@ -187,7 +229,9 @@ export const Contact = () => {
                   When are you thinking? (dates or just a season)
                 </label>
                 <Input
-                placeholder="I am planning for this christmas holidays"
+                  placeholder="I am planning for this christmas holidays"
+                  value={formData.dates}
+                  onChange={(e) => setFormData({...formData, dates: e.target.value})}
                   className="h-[63px] bg-white rounded-xl border border-[#00000080] shadow-[0px_4px_40px_#00000005] [font-family:'BDO_Grotesk-Regular',Helvetica] text-[#10101080] text-lg"
                 />
               </div>
@@ -198,12 +242,17 @@ export const Contact = () => {
                 </label>
                 <Textarea
                   placeholder="budget, must-haves, travel style etc"
+                  value={formData.notes}
+                  onChange={(e) => setFormData({...formData, notes: e.target.value})}
                   className="min-h-[171px] bg-white rounded-xl border border-[#00000080] shadow-[0px_4px_40px_#00000005] [font-family:'BDO_Grotesk-Regular',Helvetica] text-[#b8b8b8] text-lg resize-none"
                 />
               </div>
 
-              <Button className="h-[63px] mt-10 w-[219px] bg-[#222222] rounded-xl shadow-[0px_4px_40px_#00000005] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#dddddd] text-[22px] tracking-[0] leading-[50.2px] hover:bg-[#333333]">
-                Submit
+              <Button 
+                onClick={handleSubmit}
+                disabled={isSubmitting}
+                className="h-[63px] mt-10 w-[219px] bg-[#222222] rounded-xl shadow-[0px_4px_40px_#00000005] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#dddddd] text-[22px] tracking-[0] leading-[50.2px] hover:bg-[#333333] disabled:opacity-50">
+                {isSubmitting ? 'Submitting...' : 'Submit'}
               </Button>
             </div>
           </div>

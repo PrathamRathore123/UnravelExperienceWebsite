@@ -4,6 +4,7 @@ import { Card, CardContent } from "../ui/card";
 import { Separator } from "../ui/Separator";
 import { Navbartwo } from "../ui/Navbar";
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 const whatWeDontDoItems = [
@@ -341,11 +342,12 @@ export const About = () => {
           </div>
 
           <div className="flex gap-4">
-            <Button className="bg-[#f6f3f0] rounded-[32px] border border-[#00000014] hover:bg-[#e6e3e0] transition-colors px-8 h-9">
+           <Link to="/signup"> <Button className="bg-[#f6f3f0] rounded-[32px] border border-[#00000014] hover:bg-[#e6e3e0] transition-colors px-8 h-9">
               <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-[13.3px] tracking-[0.25px] leading-5">
                 SIGN UP
               </span>
             </Button>
+            </Link>
 
             <Button className="bg-[#f6f2ef0a] rounded-[32px] border border-[#f6f2ef14] backdrop-blur-[5px] hover:bg-[#f6f2ef1a] transition-colors px-8 h-9">
               <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#f6f3f0] text-[13.3px] tracking-[0.25px] leading-5">

@@ -1,9 +1,40 @@
 import { useState } from "react";
 import { useGoogleLogin } from '@react-oauth/google';
 import { Navbartwo } from "../ui/Navbar";
+import { useNavigate } from 'react-router-dom';
 
 export  const Login=()=> {
   const [showPassword, setShowPassword] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+    
+    try {
+      const response = await fetch('http://localhost:8000/api/auth/login/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok) {
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('user', JSON.stringify(data.user));
+        alert('Login successful!');
+        navigate('/');
+      } else {
+        setError(data.error || 'Login failed');
+      }
+    } catch (err) {
+      setError('Network error. Please try again.');
+    }
+  };
 
   const googleLogin = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
@@ -26,35 +57,45 @@ export  const Login=()=> {
         <div className="w-[470px] h-120 bg-white shadow-2xl rounded-xl p-7 border border-gray-100">
           <h2 className="text-[30px] font-semibold mb-10">Login</h2>
 
-          <div className="flex flex-col mb-6">
-            <label className="text-[13px] mb-1">Username</label>
-            <input
-              type="text"
-              placeholder="john@unravel"
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none"
-            />
-          </div>
+          {error && <div className="bg-red-100 text-red-700 p-2 rounded mb-4 text-sm">{error}</div>}
 
-          <div className="flex flex-col mb-2">
-            <label className="text-[13px] mb-1">Password</label>
-            <div className="relative">
+          <form onSubmit={handleLogin}>
+            <div className="flex flex-col mb-6">
+              <label className="text-[13px] mb-1">Username</label>
               <input
-                type={showPassword ? "text" : "password"}
-                placeholder="*************"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 pr-10 text-sm focus:outline-none"
-              />
-              <img
-                src="/eye.svg"
-                onClick={() => setShowPassword(!showPassword)}
-                className="w-4 absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
-                
+                type="text"
+                placeholder="john@unravel"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none"
+                required
               />
             </div>
-          </div>
 
-          <button className="w-full bg-black text-white py-2 rounded-md text-sm mt-4 mb-2">
-            LOGIN
-          </button>
+            <div className="flex flex-col mb-2">
+              <label className="text-[13px] mb-1">Password</label>
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="*************"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 pr-10 text-sm focus:outline-none"
+                  required
+                />
+                <img
+                  src="/eye.svg"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="w-4 absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
+                  
+                />
+              </div>
+            </div>
+
+            <button type="submit" className="w-full bg-black text-white py-2 rounded-md text-sm mt-4 mb-2">
+              LOGIN
+            </button>
+          </form>
 
           <p className="text-[11px] text-right text-gray-500 cursor-pointer">Forgot Your Password</p>
 

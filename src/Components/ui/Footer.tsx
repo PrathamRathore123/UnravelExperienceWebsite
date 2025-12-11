@@ -1,5 +1,6 @@
 
 import { Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -33,14 +34,14 @@ export const Footer = () => {
           <p className="text-[10px] tracking-widest">US</p>
 
           <div className="flex flex-col space-y-2 text-sm">
-            <a href="#">Why we Exist</a>
+            <Link to="/about">Why we Exist</Link>
           </div>
 
           <p className="text-[10px] tracking-widest pt-2">HELP</p>
           <div className="flex flex-col space-y-2 text-sm">
-            <a href="#">Talk To Us</a>
-            <a href="#">FAQs</a>
-            <a href="#">Fine Print</a>
+            <Link to="/contact">Talk To Us</Link>
+            <Link to="/faq">FAQs</Link>
+            <Link to="/terms">Fine Print</Link>
           </div>
         </div>
 
@@ -49,12 +50,12 @@ export const Footer = () => {
           <p className="text-[10px] tracking-widest">MULTILAYOUT</p>
 
           <div className="flex flex-col space-y-2 text-sm">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Experiences</a>
-            <a href="#">Sign Up</a>
-            <a href="#">Sign In</a>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/experiences">Experiences</Link>
+            <Link to="/signup">Sign Up</Link>
+            <Link to="/login">Sign In</Link>
           </div>
         </div>
 
@@ -63,9 +64,9 @@ export const Footer = () => {
           <p className="text-[10px] tracking-widest">GO</p>
 
           <div className="flex flex-col space-y-2 text-sm">
-            <a href="#">Experiences</a>
-            <a href="#">Unravel One</a>
-            <a href="#">Insider</a>
+            <Link to="/experiences">Experiences</Link>
+            <Link to="/unravel-one">Unravel One</Link>
+            <Link to="/insider">Insider</Link>
           </div>
 
           {/* Social Icons */}

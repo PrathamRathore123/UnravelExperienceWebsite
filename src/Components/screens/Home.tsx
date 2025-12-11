@@ -26,7 +26,7 @@ export const HomeLandingPage = () => {
         <PackagesSection />
         <NewWaysToWander />
         <MembershipSection />
-        <MomentsDump/>
+        <MomentsDump/>  
         <TestimonialsSection />
         <Travellers></Travellers>
       </div>
