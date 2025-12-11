@@ -6,6 +6,7 @@ import { Button } from "../ui/buttons";
 import { Calendar } from "../ui/Calendar";
 import { Card, CardContent } from "../ui/card";
 import { itenaryData } from "../data/itenaryData";
+import { BookingForm } from "../ui/Bookingform";
 
 
 
@@ -54,6 +55,7 @@ export  const Itenary = () => {
   const { id } = useParams();
   const data = itenaryData[id || 'london'];
   const [selectedDay, setSelectedDay] = useState<any| null>(null);
+  const [showBookingForm, setShowBookingForm] = useState(false);
 
  useEffect(() => {
     const firstSection = document.getElementById("start");
@@ -112,7 +114,9 @@ export  const Itenary = () => {
 
             <div className="flex wrap items-center gap-4 mt-12">
               <br />
-              <Button className="bg-[linear-gradient(90deg,rgba(34,34,34,1)_0%,rgba(57,57,57,1)_100%)] text-white rounded-[200px] px-4  h-auto [font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-base hover:opacity-90 transition-opacity">
+              <Button 
+                onClick={() => setShowBookingForm(true)}
+                className="bg-[linear-gradient(90deg,rgba(34,34,34,1)_0%,rgba(57,57,57,1)_100%)] text-white rounded-[200px] px-4  h-auto [font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-base hover:opacity-90 transition-opacity">
                 Book with Unravel One
                 <div className="ml-3 w-[38px] h-[38px] bg-[#d9d9d9] rounded-full flex items-center justify-center">
                   <ChevronRightIcon className="w-4 h-4 text-black" />
@@ -267,7 +271,9 @@ export  const Itenary = () => {
                 not giving a single penny on reservation
               </span>
             </p>
-            <Button className="bg-transparent border-2 border-white text-white rounded-[40px] px-14 py-6 h-auto [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-[32px] tracking-[-0.80px] leading-[40px] hover:bg-white/10 transition-colors">
+            <Button 
+              onClick={() => setShowBookingForm(true)}
+              className="bg-transparent border-2 border-white text-white rounded-[40px] px-14 py-6 h-auto [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-[32px] tracking-[-0.80px] leading-[40px] hover:bg-white/10 transition-colors">
               Reserve For Free
             </Button>
           </div>
@@ -276,6 +282,14 @@ export  const Itenary = () => {
         {/* Footer */}
       
       </div>
+      
+      {showBookingForm && (
+        <BookingForm 
+          onClose={() => setShowBookingForm(false)}
+          tripTitle={data.title}
+          price={data.price || "Contact for pricing"}
+        />
+      )}
     </div>
     </>
   );
