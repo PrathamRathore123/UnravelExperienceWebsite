@@ -19,7 +19,7 @@ export const HomeLandingPage = () => {
         <HeroSection />
       </div>
       <NavbarOne />
-      <div className="overflow-hidden">
+      <div className="overflow-hidden px-4 sm:px-6 lg:px-8">
         <FeaturesSection />
         <AboutSection />
         <ExperiencesSection  />

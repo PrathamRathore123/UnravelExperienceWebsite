@@ -9,45 +9,50 @@ export const NavbarOne = () => {
     <div className="sticky top-0 z-50 w-full flex justify-center py-4 bg-transparent">
       <nav
         className="
-          bg-black text-white px-8 py-3 
-          rounded-full shadow-xl 
-          flex items-center gap-10
+          bg-black text-white px-4 md:px-8 py-3
+          rounded-full shadow-xl
+          flex items-center justify-between md:gap-10
           transition-all duration-300
+          w-full max-w-4xl
         "
       >
         {/* Logo */}
-        <Link to="/" className="bg-white text-black font-bold px-5 py-2 rounded-full">
+        <Link to="/" className="bg-white text-black font-bold px-4 md:px-5 py-2 rounded-full text-sm md:text-base">
           UNRAVEL
         </Link>
 
-        {/* Nav Items */}
-        <ul className="flex items-center gap-8 text-sm opacity-80">
+        {/* Nav Items - Hidden on mobile */}
+        <ul className="hidden md:flex items-center gap-4 md:gap-8 text-sm opacity-80">
           <li className="hover:opacity-100 cursor-pointer"><Link to="/">Home</Link></li>
           <li className="hover:opacity-100 cursor-pointer"><Link to="/about">About</Link></li>
           <li className="hover:opacity-100 cursor-pointer"><Link to="/experiences">Experiences</Link></li>
           <li className="hover:opacity-100 cursor-pointer"><Link to="/contact">Contact</Link></li>
         </ul>
 
-        {/* Hamburger */}
-        <div  onClick={() => { setOpen(!open)  }} className={`ml-6 cursor-pointer p-5 rounded-full  ${open ? "bg-white" : "bg-black"}`}>
-          <div className={`w-6 h-[2px]  mb-[6px]  ${open ? "bg-black" : "bg-white"}`}></div>
-          <div className={`w-6 h-[2px]   ${open ? "bg-black" : "bg-white"}`}></div>
+        {/* Hamburger - Always visible */}
+        <div  onClick={() => { setOpen(!open)  }} className={`cursor-pointer p-3 md:p-5 rounded-full  ${open ? "bg-white" : "bg-black"}`}>
+          <div className={`w-5 md:w-6 h-[2px]  mb-[4px] md:mb-[6px]  ${open ? "bg-black" : "bg-white"}`}></div>
+          <div className={`w-5 md:w-6 h-[2px]   ${open ? "bg-black" : "bg-white"}`}></div>
         </div>
       </nav>
       {open && (
-        <div id="profileCard" className=" z-[999] absolute bg-black h-[300px] w-[450px] top-23 left-[49%] translate-x-[-23%]  text-white  rounded-lg shadow-lg ">
+        <div id="profileCard" className=" z-[999] absolute bg-black min-h-[300px] w-[90%] max-w-[450px] top-20 left-[50%] translate-x-[-50%] text-white rounded-lg shadow-lg">
 
-          <div className='p-4 '>
-            <div className='  absolute left-[400px] top-[-75px] h-[80px] w-[50px] bg-black rounded-s   
-    [-webkit-mask-image:radial-gradient(circle_40px_at_left_35px_,transparent_99%,black_100%)]
-  '></div>
-            <div className='flex justify-between items-start'>
+          <div className='p-4 md:p-6'>
+            <div className='hidden md:block absolute right-[0px] top-[-78px] h-[100px] w-[50px] bg-black rounded-s [-webkit-mask-image:radial-gradient(circle_42px_at_left_35px_,transparent_99%,black_100%)]'></div>
+            <div className='flex flex-col md:flex-row justify-between items-start gap-4'>
               <div>
-                <h3 className="text-gray-400  mb-2">WE ARE UNRAVEL</h3>
-                <p className="mb-4 text-3xl w-[60%]">The trips your friends will ask you about.</p>
-              </div>  <Link to={'/login'}><button className="bg-white text-gray-900 px-7 py-2 rounded-full hover:bg-gray-200 transition">Login</button></Link>
+                <h3 className="text-gray-400 text-sm md:text-base mb-2">WE ARE UNRAVEL</h3>
+                <p className="mb-4 text-xl md:text-3xl w-full md:w-[60%]">The trips your friends will ask you about.</p>
+              </div>
+              <Link to={'/login'}><button className="bg-white text-gray-900 px-5 md:px-7 py-2 rounded-full hover:bg-gray-200 transition text-sm md:text-base">Login</button></Link>
             </div>
-          
+            <div className='md:hidden mt-4 flex flex-col gap-3 text-sm'>
+              <Link to="/" className="hover:opacity-70" onClick={() => setOpen(false)}>Home</Link>
+              <Link to="/about" className="hover:opacity-70" onClick={() => setOpen(false)}>About</Link>
+              <Link to="/experiences" className="hover:opacity-70" onClick={() => setOpen(false)}>Experiences</Link>
+              <Link to="/contact" className="hover:opacity-70" onClick={() => setOpen(false)}>Contact</Link>
+            </div>
           </div>
         </div>
       )}

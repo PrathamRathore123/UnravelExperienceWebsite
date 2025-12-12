@@ -52,7 +52,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.7, ease: [0.65, 0, 0.35, 1] }}
-            className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-white text-[50px] text-center tracking-[-0.88px] leading-[50px] max-w-[647px]"
+            className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-white text-3xl md:text-4xl lg:text-[50px] text-center tracking-[-0.88px] leading-tight md:leading-[50px] max-w-[647px]"
           >
             Less planning. More living.
             <br />

@@ -4,9 +4,9 @@ import image from "../../assets/WhatsApp.jpg"
 export const Travellers=()=> {
   return (
     <section
-      className="relative w-full h-[80vh]   flex items-center justify-center text-white">
-      <img className="absolute w-[100%] bg" src={image} alt="" />
-    
+      className="relative w-full h-[60vh] sm:h-[80vh] flex items-center justify-center text-white">
+      <img className="absolute w-[100%]h-[100%] bg" src={image} alt="" />
+
       {/* CONTENT */}
       <div className="relative z-10 text-center max-w-3xl px-4">
         <h1 className="text-4xl md:text-5xl font-semibold leading-snug">
@@ -19,7 +19,7 @@ export const Travellers=()=> {
         <p className="mt-6 text-sm opacity-80">Don't miss the next one</p>
 
         {/* BUTTONS */}
-        <div className="flex items-center justify-center gap-4 mt-6">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mt-6">
           <button
             className="px-6 py-2 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-200 transition"
           >

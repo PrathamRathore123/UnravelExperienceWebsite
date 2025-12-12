@@ -2,11 +2,11 @@ import { Badge } from "../ui/badge";
 
 export const ExperiencesSection = () => {
   return (
-    <section id="Winter" className="relative px-8 py-24 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+    <section id="Winter" className="relative px-4 py-12 sm:px-8 sm:py-24 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-start justify-between gap-16">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-16">
           <div className="flex-1">
-            <h2 className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-black text-[121.6px] tracking-[-2.56px] leading-[108.8px]">
+            <h2 className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-black text-4xl md:text-6xl lg:text-[121.6px] tracking-[-2.56px] leading-[108.8px]">
               Curated
               <br />
               Experiences.
@@ -17,7 +17,7 @@ export const ExperiencesSection = () => {
               </Badge>
             </div>
           </div>
-          <div className="flex-1 flex flex-col gap-8 pt-32">
+          <div className="flex-1 flex flex-col gap-8 pt-8 md:pt-32">
             <div className="flex items-center gap-2">
               <div className="w-1 h-1 bg-[#222222] rounded-sm" />
               <span className="[font-family:'Roboto_Mono',Helvetica] font-bold text-black text-sm tracking-[0.70px] leading-[13.3px]">
@@ -28,7 +28,7 @@ export const ExperiencesSection = () => {
               We're starting with winter the season that gives you permission to slow down, stay close to the fire, and feel exactly where you are.
             </p>
           </div>
-          <div className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-black text-[123.6px] tracking-[-2.56px] leading-[108.8px]">
+          <div className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-black text-4xl md:text-6xl lg:text-[123.6px] tracking-[-2.56px] leading-[108.8px]">
             ©25
           </div>
         </div>

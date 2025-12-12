@@ -104,14 +104,14 @@ export const Experiences = () => {
        viewport={{ once: true, amount: 0.3 }}
        variants={fadeUp}
        className="w-full flex items-center justify-center px-4 py-12">
-      <p className="max-w-[1186px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-[41.6px] text-center tracking-[0] leading-[50px]">
-        <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-[41.6px] tracking-[0] leading-[50px]">
+      <p className="max-w-[1186px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-xl md:text-2xl lg:text-[41.6px] text-center tracking-[0] leading-relaxed md:leading-[50px]">
+        <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-xl md:text-2xl lg:text-[41.6px] tracking-[0] leading-relaxed md:leading-[50px]">
           There are places that only{" "}
         </span>
         <span className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold">
           reveal themselves in December
         </span>
-        <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-[41.6px] tracking-[0] leading-[50px]">
+        <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-xl md:text-2xl lg:text-[41.6px] tracking-[0] leading-relaxed md:leading-[50px]">
           . When the crowds thin out, the lights come on, and the cold gives you
           an excuse to stay close to the fire, the wine, the person next to you.
         </span>
