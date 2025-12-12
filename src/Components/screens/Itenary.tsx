@@ -8,6 +8,13 @@ import { Card, CardContent } from "../ui/card";
 import { itenaryData } from "../data/itenaryData";
 import { BookingForm } from "../ui/Bookingform";
 
+interface Day {
+  day: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
 
 
 const thingsToKnowCards = [
@@ -54,7 +61,7 @@ const thingsToKnowCards = [
 export  const Itenary = () => {
   const { id } = useParams();
   const data = itenaryData[id || 'london'];
-  const [selectedDay, setSelectedDay] = useState<any| null>(null);
+  const [selectedDay, setSelectedDay] = useState<Day | null>(null);
   const [showBookingForm, setShowBookingForm] = useState(false);
 
  useEffect(() => {
@@ -72,42 +79,42 @@ export  const Itenary = () => {
         {/* Navigation */}
      
         {/* Hero Section */}
-        <section className="flex gap-10 container mx-auto px-8 py-12">
-          <div className="grid grid-cols-2 gap-4 max-w-[1100px] mx-auto mb-16">
+        <section className="flex flex-col lg:flex-row gap-10 container mx-auto px-4 md:px-8 py-12">
+          <div className="grid grid-cols-2 gap-4 max-w-[1100px] mx-auto mb-8 lg:mb-16">
             <img
-              className="w-full h-[250px] rounded-tl-[150px] object-cover"
+              className="w-full h-[150px] sm:h-[200px] md:h-[250px] rounded-tl-[150px] object-cover"
               alt={data.title}
               src={data.heroImages[0]}
             />
             <img
-              className="w-full h-[250px] object-cover rounded-tr-[20px]"
+              className="w-full h-[150px] sm:h-[200px] md:h-[250px] object-cover rounded-tr-[20px]"
               alt={data.title}
               src={data.heroImages[1]}
             />
             <img
-              className="w-full h-[250px] object-cover rounded-bl-[20px]"
+              className="w-full h-[150px] sm:h-[200px] md:h-[250px] object-cover rounded-bl-[20px]"
               alt={data.title}
               src={data.heroImages[2]}
             />
             <img
-              className="w-full h-[250px] rounded-br-[150px] object-cover"
+              className="w-full h-[150px] sm:h-[200px] md:h-[250px] rounded-br-[150px] object-cover"
               alt={data.title}
               src={data.heroImages[3]}
             />
           </div>
 
-          <div className=" grid-cols-2 gap-16 max-w-[1200px] mx-auto">
+          <div className="max-w-[1200px] mx-auto">
             <div>
-              <h1 className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-[64px] tracking-[-3.50px] leading-[68px] mb-6">
+              <h1 className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-3xl md:text-[64px] tracking-[-3.50px] leading-tight md:leading-[68px] mb-6">
                 {data.title}
               </h1>
-              <p className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-[#9b9b9b] text-xl tracking-[-0.32px] leading-[28px] mb-8">
+              <p className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-[#9b9b9b] text-base md:text-xl tracking-[-0.32px] leading-[28px] mb-8">
                 {data.subtitle}
               </p>
-              <div className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-black text-xl tracking-[-0.32px] leading-[26px] mb-2">
+              <div className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-black text-lg md:text-xl tracking-[-0.32px] leading-[26px] mb-2">
                 {data.duration}
               </div>
-              <div className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-black text-lg tracking-[-0.32px] leading-[26px]">
+              <div className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-black text-base md:text-lg tracking-[-0.32px] leading-[26px]">
                 {data.location}
               </div>
             </div>
@@ -127,14 +134,14 @@ export  const Itenary = () => {
         </section>
 
         {/* Journey Section */}
-        <section className="container mx-auto px-8 py-12">
-          <h2 className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-[#222222] text-[38px] tracking-[-0.44px] leading-[26px] mb-12 max-w-[1200px] mx-auto">
+        <section className="container mx-auto px-4 md:px-8 py-12">
+          <h2 className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-[#222222] text-2xl md:text-[38px] tracking-[-0.44px] leading-[26px] mb-12 max-w-[1200px] mx-auto">
             The&nbsp;&nbsp;Journey
           </h2>
 
-          <div className="max-w-[1200px] mx-auto flex gap-12">
+          <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-12">
             <div className="flex-1">
-              {data.journeyDays.map((day: any, index: number) => (
+              {data.journeyDays.map((day: Day, index: number) => (
                 
                 <Card 
                   key={index}
@@ -162,7 +169,7 @@ export  const Itenary = () => {
               </Button>
             </div>
 
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 hidden lg:block">
               <Calendar />
             </div>
           </div>
@@ -211,10 +218,10 @@ export  const Itenary = () => {
         <section >
           <div className=" justify-between gap-12 max-w-[1200px] mx-auto">
             <div className="flex-1">
-              <h2 className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#222222] text-[56px] tracking-[-1.00px] leading-[60px] text-center mb-6">
+              <h2 className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#222222] text-2xl sm:text-3xl md:text-4xl lg:text-[56px] tracking-[-1.00px] leading-tight sm:leading-normal md:leading-relaxed lg:leading-[60px] text-center mb-6">
                 {data.galleryTitle}
               </h2>
-              <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#383838] text-[28px] text-center tracking-[-0.50px] leading-[40px] mb-12">
+              <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#383838] text-lg sm:text-xl md:text-2xl lg:text-[28px] text-center tracking-[-0.50px] leading-[40px] mb-12">
                 {data.gallerySubtitle}
               </p>
               <img
@@ -227,12 +234,12 @@ export  const Itenary = () => {
         </section>
 
         {/* Things to Know Section */}
-        <section className="container mx-auto px-8 py-16">
-          <h2 className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-black text-[44px] tracking-[0] leading-[60px] text-center mb-16">
+        <section className="container mx-auto px-4 md:px-8 py-16">
+          <h2 className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-black text-2xl md:text-[44px] tracking-[0] leading-[60px] text-center mb-16">
             Things to Know
           </h2>
 
-          <div className="grid grid-cols-3 gap-6 max-w-[1200px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
             {thingsToKnowCards.map((card, index) => (
               <Card
                 key={index}
@@ -261,9 +268,9 @@ export  const Itenary = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="container mx-auto px-8 py-16">
-          <div className="bg-[#222222] rounded-[40px] py-20 px-16 text-center max-w-[1200px] mx-auto">
-            <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[52px] text-center tracking-[-0.80px] leading-[64px] mb-12 max-w-4xl mx-auto">
+        <section className="container mx-auto px-4 md:px-8 py-16">
+          <div className="bg-[#222222] rounded-[40px] py-12 md:py-20 px-6 md:px-16 text-center max-w-[1200px] mx-auto">
+            <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-2xl md:text-[52px] text-center tracking-[-0.80px] leading-tight md:leading-[64px] mb-12 max-w-4xl mx-auto">
               <span className="text-[#dbdbdb4c] tracking-[-0.60px]">
                 Reserve this experience for yourself with{" "}
               </span>
@@ -273,7 +280,7 @@ export  const Itenary = () => {
             </p>
             <Button 
               onClick={() => setShowBookingForm(true)}
-              className="bg-transparent border-2 border-white text-white rounded-[40px] px-14 py-6 h-auto [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-[32px] tracking-[-0.80px] leading-[40px] hover:bg-white/10 transition-colors">
+              className="bg-transparent border-2 border-white text-white rounded-[40px] px-8 md:px-14 py-4 md:py-6 h-auto [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-xl md:text-[32px] tracking-[-0.80px] leading-[40px] hover:bg-white/10 transition-colors">
               Reserve For Free
             </Button>
           </div>

@@ -67,26 +67,26 @@ export  function Signup() {
     
     
       
-      <div className="w-full flex justify-center gap-20 items-center mb-20 ">
+      <div className="w-full min-h-screen flex flex-col md:flex-row justify-center gap-8 md:gap-20 items-center mb-20 px-4">
       
-        <div>
+        <div className="text-center md:text-left">
           <img src="" alt="" />
-          <h1 className="text-[28px] font-semibold leading-tight">Travel</h1>
-          <p className="text-[26px] -mt-1">better</p>
-          <p className="text-[13px] text-gray-600 mt-2 w-64 leading-tight">
+          <h1 className="text-2xl md:text-[28px] font-semibold leading-tight">Travel</h1>
+          <p className="text-xl md:text-[26px] -mt-1">better</p>
+          <p className="text-xs md:text-[13px] text-gray-600 mt-2 max-w-[264px] leading-tight mx-auto md:mx-0">
             Get first access to Unravel One and the kind of perks most people don’t know exist.
           </p>
 
 
           <img
             src="/banner.png"
-            className="w-[430px] h-[260px] rounded-xl object-cover mt-6"
+            className="w-full max-w-[430px] h-[260px] rounded-xl object-cover mt-6"
           />
         </div>
 
         {/* SIGN UP CARD */}
 
-    <div className="w-[470px] bg-white shadow-lg border border-gray-100 rounded-xl p-8">
+    <div className="w-full max-w-[470px] bg-white shadow-lg border border-gray-100 rounded-xl p-8">
           <h2 className="text-[20px] font-semibold mb-6">Sign Up</h2>
 
           {error && <div className="bg-red-100 text-red-700 p-2 rounded mb-4 text-sm">{error}</div>}

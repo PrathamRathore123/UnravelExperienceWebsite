@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 export const Footer = () => {
   return (
     <footer className="w-full bg-white text-black py-14">
-      <div className="flex justify-around ">
+      <div className="flex flex-col md:flex-row justify-around gap-8 md:gap-0 px-4 md:px-0">
 
         {/* CONTACT */}
-        <div className="space-y-4 w-[30%]">
+        <div className="space-y-4 w-full md:w-auto">
           <p className="text-[10px] tracking-widest">CONTACT</p>
 
           <p className="text-sm leading-relaxed">
@@ -30,7 +30,7 @@ export const Footer = () => {
         </div>
 
         {/* US */}
-        <div className="space-y-4 ">
+        <div className="space-y-4 w-full md:w-auto">
           <p className="text-[10px] tracking-widest">US</p>
 
           <div className="flex flex-col space-y-2 text-sm">
@@ -46,7 +46,7 @@ export const Footer = () => {
         </div>
 
         {/* MULTILAYOUT */}
-        <div className="space-y-4 ">
+        <div className="space-y-4 w-full md:w-auto">
           <p className="text-[10px] tracking-widest">MULTILAYOUT</p>
 
           <div className="flex flex-col space-y-2 text-sm">
@@ -60,7 +60,7 @@ export const Footer = () => {
         </div>
 
         {/* GO */}
-        <div className="space-y-4 ">
+        <div className="space-y-4 w-full md:w-auto">
           <p className="text-[10px] tracking-widest">GO</p>
 
           <div className="flex flex-col space-y-2 text-sm">

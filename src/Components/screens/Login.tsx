@@ -31,7 +31,7 @@ export  const Login=()=> {
       } else {
         setError(data.error || 'Login failed');
       }
-    } catch (err) {
+    } catch {
       setError('Network error. Please try again.');
     }
   };
@@ -50,11 +50,11 @@ export  const Login=()=> {
   return (
     <>
     <Navbartwo/>
-    <div className="w-full min-h-screen bg-white flex flex-col items-center justify-start px-14 py-10 font-sans">
+    <div className="w-full min-h-screen bg-white flex flex-col items-center justify-start px-4 md:px-14 py-10 font-sans">
       {/* LOGIN SECTION EXACT CLONE */}
-      <div className="w-full h-screen flex justify-center items-center gap-20">
+      <div className="w-full min-h-screen flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20">
         {/* LEFT LOGIN CARD */}
-        <div className="w-[470px] h-120 bg-white shadow-2xl rounded-xl p-7 border border-gray-100">
+        <div className="w-full max-w-[470px] bg-white shadow-2xl rounded-xl p-7 border border-gray-100">
           <h2 className="text-[30px] font-semibold mb-10">Login</h2>
 
           {error && <div className="bg-red-100 text-red-700 p-2 rounded mb-4 text-sm">{error}</div>}
@@ -108,20 +108,20 @@ export  const Login=()=> {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="flex flex-col pl-10">
+        <div className="flex flex-col md:pl-10 items-center md:items-start">
           <img className="h-[30px] w-[130px] mb-4" src="https://c.animaapp.com/miww62p4QlXFLl/img/untitled-design-7-removebg-preview-png-1.png" alt="" />
            
  
-          <h1 className="text-[28px] font-semibold leading-tight">
+          <h1 className="text-2xl md:text-[28px] font-semibold leading-tight text-center md:text-left">
             Good to see <br /> you
           </h1>
-          <p className="text-[11px] text-gray-500 mt-1">Your next trip is waiting</p>
+          <p className="text-[11px] text-gray-500 mt-1 text-center md:text-left">Your next trip is waiting</p>
 
           
 
           <img
             src="/banner.png"
-            className="w-[430px] h-[250px] rounded-xl object-cover mt-6"
+            className="w-full max-w-[430px] h-[250px] rounded-xl object-cover mt-6"
           />
         </div>
       </div>

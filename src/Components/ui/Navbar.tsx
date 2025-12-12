@@ -101,23 +101,22 @@ export const Navbartwo = () => {
         </div>
       </nav>
       {open && (
-      <div id="profileCard" className="absolute z-[999] bg-black min-h-[250px] md:h-[300px] w-[90%] max-w-[450px] top-24 md:top-29 left-[50%] translate-x-[-50%] md:translate-x-[-10%] md:left-[51%] text-white rounded-lg shadow-lg">
-        <div className='p-4 md:p-6'>
+      <div id="profileCard" className="absolute z-[999] bg-black min-h-[250px] w-[90%] max-w-[450px] top-26 left-1/2 transform -translate-x-1/2 md:left-auto md:right-35 md:top-29 md:transform-none text-white rounded-lg shadow-lg">
+        <div className='p-6 md:p-6'>
           <div className='hidden md:block absolute right-[0px] top-[-78px] h-[100px] w-[50px] bg-black rounded-s [-webkit-mask-image:radial-gradient(circle_42px_at_left_35px_,transparent_99%,black_100%)]'></div>
-          <div className='flex flex-col md:flex-row justify-between items-start gap-4'>
-            <div>
-              <h3 className="text-gray-400 text-sm md:text-base mb-2">WE ARE UNRAVEL</h3>
-              <p className="mb-4 text-xl md:text-3xl w-full md:w-[60%]">The trips your friends will ask you about.</p>
-            </div> 
-            <Link to={'/login'}><button className="bg-white text-gray-900 px-5 md:px-7 py-2 rounded-full hover:bg-gray-200 transition text-sm md:text-base">Login</button></Link>
+          <div className='flex flex-col md:flex-row justify-between items-start gap-6 md:gap-4'>
+            <div className='flex-1'>
+              <h3 className="text-gray-400 text-sm md:text-base mb-3 md:mb-2">WE ARE UNRAVEL</h3>
+              <p className="mb-6 md:mb-4 text-lg md:text-3xl w-full md:w-[60%] leading-tight">The trips your friends will ask you about.</p>
+            </div>
+            <Link to={'/login'}><button className="bg-white text-gray-900 px-6 md:px-7 py-3 md:py-2 rounded-full hover:bg-gray-200 transition text-sm md:text-base font-medium whitespace-nowrap">Login</button></Link>
           </div>
-          <div className='md:hidden mt-4 flex flex-col gap-3 text-sm'>
-            <Link to="/" className="hover:opacity-70" onClick={() => setOpen(false)}>Home</Link>
-            <Link to="/about" className="hover:opacity-70" onClick={() => setOpen(false)}>About</Link>
-            <Link to="/experiences" className="hover:opacity-70" onClick={() => setOpen(false)}>Experiences</Link>
-            <Link to="/contact" className="hover:opacity-70" onClick={() => setOpen(false)}>Contact</Link>
+          <div className='md:hidden mt-6 flex flex-col gap-4 text-base'>
+            <Link to="/" className="hover:opacity-70 py-2 border-b border-gray-700" onClick={() => setOpen(false)}>Home</Link>
+            <Link to="/about" className="hover:opacity-70 py-2 border-b border-gray-700" onClick={() => setOpen(false)}>About</Link>
+            <Link to="/experiences" className="hover:opacity-70 py-2 border-b border-gray-700" onClick={() => setOpen(false)}>Experiences</Link>
+            <Link to="/contact" className="hover:opacity-70 py-2" onClick={() => setOpen(false)}>Contact</Link>
           </div>
-            <img src="" alt="" />
         </div>
       </div>
        )}
