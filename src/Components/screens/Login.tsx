@@ -56,9 +56,7 @@ export  const Login=()=> {
         {/* LEFT LOGIN CARD */}
         <div className="w-full max-w-[470px] bg-white shadow-2xl rounded-xl p-7 border border-gray-100">
           <h2 className="text-[30px] font-semibold mb-10">Login</h2>
-
           {error && <div className="bg-red-100 text-red-700 p-2 rounded mb-4 text-sm">{error}</div>}
-
           <form onSubmit={handleLogin}>
             <div className="flex flex-col mb-6">
               <label className="text-[13px] mb-1">Username</label>
@@ -71,7 +69,6 @@ export  const Login=()=> {
                 required
               />
             </div>
-
             <div className="flex flex-col mb-2">
               <label className="text-[13px] mb-1">Password</label>
               <div className="relative">
@@ -91,14 +88,11 @@ export  const Login=()=> {
                 />
               </div>
             </div>
-
             <button type="submit" className="w-full bg-black text-white py-2 rounded-md text-sm mt-4 mb-2">
               LOGIN
             </button>
           </form>
-
           <p className="text-[11px] text-right text-gray-500 cursor-pointer">Forgot Your Password</p>
-
           <button 
             onClick={() => googleLogin()}
             className="w-40 mt-5 border border-gray-300 rounded-md py-2 text-sm flex items-center justify-center gap-2"
@@ -106,27 +100,19 @@ export  const Login=()=> {
             <img src="/google.png" className="w-4" /> Login With Google
           </button>
         </div>
-
         {/* RIGHT SIDE */}
         <div className="flex flex-col md:pl-10 items-center md:items-start">
           <img className="h-[30px] w-[130px] mb-4" src="https://c.animaapp.com/miww62p4QlXFLl/img/untitled-design-7-removebg-preview-png-1.png" alt="" />
-           
- 
           <h1 className="text-2xl md:text-[28px] font-semibold leading-tight text-center md:text-left">
             Good to see <br /> you
           </h1>
           <p className="text-[11px] text-gray-500 mt-1 text-center md:text-left">Your next trip is waiting</p>
-
-          
-
           <img
             src="/banner.png"
             className="w-full max-w-[430px] h-[250px] rounded-xl object-cover mt-6"
           />
         </div>
       </div>
-
-   
     </div>
     </>
   );

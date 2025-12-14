@@ -5,10 +5,10 @@ export const AboutSection = () => {
   return (
     <div  className="w-full flex flex-col md:flex-row items-center justify-center gap-12 py-20 px-6 md:px-20">
       
-      <div className="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-md">
+      <div className="w-100 h-100 rounded-2xl overflow-hidden shadow-md">
         <img
           src={Starry} 
-          alt="Starry Sky"
+          
           className="w-full h-full object-cover"
         />
       </div>

@@ -1,0 +1,2 @@
+- [x] Reduce vertical gap between cards from gap-10 to gap-5 in the container div
+- [x] Change transition duration for second card (index 1) to 0.05 seconds, keep 0.1 for others

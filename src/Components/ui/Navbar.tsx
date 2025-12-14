@@ -69,7 +69,7 @@ export const Navbartwo = () => {
         flex items-center justify-between px-6 py-3
         border border-[#e5e5e5]
         rounded-full shadow-sm bg-white
-        max-w-[800px] w-full md:w-[80%] lg:w-[60%]
+        max-w-[800px] w-[80%] md:w-[80%] lg:w-[60%]
       ">
 
           {/* Logo Capsule */}

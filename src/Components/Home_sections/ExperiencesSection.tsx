@@ -12,7 +12,7 @@ export const ExperiencesSection = () => {
               Experiences.
             </h2>
             <div className="relative inline-block">
-              <Badge className="h-5 w-5 flex items-center justify-center bg-[#222222] text-white text-xs rounded-[9.99px] p-0 absolute -right-3 sm:-right-5 top-0">
+              <Badge className="h-5 w-5 flex items-center justify-center bg-[#222222] text-white text-xs rounded-[9.99px] p-0 absolute -right-3 sm:-right-5 top-0 ">
                 4
               </Badge>
             </div>
@@ -28,7 +28,7 @@ export const ExperiencesSection = () => {
               We're starting with winter the season that gives you permission to slow down, stay close to the fire, and feel exactly where you are.
             </p>
           </div>
-          <div className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[-2.56px] leading-tight sm:leading-normal md:leading-relaxed lg:leading-[4rem]">
+          <div className="  [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[-2.56px] leading-tight sm:leading-normal md:leading-relaxed lg:leading-[4rem]   hidden md:block">
             ©25
           </div>
         </div>

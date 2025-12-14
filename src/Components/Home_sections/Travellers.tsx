@@ -1,18 +1,19 @@
 
 import image from "../../assets/WhatsApp.jpg"
-
+import Logo from "../../assets/UnravelLogo.png"
 export const Travellers=()=> {
   return (
+    <>
     <section
-      className="relative w-full h-[60vh] sm:h-[80vh] flex items-center justify-center text-white">
-      <img className="absolute w-[100%]h-[100%] bg" src={image} alt="" />
+      className="relative w-full h-[60vh] md:h-[80vh]  flex items-center justify-center text-white">
+      <img className="absolute w-[100%] h-[100%] rounded-t-2xl " src={image} alt="" />
 
       {/* CONTENT */}
       <div className="relative z-10 text-center max-w-3xl px-4">
-        <h1 className="text-4xl md:text-5xl font-semibold leading-snug">
+        <h1 className="text-2xl md:text-5xl font-semibold leading-snug">
           Unravel Experiences
         </h1>
-        <p className="text-xl md:text-2xl mt-2 font-light">
+        <p className="text-2xl md:text-5xl font-semibold leading-snug">
           For travellers who feel things.
         </p>
 
@@ -34,5 +35,7 @@ export const Travellers=()=> {
         </div>
       </div>
     </section>
+    <img className="p-5 py-6" src={Logo} alt="" />
+    </>
   );
 }

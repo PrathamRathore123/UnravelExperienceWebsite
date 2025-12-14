@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-white text-black py-14">
-      <div className="flex flex-col md:flex-row justify-around gap-8 md:gap-0 px-4 md:px-0">
-
-        {/* CONTACT */}
-        <div className="space-y-4 w-full md:w-auto">
+    <>
+    <footer className="w-full md:flex  bg-white text-black py-14">
+       {/* CONTACT */}
+        <div className="p-4  rounded-t-2xl h-full  md:w-[50%] bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border border-gray-100 md:bg-white space-y-4  ">
           <p className="text-[10px] tracking-widest">CONTACT</p>
 
           <p className="text-sm leading-relaxed">
@@ -28,16 +27,17 @@ export const Footer = () => {
             </span>
           </p>
         </div>
-
+        
+      <div className="flex justify-between pt-5 md:w-[50%] md:flex-row md:justify-around nd:gap-8 md:gap-0  md:px-0">
         {/* US */}
-        <div className="space-y-4 w-full md:w-auto">
+        <div className="hidden md:block px-4 space-y-4 w-full md:w-auto">
           <p className="text-[10px] tracking-widest">US</p>
 
           <div className="flex flex-col space-y-2 text-sm">
             <Link to="/about">Why we Exist</Link>
           </div>
 
-          <p className="text-[10px] tracking-widest pt-2">HELP</p>
+          <p className=" text-[10px] tracking-widest pt-2">HELP</p>
           <div className="flex flex-col space-y-2 text-sm">
             <Link to="/contact">Talk To Us</Link>
             <Link to="/faq">FAQs</Link>
@@ -46,7 +46,7 @@ export const Footer = () => {
         </div>
 
         {/* MULTILAYOUT */}
-        <div className="space-y-4 w-full md:w-auto">
+        <div className="px-4 space-y-4 w-full md:w-auto">
           <p className="text-[10px] tracking-widest">MULTILAYOUT</p>
 
           <div className="flex flex-col space-y-2 text-sm">
@@ -58,9 +58,19 @@ export const Footer = () => {
             <Link to="/login">Sign In</Link>
           </div>
         </div>
+         <div className="px-4 space-y-4 w-full md:w-auto">
+          <p className="text-[10px] tracking-widest">Pages</p>
+
+          <div className="flex flex-col space-y-2 text-sm">
+            <Link to="/about">About</Link>
+            <Link to="/contact">Blog</Link>
+            <Link to="/experiences">Blog Article</Link>
+            <Link to="/signup">Case Study</Link>
+          </div>
+        </div>
 
         {/* GO */}
-        <div className="space-y-4 w-full md:w-auto">
+        <div  className="px-4 space-y-4 w-full md:w-auto">
           <p className="text-[10px] tracking-widest">GO</p>
 
           <div className="flex flex-col space-y-2 text-sm">
@@ -70,18 +80,21 @@ export const Footer = () => {
           </div>
 
           {/* Social Icons */}
-          <div className="flex items-center space-x-4 pt-4">
-            <Instagram size={16} />
-            <Linkedin size={16} />
-          </div>
+         
         </div>
       </div>
 
       {/* Bottom Text */}
-      <p className="text-[10px] m-16 ">
+     
+    </footer>
+     <div className=" px-4 flex items-center space-x-4 pt-4 mr-10 float-right">
+            <Instagram size={16} />
+            <Linkedin size={16} />
+          </div>
+     <p className="text-[10px] w-[100%] my-16 text-center ">
         © 2025 Unravel Experiences. For travelers who feel things.
       </p>
-    </footer>
+    </>
   );
 };
 

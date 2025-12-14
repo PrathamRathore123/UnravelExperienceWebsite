@@ -11,7 +11,7 @@ export function MomentsDump() {
       </h1>
 
       {/* Folder grid */}
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
         <FolderCard title="London Dump"  />
         <FolderCard title="Paris Dump" />
         <FolderCard title="New York Dump"  />

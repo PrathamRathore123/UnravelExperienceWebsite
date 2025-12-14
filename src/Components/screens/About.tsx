@@ -242,7 +242,7 @@ export const About = () => {
       <section className=" w-full py-20 bg-[#f6f3f0]">
         <div className=" flex flex-col md:flex-row justify-around items-center max-w-[1708px] mx-auto px-4 md:px-12 gap-8">
          <div className="w-full md:w-[45%]">
-          <h2 className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-3xl md:text-5xl tracking-[-0.32px] leading-[7px] mb-6 md:mb-8">
+          <h2 className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-3xl md:text-5xl tracking-[-0.32px] sm:leading-[7px] mb-6 md:mb-8">
             How We Choose Experiences
           </h2>
 

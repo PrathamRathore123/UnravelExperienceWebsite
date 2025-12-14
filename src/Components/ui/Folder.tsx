@@ -13,34 +13,33 @@ interface FolderCardProps {
 
 export function FolderCard({ title }: FolderCardProps) {
   return (
-    <div className="flex flex-col items-center group">
+    <div className="flex flex-col items-center group  ">
       {/* Folder */}
-      <div className="relative w-[190px] h-[200px]">
+      
+      <div className="relative w-[150px] h-[80px] md:w-[190px] md:h-[200px]">
         {/* Images that slide out in arc */}
-        <div className="absolute top-[20px] left-[35px] w-[120px] h-[90px] bg-gradient-to-br from-blue-200 to-blue-400 rounded-xl shadow-lg transition-all duration-500 -translate-y-8 -translate-x-8 -rotate-8 group-hover:-translate-y-32 group-hover:-translate-x-24 group-hover:-rotate-15 z-10">
-          <img className="w-100 h-23 rounded-xl" src={image1} alt="" />
+        <div className="absolute top-[20px] left-[50px] p-1 bg-white rounded-xl shadow-lg transition-all duration-500 -translate-y-8 -translate-x-8 -rotate-8 group-hover:-translate-y-32 group-hover:-translate-x-24 group-hover:-rotate-15 z-10">
+          <img className="w-19 h-16 md:h-20 rounded-xl" src={image1} alt="" />
         </div>
-        <div className="absolute top-[20px] left-[35px] w-[120px] h-[90px] bg-gradient-to-br from-purple-200 to-purple-400 rounded-xl shadow-lg transition-all duration-500 -translate-y-6 -translate-x-3 -rotate-4 group-hover:-translate-y-36 group-hover:-translate-x-10 group-hover:-rotate-8 z-20">
-          <img className="w-100 h-23 rounded-xl" src={image2} alt="" />
+        <div className="absolute top-[20px] left-[50px] p-1 bg-white  rounded-xl shadow-lg transition-all duration-500 -translate-y-6 -translate-x-3 -rotate-4 group-hover:-translate-y-36 group-hover:-translate-x-10 group-hover:-rotate-8 z-20">
+          <img className="w-19 h-16 md:h-20 rounded-xl" src={image2} alt="" />
         </div>
-        <div className="absolute top-[20px] left-[35px] w-[120px] h-[90px] bg-gradient-to-br from-pink-200 to-pink-400 rounded-xl shadow-lg transition-all duration-500 -translate-y-6 translate-x-3 rotate-4 group-hover:-translate-y-36 group-hover:translate-x-10 group-hover:rotate-8 z-30">
-          <img className="w-100 h-23 rounded-xl" src={image3} alt="" />
+        <div className="absolute top-[20px] left-[50px] p-1 bg-white rounded-xl shadow-lg transition-all duration-500 -translate-y-6 translate-x-3 rotate-4 group-hover:-translate-y-36 group-hover:translate-x-10 group-hover:rotate-8 z-30">
+          <img className="w-19 h-16 md:h-20 rounded-xl" src={image3} alt="" />
         </div>
-        <div className="absolute top-[20px] left-[35px] w-[120px] h-[90px] bg-gradient-to-br from-orange-200 to-orange-400 rounded-xl shadow-lg transition-all duration-500 -translate-y-8 translate-x-8 rotate-8 group-hover:-translate-y-32 group-hover:translate-x-24 group-hover:rotate-15 z-40">
-          <img className="w-100 h-23 rounded-xl" src={image4} alt="" />
+        <div className="absolute top-[20px] left-[50px] p-1 bg-white rounded-xl shadow-lg transition-all duration-500 -translate-y-8 translate-x-8 rotate-8 group-hover:-translate-y-32 group-hover:translate-x-24 group-hover:rotate-15 z-40">
+          <img className="w-19 h-16 md:h-20 rounded-xl" src={image4} alt="" />
         </div>
-
-        {/* Folder Body */}
-        <div className="absolute top-3 w-full h-[130px] bg-white rounded-2xl shadow-lg z-50" />
-
+       {/* Folder Body */}
+        <div style={{clipPath: 'polygon(38% 0, 48% 13%, 100% 13%, 100% 100%, 70% 100%, 0 99%, 0 35%, 0 0)'}} className="absolute rounded-2xl  top-[-5px] w-full h-[120px] md:h-[150px] bg-[#706A6B]/20 md:bg-[#E9E8E8]/20 backdrop-blur-lg    shadow-lg z-50 transform perspective-1000 rotate-x-[-15deg]" />
         {/* Folder Flap (blur effect) - half open */}
-        <div className="absolute -top-1 left-0 w-full h-[55px] bg-white/70 backdrop-blur-md rounded-t-2xl shadow-sm z-50 transform -rotate-3 origin-bottom-left"></div>
+        <div className="absolute -top-3 left-3 w-[90%] h-[55px] bg-[#807b8e]/20 backdrop-blur-sm rounded-t-2xl shadow-sm z-9   origin-bottom-left"></div>
 
         {/* Sticker */}
         <img
           src={stickerfirst}
           
-          className="absolute top-19 left-4 w-10 h-10 object-cover z-50"
+          className="absolute top-18 left-4 w-10 h-10 object-cover z-50"
         />
           <img
           src={stickersecond}
@@ -50,7 +49,7 @@ export function FolderCard({ title }: FolderCardProps) {
       </div>
 
       {/* Title */}
-      <p className="mt-4 text-center text-lg font-medium text-gray-800">
+      <p className="mt-9 md:mt-4 text-center text-lg font-medium text-gray-800">
         {title}
       </p>
     </div>

@@ -30,88 +30,63 @@ export const FeaturesSection = () => {
     </div>
 
     <div className="w-full px-6 md:px-20 pb-20 bg-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-30 gap-y-20">
-
+      <div className="max-w-7xl md:mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-50 gap-y-20">
         {/* Discover & Book */}
-        <div className="text-center w-[80%]">
-        <div className="flex items-center ">
-          <div className=" w-full flex items-center h-[360px] bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl mb-8 overflow-hidden">
-          <img className="h-[100%] w-[100%]" src={mess1} />
+        <div className="text-center lg:w-[80%] ">
+          <div className=" w-full flex justify-center items-center  h-[360px] bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl mb-8 overflow-hidden">
+          <img className="h-[100%] w-100" src={mess1} />
           </div>
-        </div>
       <h2 className="text-[34px] md:text-[40px] font-semibold text-black">
         Discover &amp; Book
       </h2>
-      <p className="text-gray-700 text-[16px] md:text-[17px] mt-2 max-w-[600px]">
+      <p className="text-gray-700 text-[16px] md:text-[17px] mt-2 ">
         Browse curated experiences. Get personalized recommendations. Book in seconds.
       </p>
-        </div>
+      </div>
 
         {/* Manage Everything */}
-        <div className="w-[80%] text-center">
-        <div className="flex items-center  ">
-          <div className=" w-full h-[360px] bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl mb-8 overflow-hidden">
-          <img className="h-100 w-100" src={mess2}  />
+        <div className=" lg:w-[80%] text-center">
+       
+          <div className=" w-full h-[360px] bg-gradient-to-br flex justify-center items-center  from-gray-50 to-gray-100 rounded-3xl mb-8 overflow-hidden">
+          <img className="h-[100%] w-100" src={mess2}  />
           </div>
-        </div>
+      
         <h2 className="text-[34px] md:text-[40px] font-semibold text-black">
         Manage Everything
       </h2>
-      <p className="text-gray-700 text-[16px] md:text-[17px] mt-2 max-w-[600px]">
+      <p className="text-gray-700 text-[16px] md:text-[17px] mt-2 ">
         Your documents Reminder and Real-time updates. All in one place
       </p>
 </div>
         {/* 24/7 Support */}
-        <div className="text-center w-[80%]">
-        <div className="flex items-center ">
-          <div className=" w-full h-[360px] bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl mb-8 p-6 overflow-hidden">
-          <img className="h-100 w-100" src={mess3}  />
-          </div>
+        <div className="text-center  lg:w-[80%]">
+          <div className=" w-full h-100 bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl mb-8 p-6 overflow-hidden flex justify-center items-center ">
+          <img className="h-[100%] w-100" src={mess3}  />
         </div>
          <h2 className="text-[34px] md:text-[40px] font-semibold text-black">
         24/7 Support
       </h2>
-      <p className="text-gray-700 text-[16px] md:text-[17px] mt-2 max-w-[600px]">
+      <p className="text-gray-700 text-[16px] md:text-[17px] mt-2 ">
        Questions at 2 AM? In-trip guidance? we're always on 
       </p>
         </div>
 
         {/* Human When You Need It */}
-        <div className="text-center w-[80%]">
-        <div className="flex items-center  ">
-          <div className=" w-full h-[360px] bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl mb-8 p-6 overflow-hidden">
-          <img className="h-100 w-100" src={mess4} />
+        <div className="text-center lg:w-[80%] hidden md:block">
+      
+          <div className="  h-[360px] bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl mb-8 p-6 overflow-hidden flex justify-center items-center  ">
+          <img className="h-[100%] w-100" src={mess4} />
           </div>
-          </div>
+          
            <h2 className="text-[32px] md:text-[39px] font-semibold text-black">
         Human when You Need IT
       </h2>
-      <p className="text-gray-700 text-[16px] md:text-[17px] mt-2 max-w-[600px]">
+      <p className="text-gray-700 text-[16px] md:text-[17px] mt-2 ">
      Flights Custom itineraries. payment request we connect you instantly </p>
           </div>
       </div>
     </div>
-     <div className="w-full flex flex-col items-center text-center space-y-4 py-10">
-      {/* Heading */}
-      <div className="text-[20px] leading-[1.4] font-normal text-black/90">
-        <p>One conversation. Everything handled.</p>
-        <p>Travel like someone's got your back.</p>
-      </div>
-<br /><br />
-      {/* Button */}
-      <button
-        className="
-          flex items-center gap-2 
-          bg-black text-white 
-          rounded-full px-6 py-3 
-          text-[15px] font-medium 
-          hover:bg-black/90 transition
-        "
-      >
-        Meet Unravel One
-        <span className="text-xl">→</span>
-      </button>
-    </div>
+   
 </>
   );
 };
