@@ -28,7 +28,7 @@ export const HomeLandingPage = () => {
       </div>
       <div className="hidden md:block"><NavbarOne /></div>
 
-      <div className="overflow-hidden px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8">
         <FeaturesSection />
         <div className="block md:hidden"> <HumanSupport></HumanSupport></div>
         <div className="hidden md:block">  <AboutSection /></div>

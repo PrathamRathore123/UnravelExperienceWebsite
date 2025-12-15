@@ -28,29 +28,32 @@ export const About = () => {
 
       {/* Hero Section */}
       <section className=" w-full min-h-[400px] md:h-[870px] px-4 py-8 md:py-0">
-        <div className="w-full flex justify-center py-4 md:py-8 [font-family:'Inter-Bold',Helvetica] font-bold text-black text-xs md:text-base">
+      <p className="block md:hidden float-right [font-family:'Roboto_Mono',Helvetica] font-bold text-black text-xs pr-5"> 52°30'59"N / 13°22'34"E</p>
+        <div className="w-full flex  flex-col lg:flex-row gap-4 lg:gap-20 lg:justify-center items-center">
+
+          <h1 className="mr-[50%] lg:mr-0  [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-3xl md:text-[92px] tracking-[-1.92px] leading-tight md:leading-[91.2px]">
+            We are
+          </h1>
+          <div>
+  <div className="w-full flex justify-center py-4 md:py-8 [font-family:'Inter-Bold',Helvetica] font-bold text-black text-xs md:text-base">
           <img
             className=" w-4 h-3 md:w-7 md:h-6"
             alt="Svg"
             src="https://c.animaapp.com/miuhpmp5biS0W2/img/svg.svg"
           /> Bangalore based
         </div>
-        <div className="w-full flex flex-col md:flex-row gap-4 md:gap-20 justify-center items-center">
-
-          <h1 className=" [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-3xl md:text-[92px] tracking-[-1.92px] leading-tight md:leading-[91.2px]">
-            We are
-          </h1>
           <img className=" w-[200px] h-[240px] md:w-[404px] md:h-[485px] rounded-2xl bg-cover bg-center" src="https://c.animaapp.com/miuhpmp5biS0W2/img/a-cardboard-box-with-stickers-on-it-flying-through-the-air-.png" alt="" />
-          <h1 className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-3xl md:text-[93px] tracking-[-1.92px] leading-tight md:leading-[91.2px]">
+         </div>
+          <h1 className="ml-[60%] lg:ml-0  [font-family:'BDO_Grotesk-Bold',Helvetica]  font-bold text-black text-3xl md:text-[93px] tracking-[-1.92px] leading-tight md:leading-[91.2px]">
             Unravel
           </h1>
         </div>
-        <div className=" w-full flex flex-wrap gap-2 md:gap-0 justify-around items-center py-6 md:py-10 [font-family:'Roboto_Mono',Helvetica] font-bold text-black text-xs md:text-sm tracking-[0.70px]">
-          <p> 52°30'59"N / 13°22'34"E</p>
-          <p className=" [font-family:'Roboto_Mono',Helvetica] font-bold text-black text-xs md:text-sm">
+        <div className="  w-full md:flex  gap-2  justify-around items-center py-6 md:py-10 [font-family:'Roboto_Mono',Helvetica] font-bold text-black text-xs md:text-sm tracking-[0.70px]">
+          <p className="hidden md:block"> 52°30'59"N / 13°22'34"E</p>
+          <p className=" pr-5 [font-family:'Roboto_Mono',Helvetica] font-bold text-black  text-xs md:text-sm">
             EST. YR25
           </p>
-          <p className=" [font-family:'Roboto_Mono',Helvetica] font-bold text-black text-xs md:text-sm">
+          <p className=" float-right pl-5 [font-family:'Roboto_Mono',Helvetica] font-bold text-black text-xs md:text-sm">
             SYSTEM: UNRAVEL.
           </p>
         </div>

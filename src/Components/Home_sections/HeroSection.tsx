@@ -112,7 +112,7 @@ export const HeroSection = () => {
           initial={{ x: '0%', opacity: 0.3, filter: 'blur(2px)' }}
           animate={{ x: '-110%', opacity: [0.3, 1, 0.3], filter: ['blur(1px)', 'blur(0px)', 'blur(1px)'] }}
           transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-          className="text-white whitespace-nowrap mb-10 text-[12px]  "
+          className="text-white whitespace-nowrap  text-[12px]  "
         >
           -scroll to Reveal-scroll to Reveal-scroll to Reveal-scroll to Reveal-scroll Reveal-scroll to Reveal-scroll to Reveal -scroll to Reveal-scroll to Reveal-scroll to Reveal-scroll to Reveal-scroll Reveal-scroll to Reveal-scroll to Reveal -scroll to Reveal-scroll to Reveal-scroll to Reveal-scroll to Reveal-scroll Reveal-scroll to Reveal-scroll to Reveal
         </motion.p>
