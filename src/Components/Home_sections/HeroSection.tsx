@@ -1,6 +1,7 @@
 import { Button } from "../ui/buttons";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import HeroImage from "../../assets/HeroSectionIMage.jpg";
 
 export const HeroSection = () => {
   const [shutterComplete, setShutterComplete] = useState(false);
@@ -27,7 +28,7 @@ export const HeroSection = () => {
         whileInView={{ y: -50 }}
         transition={{ duration: 0.8 }}
       >
-        <div style={{backgroundImage:`url(../src/assets/HeroSectionIMage.jpg)`}} className="absolute inset-0  bg-cover bg-center" />
+        <div style={{backgroundImage:`url(${HeroImage})`}} className="absolute inset-0  bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-50% via-black/70  to-black/70  " >
       <motion.h3
             initial={{ opacity: 0, y: 30 }}
