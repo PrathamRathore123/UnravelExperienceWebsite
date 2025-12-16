@@ -7,7 +7,7 @@ export const Footer = () => {
     <>
     <footer className="w-full md:flex  bg-white text-black py-14">
        {/* CONTACT */}
-        <div className="p-4  rounded-t-2xl h-full  md:w-[50%] bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border border-gray-100 md:bg-white space-y-4  ">
+        <div className="p-4  rounded-t-2xl h-full  md:w-[50%] bg-gray-100  rounded-md bg-clip-padding  backdrop-blur-xl bg-opacity-20 border border-gray-100 md:border-none md:bg-white space-y-4  ">
           <p className="text-[10px] tracking-widest">CONTACT</p>
 
           <p className="text-sm leading-relaxed">

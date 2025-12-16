@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import { Navbartwo } from '../ui/Navbar';
+
 
 export const NotFound = () => {
   return (
     <>
-      <Navbartwo />
+      
       <div className="min-h-screen flex items-center justify-center bg-[#f6f3f0]">
         <div className="text-center">
           <h1 className="text-6xl md:text-[120px] font-bold text-black">404</h1>

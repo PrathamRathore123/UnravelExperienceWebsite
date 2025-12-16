@@ -2,7 +2,7 @@
 import { Button } from "../ui/buttons";
 import { Card, CardContent } from "../ui/card";
 import { Separator } from "../ui/Separator";
-import { Navbartwo } from "../ui/Navbar";
+import { Navbar } from "../ui/Navbar";
 import React from "react";
 import { Link } from "react-router-dom";
 import BackImg from '../../assets/WhatsApp.jpg'
@@ -17,7 +17,7 @@ const whatWeDontDoItems = [
 export const About = () => {
   return (
     <>
-      <div className="h-40"><Navbartwo />
+      <div className="h-40"><Navbar />
       </div>
 
       <div
@@ -166,7 +166,7 @@ export const About = () => {
                 <CardContent className="p-0 flex flex-col items-center text-center">
 
                   <h1 className="text-[50px]/[60px] lg:text-[70px]/[60px] text-[transparent] bg-contain [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold bg-center bg-clip-text  bg-[url(https://c.animaapp.com/miuhpmp5biS0W2/img/we-re-curators.png)]">
-                    We're Curators</h1>
+                    We're <br /> Curators</h1>
                   <br />
                   <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] text-sm font-medium text-[#393636] md:text-2xl tracking-[-0.32px] md:leading-[34px] mb-10 md:mb-16">
                     Every experience we create is hand-built. No templates. No copy-paste itineraries. Just thoughtful design based on who you are and what you're chasing.

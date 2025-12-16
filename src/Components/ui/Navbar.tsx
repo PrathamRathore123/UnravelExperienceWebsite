@@ -1,127 +1,152 @@
-
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-
-
-export const NavbarOne = () => {
+import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+import {UserRound} from "lucide-react"
+import  Image  from "../../assets/UnravelLogo.png";
+import  image from '../../assets/HeroSectionIMage.jpg'
+export const Navbar = () => {
+ 
   const [open, setOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+
+  
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <div className="sticky top-0 z-50 w-full flex justify-center py-4 bg-transparent">
-      <nav
-        className="
-          bg-black text-white px-4 md:px-8 py-3
-          rounded-full shadow-xl
-          flex items-center justify-between md:gap-10
-          transition-all duration-300
-          w-full max-w-4xl
-        "
-      >
-        {/* Logo */}
-        <Link to="/" className="bg-white text-black font-bold px-4 md:px-5 py-2 rounded-full text-sm md:text-base">
-          UNRAVEL
+   
+      <header className="w-full flex justify-center py-4  ">
+      {/* NAVBAR WRAPPER */}
+      <nav className={`relative flex items-center justify-between
+        bg-black text-white px-2 py-1
+        rounded-full shadow-xl
+        w-[300px]
+        md:w-[600px] 
+text-base
+      `}>
+
+        {/* LOGO */}
+        <Link
+          to="/"
+          className="bg-white text-black font-bold px-4 py-2 rounded-full"
+        >
+         <img className="w-20" src={Image} alt="" />
         </Link>
 
-        {/* Nav Items - Hidden on mobile */}
-        <ul className="hidden md:flex items-center gap-4 md:gap-8 text-sm opacity-80">
-          <li className="hover:opacity-100 cursor-pointer"><Link to="/">Home</Link></li>
-          <li className="hover:opacity-100 cursor-pointer"><Link to="/about">About</Link></li>
-          <li className="hover:opacity-100 cursor-pointer"><Link to="/experiences">Experiences</Link></li>
-          <li className="hover:opacity-100 cursor-pointer"><Link to="/contact">Contact</Link></li>
-        </ul>
+        {/* DESKTOP MENU */}
+        <ul className="flex items-center gap-8 text-xs ">
+          <li className="hidden md:block hover:opacity-100"><Link to="/">Home</Link></li>
+          <li className="hidden md:block hover:opacity-100"><Link to="/about">About</Link></li>
+          <li className="hidden md:block hover:opacity-100">
+            <Link to="/experiences" className="hidden md:block flex items-center gap-1">
+              Experiences
+              <sup className="bg-gray-900 text-white rounded-full px-2 py-[2px] text-[10px]">5</sup>
+            </Link>
+          </li>
+          <li className="hidden md:block hover:opacity-100"><Link to="/contact">Contact</Link></li>
+      
 
-        {/* Hamburger - Always visible */}
-        <div  onClick={() => { setOpen(!open)  }} className={`cursor-pointer p-3 md:p-5 rounded-full  ${open ? "bg-white" : "bg-black"}`}>
-          <div className={`w-5 md:w-6 h-[2px]  mb-[4px] md:mb-[6px]  ${open ? "bg-black" : "bg-white"}`}></div>
-          <div className={`w-5 md:w-6 h-[2px]   ${open ? "bg-black" : "bg-white"}`}></div>
+        {/* HAMBURGER + DROPDOWN ANCHOR */}
+        <div className="relative block" ref={dropdownRef}>
+          <button
+            onClick={() => setOpen(!open)}
+            className={`p-3 md:p-4 rounded-full transition
+              ${open ? "bg-white" : "bg-black"}
+            `}
+          >
+            <div className={`w-5 md:w-6 h-[2px] mb-1
+              ${open ? "bg-black" : "bg-white"}
+            `}></div>
+            <div className={`w-5 md:w-6 h-[2px]
+              ${open ? "bg-black" : "bg-white"}
+            `}></div>
+          </button>
+ 
+          {/* DROPDOWN */}
+            {open && <NavbarDropdown />}
         </div>
+         </ul>
       </nav>
-      {open && (
-        <div id="profileCard" className=" z-[999] absolute bg-black min-h-[300px] w-[90%] max-w-[450px] top-20 left-[50%] translate-x-[-50%] text-white rounded-lg shadow-lg">
+    
+    </header>
+   
 
-          <div className='p-4 md:p-6'>
-            <div className='hidden md:block absolute right-[0px] top-[-78px] h-[100px] w-[50px] bg-black rounded-s [-webkit-mask-image:radial-gradient(circle_42px_at_left_35px_,transparent_99%,black_100%)]'></div>
-            <div className='flex flex-col md:flex-row justify-between items-start gap-4'>
-              <div>
-                <h3 className="text-gray-400 text-sm md:text-base mb-2">WE ARE UNRAVEL</h3>
-                <p className="mb-4 text-xl md:text-3xl w-full md:w-[60%]">The trips your friends will ask you about.</p>
-              </div>
-              <Link to={'/login'}><button className="bg-white text-gray-900 px-5 md:px-7 py-2 rounded-full hover:bg-gray-200 transition text-sm md:text-base">Login</button></Link>
-            </div>
-            <div className='md:hidden mt-4 flex flex-col gap-3 text-sm'>
-              <Link to="/" className="hover:opacity-70" onClick={() => setOpen(false)}>Home</Link>
-              <Link to="/about" className="hover:opacity-70" onClick={() => setOpen(false)}>About</Link>
-              <Link to="/experiences" className="hover:opacity-70" onClick={() => setOpen(false)}>Experiences</Link>
-              <Link to="/contact" className="hover:opacity-70" onClick={() => setOpen(false)}>Contact</Link>
-            </div>
+  );
+};
+
+export default Navbar;
+
+/* ================= DROPDOWN ================= */
+
+const NavbarDropdown = () => {
+  return (
+    <div
+      className="
+        absolute
+        -right-10
+        md:-right-14
+
+        mt-4
+        z-50
+        w-[45vw]
+        max-w-[420px]
+      "
+    >
+      {/* CUTOUT / NOTCH */}
+      <div className="absolute -top-17 right-0 w-14 h-20 bg-black rounded-t [-webkit-mask-image:radial-gradient(circle_42px_at_left_35px_,transparent_99%,black_100%)] " />
+
+      {/* DROPDOWN CARD */}
+      <div className="w-full
+        bg-black text-white
+        rounded-4xl rounded-tr-none shadow-2xl
+        mt-1
+        p-6
+      ">
+        <div className="flex flex-col md:flex-row justify-between gap-6">
+          <div className="hidden md:block">
+           
+            <h4 className=" text-gray-400 text-sm mb-2">
+              WE ARE UNRAVEL
+            </h4>
+            <p className=" text-lg md:text-2xl leading-tight max-w-[260px]">
+              The trips your friends will ask you about.
+            </p>
           </div>
+
+          <Link to="/login">
+            <button className=" flex gap-1
+              bg-white text-black float-right
+              font-bold
+              px-6 py-2 rounded-full
+              hover:bg-gray-200 transition
+              whitespace-nowrap
+            ">
+             <UserRound className="text-sm" /> Login
+            </button>
+          </Link>
         </div>
-      )}
+
+        {/* MOBILE LINKS */}
+        <div className="md:hidden mt-6 flex flex-col gap-1 text-xl">
+          <Link to="/" className=" ">Home</Link>
+          <Link to="/about" className="">About</Link>
+          <Link to="/experiences" className=" ">Experiences</Link>
+          <Link to="/contact">Contact</Link>
+        </div>
+        <p className="text-center px-14 my-4">No junk Trips. Just well-composed Strategic plan ready to experience whatever you need to feel.</p>
+         <div style={{backgroundImage:`url(${image})`}} className="w-full h-25 rounded-lg bg-center bg-cover">
+          <h1 className="text-base p-2">HI Champ</h1>
+          <p className="p-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, accusamus. 
+            Aliquam, dolore laudantium.</p>
+         </div>
+      </div>
     </div>
   );
 };
-
-export const Navbartwo = () => {
-  const [open, setOpen] = useState(false);
-  return (
-    <>
-      <nav className="w-full absolute z-[10] flex justify-center py-8 px-4">
-        <div className="
-        flex items-center justify-between px-6 py-3
-        border border-[#e5e5e5]
-        rounded-full shadow-sm bg-white
-        max-w-[800px] w-[80%] md:w-[80%] lg:w-[60%]
-      ">
-
-          {/* Logo Capsule */}
-          <div className="
-          bg-black text-white px-4 md:px-5 py-2 rounded-full
-          flex items-center justify-center font-bold
-          tracking-wider text-[12px] md:text-[14px]
-        ">
-            UNRAVEL
-          </div>
-          {/* Menu Items */}
-          <div className="hidden md:flex items-center gap-4 lg:gap-10 text-[13px] lg:text-[15px] text-[#222]">
-            <Link to="/" className="hover:opacity-70">Home</Link>
-            <Link to="/about" className="hover:opacity-70">About</Link>
-
-            {/* Experiences with dot */}
-            <Link to="/experiences" className="flex items-center gap-1 hover:opacity-70">
-              Experiences
-          <sup className='bg-black text-white p-2 lg:p-3 rounded-full text-[10px]'>5</sup>
-           </Link>
-
-            <Link to="/contact" className="hover:opacity-70">Contact</Link>
-          </div>
-            {/* Right Menu Icon */}
-            <div  onClick={() => { setOpen(!open)  }} className={`cursor-pointer p-3 md:p-5 rounded-full  ${open ? "bg-black" : "bg-white"}`}>
-          <div className={`w-5 md:w-6 h-[2px]  mb-[5px] md:mb-[6px]  ${open ? "bg-white" : "bg-black"}`}></div>
-          <div className={`w-5 md:w-6 h-[2px]   ${open ? "bg-white" : "bg-black"}`}></div>
-        </div>
-        </div>
-      </nav>
-      {open && (
-      <div id="profileCard" className="absolute z-[999] bg-black min-h-[250px] w-[90%] max-w-[450px] top-26 left-1/2 transform -translate-x-1/2 md:left-auto md:right-35 md:top-29 md:transform-none text-white rounded-lg shadow-lg">
-        <div className='p-6 md:p-6'>
-          <div className='hidden md:block absolute right-[0px] top-[-78px] h-[100px] w-[50px] bg-black rounded-s [-webkit-mask-image:radial-gradient(circle_42px_at_left_35px_,transparent_99%,black_100%)]'></div>
-          <div className='flex flex-col md:flex-row justify-between items-start gap-6 md:gap-4'>
-            <div className='flex-1'>
-              <h3 className="text-gray-400 text-sm md:text-base mb-3 md:mb-2">WE ARE UNRAVEL</h3>
-              <p className="mb-6 md:mb-4 text-lg md:text-3xl w-full md:w-[60%] leading-tight">The trips your friends will ask you about.</p>
-            </div>
-            <Link to={'/login'}><button className="bg-white text-gray-900 px-6 md:px-7 py-3 md:py-2 rounded-full hover:bg-gray-200 transition text-sm md:text-base font-medium whitespace-nowrap">Login</button></Link>
-          </div>
-          <div className='md:hidden mt-6 flex flex-col gap-4 text-base'>
-            <Link to="/" className="hover:opacity-70 py-2 border-b border-gray-700" onClick={() => setOpen(false)}>Home</Link>
-            <Link to="/about" className="hover:opacity-70 py-2 border-b border-gray-700" onClick={() => setOpen(false)}>About</Link>
-            <Link to="/experiences" className="hover:opacity-70 py-2 border-b border-gray-700" onClick={() => setOpen(false)}>Experiences</Link>
-            <Link to="/contact" className="hover:opacity-70 py-2" onClick={() => setOpen(false)}>Contact</Link>
-          </div>
-        </div>
-      </div>
-       )}
-    </>
-
-  );
-};
-

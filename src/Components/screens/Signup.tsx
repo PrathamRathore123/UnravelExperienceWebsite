@@ -1,7 +1,9 @@
 import  { useState } from 'react'
 import { useGoogleLogin } from '@react-oauth/google'
-import { Navbartwo } from '../ui/Navbar';
+import { Navbar } from '../ui/Navbar';
 import { useNavigate } from 'react-router-dom';
+import image from '../../assets/WhatsApp.jpg'
+import Logo from '../../assets/UnravelLogo.png' 
 
 export  function Signup() {
   const [showPassword, setShowPassword] = useState(false);
@@ -55,38 +57,41 @@ export  function Signup() {
         headers: { Authorization: `Bearer ${tokenResponse.access_token}` },
       }).then(res => res.json());
       console.log('User Info:', userInfo);
-      // TODO: Send userInfo to your backend
     },
     onError: (error) => console.error('Login Failed:', error)
   });
   return (
     <>
-     <Navbartwo></Navbartwo>
+     <Navbar></Navbar>
    
     <br /><br /><br /><br /><br />
     
     
       
-      <div className="w-full min-h-screen flex flex-col md:flex-row justify-center gap-8 md:gap-20 items-center mb-20 px-4">
+      <div className="w-[100%] h-[120vh] md:min-h-screen flex flex-row justify-center gap-8 md:gap-20 items-center mb-20 md:px-4">
       
-        <div className="text-center md:text-left">
-          <img src="" alt="" />
-          <h1 className="text-2xl md:text-[28px] font-semibold leading-tight">Travel</h1>
-          <p className="text-xl md:text-[26px] -mt-1">better</p>
-          <p className="text-xs md:text-[13px] text-gray-600 mt-2 max-w-[264px] leading-tight mx-auto md:mx-0">
+        <div className="text-left ">
+          <img className=' ml-2 w-20' src={Logo} alt="" />
+          <p className='ml-2 text-[grey]'>WE ARE UNRAVEL</p>
+
+          <h1 className="hidden md:block ml-2 text-2xl md:text-[28px] font-semibold leading-tight">Travel</h1>
+          <h1 className="block md:hidden ml-2 text-2xl md:text-[28px] font-semibold leading-tight">Not just an <br />atelier, we are <br />Effortless.</h1>
+          
+          <p className="hidden md:block ml-2 text-xl md:text-[26px] -mt-1">better</p>
+          <p className="block md:hidden ml-2 text-xs md:text-[13px] text-gray-600 mt-2 max-w-[264px] mb-35 leading-tight  md:mb-0">
             Get first access to Unravel One and the kind of perks most people don’t know exist.
           </p>
 
 
           <img
-            src="/banner.png"
-            className="w-full max-w-[430px] h-[260px] rounded-xl object-cover mt-6"
+            src={image}
+            className="w-[100%] h-100 md:max-w-[430px] md:blur-none blur-xs md:h-[260px]  md:rounded-xl object-cover mt-6"
           />
         </div>
 
         {/* SIGN UP CARD */}
 
-    <div className="w-full max-w-[470px] bg-white shadow-lg border border-gray-100 rounded-xl p-8">
+    <div className="absolute md:static top-[50%] w-[80%] mt-15 max-w-[470px] bg-white shadow-lg border border-gray-100 rounded-xl p-8">
           <h2 className="text-[20px] font-semibold mb-6">Sign Up</h2>
 
           {error && <div className="bg-red-100 text-red-700 p-2 rounded mb-4 text-sm">{error}</div>}

@@ -66,7 +66,7 @@ export const Calendar: React.FC = () => {
   }, [month, year]);
 
   return (
-    <div className="w-[320px] rounded-xl border p-6 shadow-sm bg-white">
+    <div className="w-full md:w-[320px] rounded-xl border p-6 shadow-sm bg-white">
       
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
@@ -114,7 +114,16 @@ export const Calendar: React.FC = () => {
           );
         })}
       </div>
-    </div>
+      <div className="pr-10 mt-10 block md:hidden">
+      <p className="text-[grey] mt-5 ">8 AM</p>
+      <h2 className="text-md">Breakfast</h2>
+    
+      <p className="text-[grey] mt-5">10 AM</p>
+      <h2>Travel to venue</h2>
+      
+      <p className="text-[grey] mt-5">10:30 AM</p>
+      <h2>Meet Santa</h2>
+    </div></div>
   );
 };
 

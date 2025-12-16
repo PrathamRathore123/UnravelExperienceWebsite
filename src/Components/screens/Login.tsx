@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { useGoogleLogin } from '@react-oauth/google';
-import { Navbartwo } from "../ui/Navbar";
+import { Navbar } from "../ui/Navbar";
 import { useNavigate } from 'react-router-dom';
+import images from '../../assets/WhatsApp.jpg';
+import Logo from '../../assets/UnravelLogo.png'
+
+
+
 
 export  const Login=()=> {
   const [showPassword, setShowPassword] = useState(false);
@@ -43,21 +48,22 @@ export  const Login=()=> {
         headers: { Authorization: `Bearer ${tokenResponse.access_token}` },
       }).then(res => res.json());
       console.log('User Info:', userInfo);
-      // TODO: Send userInfo to your backend
+  
     },
     onError: (error) => console.error('Login Failed:', error)
   });
   return (
     <>
-    <Navbartwo/>
-    <div className="w-full min-h-screen bg-white flex flex-col items-center justify-start px-4 md:px-14 py-10 font-sans">
-      {/* LOGIN SECTION EXACT CLONE */}
+    <Navbar/>
+    
+    <div className="w-full min-h-screen bg-white flex flex-col items-center justify-start  md:px-14 py-10 font-sans">
+      
       <div className="w-full min-h-screen flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20">
-        {/* LEFT LOGIN CARD */}
-        <div className="w-full max-w-[470px] bg-white shadow-2xl rounded-xl p-7 border border-gray-100">
+        
+        <div className="absolute top-[55%] md:static z-8 w-[80%] max-w-[470px] bg-white shadow-2xl mx-2 rounded-xl p-5 md:p-7 border border-gray-100">
           <h2 className="text-[30px] font-semibold mb-10">Login</h2>
-          {error && <div className="bg-red-100 text-red-700 p-2 rounded mb-4 text-sm">{error}</div>}
-          <form onSubmit={handleLogin}>
+          {error && <div className=" bg-red-100 text-red-700 p-2 rounded mb-4 text-sm">{error}</div>}
+          <form className="" onSubmit={handleLogin}>
             <div className="flex flex-col mb-6">
               <label className="text-[13px] mb-1">Username</label>
               <input
@@ -101,19 +107,26 @@ export  const Login=()=> {
           </button>
         </div>
         {/* RIGHT SIDE */}
-        <div className="flex flex-col md:pl-10 items-center md:items-start">
-          <img className="h-[30px] w-[130px] mb-4" src="https://c.animaapp.com/miww62p4QlXFLl/img/untitled-design-7-removebg-preview-png-1.png" alt="" />
-          <h1 className="text-2xl md:text-[28px] font-semibold leading-tight text-center md:text-left">
+        <div className="flex flex-col mt-20  md:pl-10 md:items-center md:items-start">
+          <img className="h-[30px] w-[130px] pl-2 mb-2  " src={Logo} alt="" />
+         <p className="text-[grey] ml-2 " >WE ARE UNRAVEL</p>
+          <h1 className="hidden md:block text-2xl md:text-[28px] font-semibold leading-tight ml-2 text-left">
             Good to see <br /> you
           </h1>
-          <p className="text-[11px] text-gray-500 mt-1 text-center md:text-left">Your next trip is waiting</p>
+          <h1 className="block md:hidden text-4xl md:text-[28px] font-semibold leading-tight ml-2 text-left">
+            Not just an <br/> atelier, we are <br/> Effortless
+          </h1>
+          <p className="hidden md:block text-[11px] text-gray-500 mt-1 text-left">Your next trip is waiting</p>
+          <p className= "block md:hidden text-[11px] w-[70%] text-gray-500 pl-2 mt-1 text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati esse sequi sed adipisci minus animi suscipit ut vero, eaque ducimus?</p>
+          
           <img
-            src="/banner.png"
-            className="w-full max-w-[430px] h-[250px] rounded-xl object-cover mt-6"
+            src={images}
+            className="w-full mt-50  blur-xs md:blur-none h-[50vh] md:max-w-[430px] md:h-[250px]  md:rounded-xl object-cover md:mt-6"
           />
         </div>
       </div>
     </div>
+    <img src={Logo} alt="" />
     </>
   );
 }

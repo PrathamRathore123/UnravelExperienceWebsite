@@ -1,7 +1,7 @@
 import { ArrowRightIcon } from "lucide-react";
 import { Button } from "../ui/buttons";
 import { Card, CardContent } from "../ui/card";
-import { Navbartwo } from "../ui/Navbar";
+import { Navbar } from "../ui/Navbar";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -64,7 +64,7 @@ export const Experiences = () => {
     >    
       <div id='winter-first' className="w-full relative">
         <section className=" w-full h-[1010px] bg-[url('https://c.animaapp.com/miu74dag18RXJR/img/rectangle-24.png')]">
-      <Navbartwo/>
+      <Navbar/>
 
           
 
@@ -130,7 +130,7 @@ export const Experiences = () => {
             variants={fadeUp}
             initial="rest"
             whileHover="hover"
-            className="relative h-[650px] overflow-hidden rounded-[20px] border-0 shadow-none"
+            className="relative h-[500px] md:h-[650px] overflow-hidden rounded-[20px] border-0 shadow-none"
           >
           <Card className="h-full">
             <CardContent className="p-0 h-full ">
@@ -177,7 +177,7 @@ export const Experiences = () => {
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeUp}
         className="w-full flex items-center justify-center py-16 px-4">
-      <h2 className="max-w-[1070px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-6xl text-center tracking-[-1.00px] leading-[70px]">
+      <h2 className="max-w-[1070px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-3xl md:text-6xl text-center tracking-[-1.00px] leading-[50px]">
         <span className="text-[#0000004c] tracking-[-0.60px]">
           Reserve any Upcoming Experience from above for yourself with{" "}
         </span>
