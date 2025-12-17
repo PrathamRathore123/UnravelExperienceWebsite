@@ -1,4 +1,3 @@
-
 import { Button } from "../ui/buttons";
 import { Card, CardContent } from "../ui/card";
 import { Separator } from "../ui/Separator";
@@ -66,7 +65,7 @@ export const About = () => {
               Why We Exist
             </h2>
 
-            <p className="text-center [font-family:'Inter-Bold',Helvetica] font-bold text-[#00000080] text-sm md:text-base tracking-[-0.32px] leading-[16.8px] mb-12">
+            <p className=" text-center [font-family:'Inter-Bold',Helvetica] font-bold text-[#00000080] text-sm md:text-base tracking-[-0.32px] leading-[16.8px] mb-12">
               Travel shouldn't feel like work
             </p>
 
@@ -99,7 +98,7 @@ export const About = () => {
                 />
               </div>
 
-              <p className="text-center [font-family:'BDO_Grotesk-Black',Helvetica] font-black text-[#2e2e2e] text-2xl md:text-[34px] max-w-[554px] mx-auto md:col-span-3">
+              <p className="mt-5 lg:mt-0 text-center [font-family:'BDO_Grotesk-Black',Helvetica] font-black text-[#2e2e2e] text-2xl md:text-[34px] max-w-[554px] mx-auto md:col-span-3">
                 So we built Unravel. For people who want to go places, not just research them all day.
               </p>
             </div>
@@ -186,7 +185,7 @@ export const About = () => {
 
                   <br />
 
-                  <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#3a3636] md:text-2xl tracking-[-0.32px] md:leading-[34px] mb-9">
+                  <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#3a3636] text-sm md:text-2xl tracking-[-0.32px] md:leading-[34px] mb-9">
                     And when you travel with us, everything is handled. Flights. Stays. Experiences. Transfers. Visas. Travel protection. The invisible work that makes a trip feel seamless instead of stressful.
                   </p>
 

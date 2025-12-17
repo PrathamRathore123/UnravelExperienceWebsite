@@ -90,20 +90,20 @@ const NavbarDropdown = () => {
     <div
       className="
         absolute
-        -right-10
-        md:-right-14
-
-        mt-4
+        -right-9
+        md:-right-8
+        mt-3
         z-50
         w-[45vw]
         max-w-[420px]
       "
     >
       {/* CUTOUT / NOTCH */}
-      <div className="absolute -top-17 right-0 w-14 h-20 bg-black rounded-t [-webkit-mask-image:radial-gradient(circle_42px_at_left_35px_,transparent_99%,black_100%)] " />
+      <div className="absolute -top-16 right-0 w-14 h-19 md:h-20 bg-black rounded-t md:[-webkit-mask-image:radial-gradient(circle_20px_at_left_35px_,transparent_99%,black_100%)] [-webkit-mask-image:radial-gradient(circle_40px_at_left_35px_,transparent_99%,black_100%)] " />
 
       {/* DROPDOWN CARD */}
-      <div className="w-full
+      <div className="md:w-full
+      w-[100% ]
         bg-black text-white
         rounded-4xl rounded-tr-none shadow-2xl
         mt-1
@@ -140,10 +140,10 @@ const NavbarDropdown = () => {
           <Link to="/experiences" className=" ">Experiences</Link>
           <Link to="/contact">Contact</Link>
         </div>
-        <p className="text-center px-14 my-4">No junk Trips. Just well-composed Strategic plan ready to experience whatever you need to feel.</p>
-         <div style={{backgroundImage:`url(${image})`}} className="w-full h-25 rounded-lg bg-center bg-cover">
+        <p className="text-center sm:px-14 my-4 ">No junk Trips. Just well-composed Strategic plan ready to experience whatever you need to feel.</p>
+         <div style={{backgroundImage:`url(${image})`}} className="overflow-hidden w-full h-25 rounded-lg bg-center bg-cover">
           <h1 className="text-base p-2">HI Champ</h1>
-          <p className="p-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, accusamus. 
+          <p className="p-2 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, accusamus. 
             Aliquam, dolore laudantium.</p>
          </div>
       </div>
