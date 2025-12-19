@@ -4,6 +4,7 @@ export const itenaryData: any = {
     subtitle: "London in December doesn't try to impress you. It just is",
     duration: "8 Nights | 9 Days",
     location: "London, United Kingdom",
+    pdf:'/Folder/A London Christmas.txt',
     heroImages: [
       "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-15.png",
       "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-18.png",
@@ -69,6 +70,7 @@ export const itenaryData: any = {
     subtitle: "Paris in Winter is for people who know that gray skies make the lights glow brighter",
     duration: "7 Days | Paris",
     location: "Paris, France",
+    pdf:'/Folder/A Parisian Noël.txt',
     heroImages: [
       "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-15.png",
       "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-18.png",
@@ -128,6 +130,7 @@ export const itenaryData: any = {
     subtitle: "If you've ever wanted to feel eight years old again, this is how",
     duration: "7 Days | Lapland, Finland",
     location: "Lapland, Finland",
+    pdf:'/Folder/A week with Santa.txt',
     heroImages: [
       "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-15.png",
       "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-18.png",
@@ -144,6 +147,7 @@ export const itenaryData: any = {
       {
         day: "Day 2 ",
         title:"Meet Santa",
+        
         description: "The magic begins.",
         image: "https://c.animaapp.com/mirmmjt1sI61N8/img/picture---6e231363-bc06-4099-b173-b736f0a14333-jpeg.png",
       },

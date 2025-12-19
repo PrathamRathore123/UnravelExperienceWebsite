@@ -91,15 +91,15 @@ const NavbarDropdown = () => {
       className="
         absolute
         -right-9
-        md:-right-8
-        mt-3
+        md:-right-9
+        mt-2
         z-50
         w-[45vw]
         max-w-[420px]
       "
     >
       {/* CUTOUT / NOTCH */}
-      <div className="absolute -top-16 right-0 w-14 h-19 md:h-20 bg-black rounded-t md:[-webkit-mask-image:radial-gradient(circle_20px_at_left_35px_,transparent_99%,black_100%)] [-webkit-mask-image:radial-gradient(circle_40px_at_left_35px_,transparent_99%,black_100%)] " />
+      <div className="absolute -top-15 right-0 w-14 h-19 md:h-20 bg-black rounded-t md:[-webkit-mask-image:radial-gradient(circle_32px_at_left_32px_,transparent_99%,black_100%)] [-webkit-mask-image:radial-gradient(circle_40px_at_left_35px_,transparent_99%,black_100%)] " />
 
       {/* DROPDOWN CARD */}
       <div className="md:w-full

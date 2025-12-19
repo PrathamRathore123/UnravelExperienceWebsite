@@ -15,6 +15,7 @@ interface Day {
   title: string;
   description: string;
   image: string;
+ 
 }
 
 
@@ -173,9 +174,9 @@ export  const Itenary = () => {
                 <div className="flex-shrink-0 py-10">
               <Calendar />
             </div>
-              <Button className="bg-[#222222] text-white rounded-[8px] px-12 py-5 h-auto [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-xl tracking-[-0.32px] leading-[19.6px] hover:bg-[#333333] transition-colors">
+              <a href={`${data.pdf}`} download={`${data.title}.pdf`} className="bg-[#222222] text-white rounded-[8px] px-12 py-5 h-auto [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-xl tracking-[-0.32px] leading-[19.6px] hover:bg-[#333333] transition-colors">
                 Download Itinerary
-              </Button>
+              </a>
             </div>
 
           
