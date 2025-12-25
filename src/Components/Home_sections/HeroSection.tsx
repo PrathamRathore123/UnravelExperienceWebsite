@@ -12,7 +12,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative  h-[90vh] md:min-h-screen flex items-center justify-center mt-30 md:mt-[218px] mb-32 mx-2">
+    <section className="relative  h-[100vh] md:min-h-screen flex items-center justify-center mt-30 md:mt-[218px] mb-32 mx-6">
       {/* Black shutter reveal */}
       <motion.div
         initial={{ scaleY: 1 }}
@@ -30,18 +30,8 @@ export const HeroSection = () => {
       >
         <div style={{backgroundImage:`url(${HeroImage})`}} className="absolute inset-0  bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-50% via-black/70  to-black/70  " >
-      <motion.h3
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.7, ease: [0.65, 0, 0.35, 1] }}
-            className=" block md:hidden   [font-family:'BDO_Grotesk-Medium',Helvetica] relative z-10 font-medium text-white text-xl text-center mt-5 tracking-[-0.88px] leading-tight md:leading-[50px] max-w-[647px]"
-          >
-          Digital Experience Design
-        </motion.h3>
-        <motion.hr     initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.7, ease: [0.65, 0, 0.35, 1] }}
-           className="  block md:hidden   w-[80%] border border-b-white border-dotted border-2 m-auto mt-3" />
+      
+        
       </div>
       </motion.div>
 

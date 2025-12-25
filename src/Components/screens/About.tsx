@@ -61,7 +61,7 @@ export const About = () => {
         {/* Why We Exist Section */}
         <section className="relative w-full bg-gradient-to-b from-white to-[#f4f4f4]">
           <div className="max-w-[1708px] mx-auto px-4 md:px-12">
-            <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-3xl md:text-5xl tracking-[-0.32px] leading-tight md:leading-[17px] mb-4">
+            <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-3xl md:text-4xl tracking-[-0.32px] leading-tight md:leading-[17px] mb-4">
               Why We Exist
             </h2>
 
@@ -110,24 +110,24 @@ export const About = () => {
 
         {/* How We Think About Travel */}
         <section className="relative w-[100%] py-20">
-          <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#2b2b2b] text-3xl md:text-5xl tracking-[-1.92px] leading-tight md:leading-[91.2px] mb-12 md:mb-16">
+          <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#2b2b2b] text-3xl md:text-4xl tracking-[-1.92px] leading-tight md:leading-[91.2px] mb-12 md:mb-16">
             How We Think About Travel
           </h2>
           <div className="  px-5">
             <div className="w-full flex flex-col-reverse md:flex-row justify-between items-center ">
               <div className="md:w-[90%] ">
-                <h3 className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-lg md:text-[28px] tracking-[-0.32px] leading-normal md:leading-[91.2px] mb-4">
+                <h3 className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-lg md:text-[24px] tracking-[-0.32px] leading-normal md:leading-[91.2px] mb-4">
                   It's not about ticking boxes.
                 </h3>
-                <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-black text-base md:text-[30px] tracking-[-0.32px] leading-normal md:leading-[40px] mb-6 md:mb-8">
+                <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-black text-base md:text-[26px] tracking-[-0.32px] leading-normal md:leading-[40px] mb-6 md:mb-8">
                   Good travel isn't about seeing the most. It's about feeling the most. The difference between visiting a city and actually being somewhere.
                 </p>
 
-                <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-black text-base md:text-[30px] tracking-[-0.32px] leading-normal md:leading-[40px] mb-6 md:mb-8">
+                <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-black text-base md:text-[26px] tracking-[-0.32px] leading-normal md:leading-[40px] mb-6 md:mb-8">
                   We design trips around how you want to feel not just where you want to go. Because the best memories aren't made from itineraries. They're made from the moment you stop checking your phone and realize exactly where you are.
                 </p>
 
-                <p className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-base md:text-[30px] tracking-[-0.32px] leading-normal md:leading-[40px]">
+                <p className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-base md:text-[26px] tracking-[-0.32px] leading-normal md:leading-[40px]">
                   We believe in slow mornings, long dinners, and leaving room for the things you didn't plan.
                 </p>
               </div>
@@ -156,18 +156,18 @@ export const About = () => {
         {/* What Makes Us Different */}
         <section className="relative w-full py-20 bg-[#f6f3f0]">
           <div className="max-w-[1708px] mx-auto px-4 md:px-12">
-            <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-3xl md:text-6xl tracking-[-0.32px] leading-[54px] mb-10">
+            <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-3xl md:text-4xl tracking-[-0.32px] leading-[54px] mb-10">
               What Makes Us Different
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 px-5">
-              <Card className="bg-white rounded-[12px] border border-[#00000026] shadow-[0px_4px_29px_#0000001a] py-5 px-12">
+              <Card className="bg-white rounded-[12px] border border-[#00000026] shadow-[0px_4px_29px_#0000001a] py-8 px-10">
                 <CardContent className="p-0 flex flex-col items-center text-center">
 
-                  <h1 className="text-[50px]/[60px] lg:text-[70px]/[60px] text-[transparent] bg-contain [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold bg-center bg-clip-text  bg-[url(https://c.animaapp.com/miuhpmp5biS0W2/img/we-re-curators.png)]">
+                  <h1 className="text-[40px]/[40px] lg:text-[50px]/[50px] text-[transparent] bg-contain [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold bg-center bg-clip-text  bg-[url(https://c.animaapp.com/miuhpmp5biS0W2/img/we-re-curators.png)]">
                     We're <br /> Curators</h1>
                   <br />
-                  <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] text-sm font-medium text-[#393636] md:text-2xl tracking-[-0.32px] md:leading-[34px] mb-10 md:mb-16">
+                  <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] text-sm font-medium text-[#393636] md:text-xl tracking-[-0.32px] md:leading-[34px] mb-10 md:mb-14">
                     Every experience we create is hand-built. No templates. No copy-paste itineraries. Just thoughtful design based on who you are and what you're chasing.
                   </p>
 
@@ -177,15 +177,15 @@ export const About = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-white rounded-[12px] border border-[#00000026] shadow-[0px_4px_29px_#0000001a] py-7 px-12">
+              <Card className="bg-white rounded-[12px] border border-[#00000026] shadow-[0px_4px_29px_#0000001a] py-8 px-10">
                 <CardContent className="p-0 flex flex-col items-center text-center">
 
-                  <h1 className="text-[50px]/[60px] lg:text-[70px]/[60px]   text-[transparent] bg-contain [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold bg-center bg-clip-text bg-contain  bg-[url(https://c.animaapp.com/miuhpmp5biS0W2/img/not-sellers.png)]">
+                  <h1 className="text-[40px]/[40px] lg:text-[50px]/[50px]   text-[transparent] bg-contain [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold bg-center bg-clip-text bg-contain  bg-[url(https://c.animaapp.com/miuhpmp5biS0W2/img/not-sellers.png)]">
                     Not <br /> Sellers</h1>
 
                   <br />
 
-                  <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#3a3636] text-sm md:text-2xl tracking-[-0.32px] md:leading-[34px] mb-9">
+                  <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#3a3636] text-sm md:text-xl tracking-[-0.32px] md:leading-[34px] mb-9">
                     And when you travel with us, everything is handled. Flights. Stays. Experiences. Transfers. Visas. Travel protection. The invisible work that makes a trip feel seamless instead of stressful.
                   </p>
 
@@ -201,7 +201,7 @@ export const About = () => {
         {/* What We Don't Do */}
         <section className="relative w-full py-20">
           <div className="max-w-[1708px] mx-auto px-4 md:px-12">
-            <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#222222] text-4xl md:text-6xl tracking-[-0.32px] leading-[45px] mb-4">
+            <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#222222] text-3xl md:text-4xl tracking-[-0.32px] leading-[45px] mb-4">
               What We Don't Do
             </h2>
 
@@ -213,7 +213,7 @@ export const About = () => {
               <CardContent className="p-0">
                 {whatWeDontDoItems.map((item, index) => (
                   <React.Fragment key={index}>
-                    <p className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-[#222222] text-sm  sm:text-lg lg:text-[25px] tracking-[-0.32px] leading-[34px] py-[24px] md:py-[32px] px-6 md:px-10">
+                    <p className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-[#222222] text-sm  sm:text-lg  tracking-[-0.32px] leading-[34px] py-[24px] md:py-[30px] px-6 md:px-10">
                       {item}
                     </p>
                     <hr className="w-[90%] m-auto" />
@@ -227,11 +227,11 @@ export const About = () => {
 
             <Card className="bg-white rounded-[13px] shadow-[0px_4px_20px_#00000026] max-w-[776px] mx-auto p-8 md:p-12">
               <CardContent className="p-0 flex flex-col items-center justify-center gap-4 md:gap-6">
-                <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#222222] text-lg md:text-[25px] text-center tracking-[-0.32px] leading-[34px]">
+                <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#222222] text-lg md:text-[20px] text-center tracking-[-0.32px] leading-[34px]">
                   We don't believe in squeezing 12 things into one day just because you're there. We don't design trips for people who want to brag about how many countries they've been to.
                 </p>
 
-                <p className="[font-family:'BDO_Grotesk-ExtraBold',Helvetica] font-extrabold text-[#222222] text-lg md:text-[25px] text-center tracking-[-0.32px] leading-[34px]">
+                <p className="[font-family:'BDO_Grotesk-ExtraBold',Helvetica] font-extrabold text-[#222222] text-lg md:text-[20px] text-center tracking-[-0.32px] leading-[34px]">
                   And we definitely don't make you figure out the boring parts on your own.
                 </p>
               </CardContent>
@@ -241,7 +241,7 @@ export const About = () => {
 
         {/* How We Choose Experiences */}
         <section className=" w-full py-20 bg-[#f6f3f0]">
-           <h2 className="md:pl-15 text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-[58px] md:text-5xl tracking-[-0.32px] md:leading-[7px] mb-6 md:mb-8">
+           <h2 className="md:pl-15 text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-[23px] md:text-4xl tracking-[-0.32px] md:leading-[7px] mb-6 md:mb-10">
                 How We Choose Experiences
               </h2>
           <div className=" flex flex-col-reverse md:flex-row justify-around items-center max-w-[1708px] mx-auto px-4 md:px-12 gap-8">
@@ -254,11 +254,11 @@ export const About = () => {
 
 
               <div>
-                <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-lg md:text-3xl tracking-[-0.32px] md:leading-[49px] mb-6 md:mb-8">
+                <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-lg md:text-2xl tracking-[-0.32px] md:leading-[40px] mb-6 md:mb-8">
                   We only curate places we'd actually send our friends to. Places that have something to say. Where the culture, the food, the rhythm of daily life feels intentional. We look for experiences that balance discovery with ease. The kind of trip where you feel like a traveler, not a tourist. Every itinerary we design gets tested, refined, and rebuilt until it feels right. Until it feels like something worth remembering.
                 </p>
 
-                <p className="[font-family:'BDO_Grotesk-ExtraBold',Helvetica] font-extrabold text-black text-lg md:text-2xl tracking-[-0.32px] leading-[91.2px]">
+                <p className="[font-family:'BDO_Grotesk-ExtraBold',Helvetica] font-extrabold text-black text-lg md:text-2xl tracking-[-0.32px] leading-[25px]">
                   If it doesn't pass that test, it doesn't go live.
                 </p>
               </div>
@@ -297,21 +297,21 @@ export const About = () => {
         {/* Founder Note */}
         <section className="relative w-full py-20">
           <div className="max-w-[1708px] mx-auto px-4 md:px-12">
-            <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#303030] text-4xl md:text-6xl tracking-[-0.64px] leading-[36.8px] mb-8 md:mb-12">
+            <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#303030] text-3xl md:text-4xl tracking-[-0.64px] leading-[36.8px] mb-8 md:mb-12">
               A Note from Our Founder
             </h2>
 
             <div className="py-12 md:py-20 bg-[url(https://c.animaapp.com/miuhpmp5biS0W2/img/rectangle-268.png)]">
 
-              <p className="text-center [font-family:'Bell_MT-Bold',Helvetica] font-bold text-[#0000008f] text-3xl md:text-5xl tracking-[-0.32px] leading-[52px] max-w-[934px] mx-auto mb-6 md:mb-8">
+              <p className="text-center [font-family:'Bell_MT-Bold',Helvetica] font-bold text-[#0000008f] text-2xl md:text-3xl tracking-[-0.32px] leading-[52px] max-w-[934px] mx-auto mb-6 md:mb-8">
                 Travel is personal. And we treat it that way.
               </p>
 
-              <p className="text-center [font-family:'Bell_MT-Regular',Helvetica] font-normal text-[#0000008f] text-3xl md:text-5xl tracking-[-0.32px] leading-[52px] max-w-[934px] mx-auto mb-8 md:mb-12">
+              <p className="text-center [font-family:'Bell_MT-Regular',Helvetica] font-normal text-[#0000008f] text-2xl md:text-2xl tracking-[-0.32px] leading-[52px] max-w-[934px] mx-auto mb-8 md:mb-12">
                 If you've read this far and something resonates we'd love to help you plan your next trip. Whether it's something from our collection or something we build just for you.
               </p>
 
-              <p className="text-center rotate-[-4.34deg] opacity-[0.79] [font-family:'Beth_Ellen',Helvetica] font-normal text-[#0101018f] text-3xl md:text-5xl tracking-[-0.32px] leading-[52px] underline">
+              <p className="text-center rotate-[-4.34deg] opacity-[0.79] [font-family:'Beth_Ellen',Helvetica] font-normal text-[#0101018f] text-2xl md:text-3xl tracking-[-0.32px] leading-[52px] underline">
                 Karthik.S
               </p>
             </div>
@@ -323,7 +323,7 @@ export const About = () => {
           <div style={{backgroundImage:`url(${BackImg})`}} className="bg-gradient-to-b from-black/60 to-black/60 absolute w-full h-full top-0 left-0 bg-cover bg-center" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-8 z-10">
             <div className="flex flex-col items-center gap-5">
-              <h2 className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#f6f3f0] text-[46.3px] text-center tracking-[-2.00px] leading-[48px]">
+              <h2 className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#f6f3f0] text-[35px] text-center tracking-[-2.00px] leading-[48px]">
                 Unravel Experiences<br />Less work. More intention.
               </h2>
 

@@ -11,25 +11,23 @@ import { AboutSection } from "../Home_sections/AboutUs";
 import { FeaturesSection } from "../Home_sections/FeaturesSection";
 import { Navbar } from '../ui/Navbar'
 import { Travellers } from "../Home_sections/Travellers";
-import { HumanSupport } from "../Home_sections/HumanSupport.tsx";
 import { AboutM } from "../Home_sections/AboutM.tsx";
 
 export const HomeLandingPage = () => {
   return (
     <div className="relative w-full  bg-white ">
       <div className="block md:hidden">
-        <Navbar  />
+        <Navbar/>
       </div>
-      
         <div className="hidden md:block">
           <Header />
         </div>
         <HeroSection />
          <div className="hidden md:block sticky top-0 z-50 w-full"><Navbar /></div>
 
-      <div className="px-4 sm:px-6 lg:px-8">
+      
         <FeaturesSection />
-        <div className="block md:hidden"> <HumanSupport></HumanSupport></div>
+       
         <div className="hidden md:block">  <AboutSection /></div>
         <div className="block md:hidden"><AboutM></AboutM> </div>
         <ExperiencesSection />
@@ -40,7 +38,7 @@ export const HomeLandingPage = () => {
         <MomentsDump />
         <TestimonialsSection />
 
-      </div>
+      
       <Travellers></Travellers>
     </div>
   );

@@ -54,7 +54,7 @@ const PackageCard = ({ pkg, index, cardProgress, cardsRef }: { pkg: typeof packa
         opacity: opacity
       }}
       transition={{ duration: index === 1 ? 0.05 : 0.1, ease: "linear" }}
-      className="w-[60%] h-[40%] md:w-[40%] md:h-[30%] opacity-80 md:opacity-100"
+      className="w-[80%] h-[40%] md:w-[40%] md:h-[30%] opacity-80 md:opacity-100"
     >
       <Link to={`/itenary/${pkg.id}`}>
         <motion.div

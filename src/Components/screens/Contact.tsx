@@ -40,13 +40,13 @@ export const Contact = () => {
 
   return (
     <>  
-    <Navbar/> 
+     
     <div
       className="relative w-full min-h-screen bg-white"
       data-model-id="127:379"
     >
-
-      <section className="relative w-full h-[500px] md:h-[900px] bg-no-repeat bg-cover overflow-hidden " style={{backgroundImage:"linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url(https://c.animaapp.com/miww62p4QlXFLl/img/rectangle-258.png)"}}>
+      <section className="relative w-full h-[500px] md:h-[900px] bg-no-repeat bg-cover overflow-hidden " style={{backgroundImage:"linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url(https://c.animaapp.com/miww62p4QlXFLl/img/rectangle-258.png)"}}>      
+<Navbar/>
         <div className="absolute top-[150px] md:top-[436px] left-1/2 -translate-x-1/2 w-full max-w-[1242px] px-4">
           <h1 className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#f6f6f6] text-3xl md:text-[91.7px] tracking-[-1.92px] leading-tight md:leading-[60.2px]">
             Let&#39;s figure this out together

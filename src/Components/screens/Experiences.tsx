@@ -104,14 +104,14 @@ export const Experiences = () => {
        viewport={{ once: true, amount: 0.3 }}
        variants={fadeUp}
        className="w-full flex items-center justify-center px-4 py-12">
-      <p className="max-w-[1186px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-xl md:text-2xl lg:text-[41.6px] text-center tracking-[0] leading-relaxed md:leading-[50px]">
-        <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-xl md:text-2xl lg:text-[41.6px] tracking-[0] leading-relaxed md:leading-[50px]">
+      <p className="max-w-[1186px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black  text-xl md:text-3xl text-center tracking-[0] leading-relaxed md:leading-[50px]">
+        <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black   tracking-[0] leading-relaxed md:leading-[50px]">
           There are places that only{" "}
         </span>
         <span className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold">
           reveal themselves in December
         </span>
-        <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-xl md:text-2xl lg:text-[41.6px] tracking-[0] leading-relaxed md:leading-[50px]">
+        <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black  tracking-[0] leading-relaxed md:leading-[50px]">
           . When the crowds thin out, the lights come on, and the cold gives you
           an excuse to stay close to the fire, the wine, the person next to you.
         </span>
@@ -141,10 +141,10 @@ export const Experiences = () => {
               />
 
               <div className="absolute inset-0  bg-gradient-to-t from-black/85 via-black/40 to-transparent flex flex-col justify-end p-[17px]">
-                <h3 className=" [text-shadow:0px_4px_26px_#00000040] [font-family:'BDO_Grotesk-Black',Helvetica] font-black text-white text-[40px] tracking-[0] leading-[40px]">
+                <h3 className=" [text-shadow:0px_4px_26px_#00000040] [font-family:'BDO_Grotesk-Black',Helvetica] font-black text-white text-[30px] tracking-[0] leading-[40px]">
                   {experience.title}
                 </h3>
-                <h4 className=" text-white leading-[40px] text-[25px] font-bold">{experience.days}</h4>
+                <h4 className=" text-white leading-[40px] text-[20px] font-bold">{experience.days}</h4>
                 <p className="w-[70%] text-[15px] text-white pb-4 pt-2">
                   {experience.description}
                 </p>
@@ -177,7 +177,7 @@ export const Experiences = () => {
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeUp}
         className="w-full flex items-center justify-center py-16 px-4">
-      <h2 className="max-w-[1070px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-3xl md:text-6xl text-center tracking-[-1.00px] leading-[50px]">
+      <h2 className="max-w-[1070px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-xl md:text-4xl text-center tracking-[-1.00px] leading-[50px]">
         <span className="text-[#0000004c] tracking-[-0.60px]">
           Reserve any Upcoming Experience from above for yourself with{" "}
         </span>

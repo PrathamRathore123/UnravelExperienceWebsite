@@ -33,31 +33,32 @@ const benefits: Benefit[] = [
 
 export const ItenaryCard: React.FC = () => {
   return (
-    <section className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
-      <div className="max-w-md w-full bg-white rounded-3xl shadow-lg overflow-hidden">
+    <section className=" bg-gray-100 flex items-center justify-center rounded-3xl px-4 py-3 mt-5">
+      <div className="max-w-md w-full    overflow-hidden">
         
         {/* Header */}
-        <div className="text-center py-6">
-          <h2 className="text-xl font-semibold text-gray-900">
-            Unravel Insider get
+        <div className="text-center py-1">
+          <h2 className="text-3xl font-semibold text-gray-900">
+             Insider
           </h2>
+          <p className="text-md text-black">Perks unlocked when you book this experience</p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-2 gap-4 px-4">
+        <div className="grid grid-cols-2 md:grid-cols-1  gap-2 px-3  ">
           {benefits.map((item, index) => (
             <div
               key={index}
-              className="bg-white border rounded-2xl p-4 flex flex-col items-center text-center shadow-sm"
+              className=" md:h-[70px] bg-white border rounded-2xl p-4 flex flex-col md:flex-row items-center text-center md:text-left shadow-sm"
             >
               <img
                 src={item.image}
-                alt={item.title}
-                className="h-16 mb-3 object-contain"
+                
+                className="h-6 w-[40%] mb-3 md:mb-0 object-contain"
               />
-
+              <div>
               <h3
-                className={`text-sm font-semibold ${
+                className={`text-xs font-semibold ${
                   item.highlight ? "text-green-600" : "text-gray-900"
                 }`}
               >
@@ -67,33 +68,12 @@ export const ItenaryCard: React.FC = () => {
               <p className="text-xs text-gray-500 mt-1">
                 {item.description}
               </p>
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Footer */}
-        <div className="bg-black mt-6 px-5 py-6 text-white">
-          <div className="flex justify-between text-xs text-gray-300 mb-3">
-            <span>Up to</span>
-            <span>Discounts Of The Best</span>
-          </div>
-
-          <div className="flex justify-between items-center mb-4">
-            <div>
-              <p className="italic text-sm">Flexible Cancellation</p>
-              <p className="text-xl font-semibold">24 Hours</p>
-            </div>
-
-            <div className="text-right">
-              <p className="text-sm">NO BLACKOUT DATES</p>
-              <p className="italic text-sm">Flexible Rates</p>
-            </div>
-          </div>
-
-          <button className="w-full bg-white text-black font-semibold py-3 rounded-full text-sm">
-            BECOME AN INSIDER
-          </button>
-        </div>
+      
       </div>
     </section>
   );
