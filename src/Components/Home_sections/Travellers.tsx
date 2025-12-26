@@ -10,10 +10,10 @@ export const Travellers=()=> {
 
       {/* CONTENT */}
       <div className="relative z-10 text-center max-w-3xl px-4">
-        <h1 className="text-2xl md:text-5xl font-semibold leading-snug">
+        <h1 className="text-2xl md:text-3xl font-semibold leading-snug">
           Unravel Experiences
         </h1>
-        <p className="text-2xl md:text-5xl font-semibold leading-snug">
+        <p className="text-2xl md:text-3xl font-semibold leading-snug">
           For travellers who feel things.
         </p>
 

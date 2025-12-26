@@ -63,7 +63,7 @@ export const Experiences = () => {
       data-model-id="101:368"
     >    
       <div id='winter-first' className="w-full relative">
-        <section className=" w-full h-[1010px] bg-[url('https://c.animaapp.com/miu74dag18RXJR/img/rectangle-24.png')]">
+        <section className=" w-full h-[700px] bg-[url('https://c.animaapp.com/miu74dag18RXJR/img/rectangle-24.png')]">
       <Navbar/>
 
           
@@ -73,8 +73,8 @@ export const Experiences = () => {
             animate="visible"
             custom={0.2}
             variants={heroVariants}
-            className="absolute top-[409px] left-1/2 -translate-x-1/2 w-full max-w-[559px] flex items-center justify-center z-10">
-            <h1 className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-black text-[64px] text-center tracking-[-2.30px] leading-[70px]">
+            className="absolute top-[259px] left-1/2 -translate-x-1/2 w-full max-w-[559px] flex items-center justify-center z-10">
+            <h1 className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-black text-[40px] text-center tracking-[-0.30px] leading-[70px]">
               Winter Elsewhere?
             </h1>
           </motion.div>
@@ -84,13 +84,13 @@ export const Experiences = () => {
             animate="visible"
             custom={0.4}
             variants={heroVariants}
-            className="absolute top-[546px] left-1/2 -translate-x-1/2 z-10">
+            className="absolute top-[356px] left-1/2 -translate-x-1/2 z-10">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 variant="outline"
                 className="h-[54px] px-[35px] rounded-[50px] border-[3px] border-solid border-black bg-transparent hover:bg-black hover:text-white transition-colors"
               >
-                <span className="[font-family:'BDO_Grotesk-Light',Helvetica] font-light text-[22px] tracking-[0] leading-[80px]">
+                <span className="[font-family:'BDO_Grotesk-Light',Helvetica] font-light text-[18px] tracking-[0] leading-[80px]">
                   explore experiences
                 </span>
               </Button>
@@ -104,14 +104,14 @@ export const Experiences = () => {
        viewport={{ once: true, amount: 0.3 }}
        variants={fadeUp}
        className="w-full flex items-center justify-center px-4 py-12">
-      <p className="max-w-[1186px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black  text-xl md:text-3xl text-center tracking-[0] leading-relaxed md:leading-[50px]">
-        <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black   tracking-[0] leading-relaxed md:leading-[50px]">
+      <p className="max-w-[786px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black  text-xl  text-center tracking-[0]  ">
+        <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black   tracking-[0] leading-relaxed ">
           There are places that only{" "}
         </span>
         <span className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold">
           reveal themselves in December
         </span>
-        <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black  tracking-[0] leading-relaxed md:leading-[50px]">
+        <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black  tracking-[0] ">
           . When the crowds thin out, the lights come on, and the cold gives you
           an excuse to stay close to the fire, the wine, the person next to you.
         </span>
@@ -123,14 +123,14 @@ export const Experiences = () => {
       viewport={{ once: true, amount: 0.1 }}
       variants={staggerContainer}
       className="w-full py-12 px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[90px] max-w-[1387px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] max-w-[1387px] ">
         {experienceData.map((experience, index) => (
           <motion.div
             key={index}
             variants={fadeUp}
             initial="rest"
             whileHover="hover"
-            className="relative h-[500px] md:h-[650px] overflow-hidden rounded-[20px] border-0 shadow-none"
+            className="relative h-[500px] md:h-[400px] w-[70%] overflow-hidden rounded-[20px] border-0 shadow-none m-auto"
           >
           <Card className="h-full">
             <CardContent className="p-0 h-full ">
@@ -140,25 +140,25 @@ export const Experiences = () => {
                 src={experience.image}
               />
 
-              <div className="absolute inset-0  bg-gradient-to-t from-black/85 via-black/40 to-transparent flex flex-col justify-end p-[17px]">
-                <h3 className=" [text-shadow:0px_4px_26px_#00000040] [font-family:'BDO_Grotesk-Black',Helvetica] font-black text-white text-[30px] tracking-[0] leading-[40px]">
+              <div className="absolute inset-0  bg-gradient-to-t from-black/85 via-black/40 to-transparent flex flex-col justify-end p-[15px]">
+                <h3 className=" [text-shadow:0px_4px_26px_#00000040] [font-family:'BDO_Grotesk-Black',Helvetica] font-black text-white text-[20px] tracking-[0] leading-[40px]">
                   {experience.title}
                 </h3>
-                <h4 className=" text-white leading-[40px] text-[20px] font-bold">{experience.days}</h4>
-                <p className="w-[70%] text-[15px] text-white pb-4 pt-2">
+                <h4 className=" text-white leading-[30px] text-[15px] font-bold">{experience.days}</h4>
+                <p className="w-[70%] text-[10px] text-white pb-4 ">
                   {experience.description}
                 </p>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button
                     variant="ghost"
                     onClick={() => navigate(`/itenary/${experience.id}`)}
-                    className="w-[173px] h-[45px] bg-[#ffffff52] hover:bg-[#ffffff70] rounded-[42px] backdrop-blur-[19.5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(19.5px)_brightness(100%)] transition-colors p-0"
+                    className="w-[123px] h-[30px] bg-[#ffffff52] hover:bg-[#ffffff70] rounded-[42px] backdrop-blur-[19.5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(19.5px)_brightness(100%)] transition-colors p-0"
                   >
-                  <span className="flex items-center justify-between w-full px-4">
-                    <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#f0f0f0] text-sm tracking-[0] leading-7">
+                  <span className="flex items-center justify-between w-full px-3">
+                    <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#f0f0f0] text-[10px] tracking-[0] leading-7">
                       View Itinerary
                     </span>
-                    <span className="flex items-center justify-center w-[38px] h-[38px] bg-[#d9d9d9] rounded-[19px] ml-2">
+                    <span className="flex items-center justify-center w-[28px] h-[28px] bg-[#d9d9d9] rounded-[19px] ml-2">
                       <ArrowRightIcon className="w-[18px] h-[18px] text-black" />
                     </span>
                   </span>
@@ -176,8 +176,8 @@ export const Experiences = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeUp}
-        className="w-full flex items-center justify-center py-16 px-4">
-      <h2 className="max-w-[1070px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-xl md:text-4xl text-center tracking-[-1.00px] leading-[50px]">
+        className="w-full flex items-center justify-center  px-4">
+      <h2 className="max-w-[670px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-xl md:text-2xl text-center tracking-[-1.00px] leading-[50px]">
         <span className="text-[#0000004c] tracking-[-0.60px]">
           Reserve any Upcoming Experience from above for yourself with{" "}
         </span>

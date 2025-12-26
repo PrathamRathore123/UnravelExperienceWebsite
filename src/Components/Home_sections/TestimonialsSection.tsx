@@ -3,7 +3,7 @@ import image from "../../assets/a-man-wearing-a-brown-coat-and-a-brown-hat-.png"
 export const TestimonialsSection = () => {
   return (
     <div className="w-full flex flex-col items-center bg-white text-black py-16 px-4 md:px-20 lg:px-32">
-      <h1 className=" text-2xl md:text-4xl md:text-5xl font-bold text-center mb-2">What Our Travelers Say</h1>
+      <h1 className=" text-xl md:text-3xl md:text-4xl font-bold text-center mb-2">What Our Travelers Say</h1>
       <p className="text-lg text-gray-600 mb-12">More stories from the road</p>
 
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10">

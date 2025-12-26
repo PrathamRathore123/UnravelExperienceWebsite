@@ -61,7 +61,7 @@ export const NewWaysToWander = () => {
       {/* Coming Soon + Heading */}
       <div className="flex flex-col md:flex-row md:items-start justify-between mb-16 gap-8">
         <p className="text-sm tracking-widest text-black font-bold  mt-2">• COMING SOON</p>
-        <h2 className="text-xl  md:text-4xl font-semibold leading-snug max-w-2xl">
+        <h2 className="text-xl  md:text-2xl font-semibold leading-snug max-w-2xl">
           We're designing fresh travel styles for the romantics.<br />
           The restless. The "let's just go" people.
           <span className="text-gray-500"> Be the first to know when they drop.</span>
@@ -73,7 +73,7 @@ export const NewWaysToWander = () => {
       <div className="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 md:gap-10 hidden md:block">
         {cards.map((card, index) => (
           <div key={index} className="flex flex-col items-center text-center cursor-pointer group">
-            <div className="w-full h-48 rounded-xl overflow-hidden shadow-md relative">
+            <div className="w-full h-38 rounded-xl overflow-hidden shadow-md relative">
               <img
                 src={card.img}
                 alt={card.title}

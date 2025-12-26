@@ -12,7 +12,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative  h-[100vh] md:min-h-screen flex items-center justify-center mt-30 md:mt-[218px] mb-32 mx-6">
+    <section className="relative  h-[100vh] md:min-h-screen flex items-center justify-center mt-30 md:mt-[118px] mb-32 mx-6">
       {/* Black shutter reveal */}
       <motion.div
         initial={{ scaleY: 1 }}
@@ -61,11 +61,11 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.7, ease: [0.65, 0, 0.35, 1] }}
-            className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-white text-3xl text-4xl lg:text-[50px] md:text-center tracking-[-0.88px] leading-tight md:leading-[50px] max-w-[647px]"
+            className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-white text-2xl text-3xl lg:text-[40px] md:text-center tracking-[-0.88px] leading-tight md:leading-[50px] max-w-[647px]"
           >
             Less planning. More living.
           
-            We handle the details. You collect the stories.
+       
           </motion.h1>
 
           {/* Subline stagger */}

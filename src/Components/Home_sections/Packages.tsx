@@ -113,9 +113,9 @@ const AnimatedButton = () => {
         transition={{ duration: 0.6 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="md:w-80  flex items-center gap-5 bg-black text-white px-2 py-2 md:px-8 md:py-3 rounded-full text-xl md:text-base hover:bg-gray-800 transition"
+        className="md:w-70  flex items-center gap-5 bg-black text-white px-2 py-2 md:px-5 md:py-3 rounded-full text-xl md:text-sm hover:bg-gray-800 transition"
       >
-        <span className="w-8 h-8 text-2xl flex items-center justify-center bg-white text-black rotate-315 rounded-full text-center leading-none">→</span>
+        <span className="w-8 h-8 text-2xl flex items-center justify-center bg-white text-black -rotate-25  rounded-full text-center leading-none">→</span>
         View winter experiences
       </motion.button>
     </Link>

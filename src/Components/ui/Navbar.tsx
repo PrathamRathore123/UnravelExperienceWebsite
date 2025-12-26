@@ -142,9 +142,7 @@ const NavbarDropdown = () => {
         </div>
         <p className="text-center sm:px-14 my-4 ">No junk Trips. Just well-composed Strategic plan ready to experience whatever you need to feel.</p>
          <div style={{backgroundImage:`url(${image})`}} className="overflow-hidden w-full h-25 rounded-lg bg-center bg-cover">
-          <h1 className="text-base p-2">HI Champ</h1>
-          <p className="p-2 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, accusamus. 
-            Aliquam, dolore laudantium.</p>
+         
          </div>
       </div>
     </div>
