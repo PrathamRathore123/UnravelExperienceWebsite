@@ -3,7 +3,7 @@ import { useGoogleLogin } from '@react-oauth/google';
 import { Navbar } from "../ui/Navbar";
 import { useNavigate } from 'react-router-dom';
 import images from '../../assets/WhatsApp.jpg';
-import Logo from '../../assets/UnravelLogo.png'
+import Logo from '../../assets/EXPERIENCES.png'
 
 
 

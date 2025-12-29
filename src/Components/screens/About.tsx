@@ -5,6 +5,7 @@ import { Navbar } from "../ui/Navbar";
 import React from "react";
 import { Link } from "react-router-dom";
 import BackImg from '../../assets/WhatsApp.jpg'
+import logo from '../../assets/EXPERIENCES.png'
 
 const whatWeDontDoItems = [
   "We don't do group tours/ fixed departures.",
@@ -350,7 +351,7 @@ export const About = () => {
         </section>
 
         {/* Footer */}
-        <div className="w-[300px] h-[60px] md:w-[613px] md:h-[117px] bg-[url(https://c.animaapp.com/miuhpmp5biS0W2/img/untitled-design-7-removebg-preview-png.png)] bg-contain bg-no-repeat m-4 md:m-12 my-8 md:my-16" />
+        <div style={{backgroundImage:`url(${logo})`}} className="w-[300px] h-[60px] md:w-[613px] md:h-[117px]  bg-contain bg-no-repeat m-4 md:m-12 my-8 md:my-16" />
 
       </div>
     </>

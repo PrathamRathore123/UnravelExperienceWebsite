@@ -1,6 +1,6 @@
 
 import  Starry from "../../assets/rectangle-256.png"
-
+import { Link } from "react-router-dom";
 export const AboutSection = () => {
   return (
     <div  className="w-full flex flex-col md:flex-row items-center justify-center gap-12 py-20 px-6 md:px-20">
@@ -36,9 +36,9 @@ export const AboutSection = () => {
           You just show up. We’ve thought through the rest.
         </p>
 
-        <button className="mt-2 bg-black text-white px-6 py-2 rounded-full text-sm hover:bg-gray-800 w-fit">
+       <Link to="/about"  > <button className="mt-2 bg-black text-white px-6 py-2 rounded-full text-sm hover:bg-gray-800 w-fit">
           More about us
-        </button>
+        </button></Link>
       </div>
     </div>
   );

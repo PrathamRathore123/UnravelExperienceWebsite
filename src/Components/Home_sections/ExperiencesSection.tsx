@@ -7,11 +7,11 @@ export const ExperiencesSection = () => {
         <div className="flex flex-col md:flex-row items-start justify-between gap-6 md:gap-16">
           <div className="flex-1">
              <div className="relative inline-block">
-              <Badge className="h-5 w-5 flex items-center justify-center bg-[#222222] text-white text-xs rounded-[9.99px] p-0 absolute -right-33 sm:-right-65 top-0 ">
+              <Badge className="h-5 w-5 flex items-center justify-center bg-[#222222] text-white text-xs rounded-[9.99px] p-0 absolute -right-33 sm:-right-68 top-10 ">
                 4
               </Badge>
             </div>
-            <h2 className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[-2.56px] leading-tight sm:leading-normal md:leading-relaxed lg:leading-[4rem]">
+            <h2 className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[-2.56px] leading-tight sm:leading-normal md:leading-relaxed lg:leading-[3rem]">
               Curated
               <br />
               Experiences.

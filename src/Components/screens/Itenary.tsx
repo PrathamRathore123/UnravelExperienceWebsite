@@ -8,7 +8,7 @@ import { Card, CardContent } from "../ui/card";
 import { itenaryData } from "../data/itenaryData";
 import { BookingForm } from "../ui/Bookingform";
 import {ItenaryCard} from "../ui/ItenaryCard"
-import image from "../../assets/UnravelLogo.png"
+import image from "../../assets/EXPERIENCES.png"
 import Image from "../../assets/image.png"
 interface Day {
   day: string;
@@ -80,32 +80,27 @@ export  const Itenary = () => {
     <div id="start" className="relative w-full bg-white min-h-screen" data-model-id="462:506">
       <div className="w-full">
         {/* Navigation */}
-      <h1 className=" block md:hidden [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-center text-black text-3xl  tracking-[-3.50px] leading-tight md:leading-[68px] ">
-                {data.title}
-              </h1>
-                 <p className="block md:hidden [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-[#9b9b9b] text-sm text-center tracking-[-0.32px] leading-[18px] ">
-                {data.subtitle}
-              </p>
+     
         {/* Hero Section */}
         <section className="flex flex-col lg:flex-row gap-10 container  px-4 md:px-8 py-12">
-          <div className="grid grid-cols-2 gap-2 md:gap-x-3  max-w-[1100px] mx-auto mb-8 lg:mb-16">
+          <div className="grid grid-cols-2 gap-2 md:gap-x-2  max-w-[1100px] mx-auto mb-8 lg:mb-28">
             <img
-              className="w-full h-[150px] sm:h-[200px] md:h-[300px] md:rounded-tl-[150px] object-cover"
+              className="w-full h-[100px] sm:h-[220px]  md:rounded-tl-[150px] object-cover"
               alt={data.title}
               src={data.heroImages[0]}
             />
             <img
-              className="w-full h-[150px] sm:h-[200px] md:h-[300px] object-cover md:rounded-tr-[20px]"
+              className="w-full h-[100px] sm:h-[220px]  object-cover md:rounded-tr-[20px]"
               alt={data.title}
               src={data.heroImages[1]}
             />
             <img
-              className="w-full h-[150px] sm:h-[200px] md:h-[300px] object-cover rounded-bl-[75px] md:rounded-bl-[20px]"
+              className="w-full h-[100px] sm:h-[220px]  object-cover rounded-bl-[75px] md:rounded-bl-[20px]"
               alt={data.title}
               src={data.heroImages[2]}
             />
             <img
-              className="w-full h-[150px] sm:h-[200px] md:h-[300px] rounded-br-[75px] md:rounded-br-[150px] object-cover"
+              className="w-full h-[100px] sm:h-[220px] rounded-br-[75px] md:rounded-br-[150px] object-cover"
               alt={data.title}
               src={data.heroImages[3]}
             />
@@ -113,16 +108,16 @@ export  const Itenary = () => {
 
           <div className="max-w-[1200px] md:mx-auto ">
             <div>
-              <h1 className="hidden md:block [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-[44px] tracking-[-3.50px] leading-tight  ">
+              <h1 className=" [font-family:'DDM Sans',sans-serif] font-bold text-black text-2xl md:text-[40px] text-center md:tracking-[-1.50px] leading-tight  ">
                 {data.title}
               </h1>
-              <p className="hidden md:block [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-[#9b9b9b] text-md tracking-[-0.32px] leading-[28px] mb-2">
+              <p className=" [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-[#9b9b9b] text-xs md:text-sm  tracking-[-0.32px] text-center leading-[28px] mb-2">
                 {data.subtitle}
               </p>
-              <div className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-black text-lg md:text-xl tracking-[-0.32px] leading-[26px] mb-2">
+              <div className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-black text-lg  tracking-[-0.32px] leading-[26px] mb-2">
                 {data.duration}
               </div>
-              <div className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-black text-base md:text-lg tracking-[-0.32px] leading-[26px]">
+              <div className="[font-family:'Inter_Variable-Bold',Helvetica] font-bold text-black text-base tracking-[-0.32px] leading-[26px]">
                 {data.location}
               </div>
             </div>
@@ -133,7 +128,7 @@ export  const Itenary = () => {
        
         {/* Journey Section */}
         <section className="container mx-auto px-4 md:px-8 py-12">
-          <h2 className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-[#222222] text-2xl md:text-[30px] tracking-[-0.44px] leading-[26px] mb-12 max-w-[1200px] mx-auto">
+          <h2 className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-[#222222] text-2xl  tracking-[-0.44px] leading-[26px] mb-12 max-w-[1200px] mx-auto">
             The&nbsp;&nbsp;Journey
           </h2>
 
@@ -152,7 +147,7 @@ export  const Itenary = () => {
                       style={{ backgroundImage: `url(${day.image})` }}
                     />
                     <div className="flex-1">
-                      <h3 className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#222222] text-[20px] tracking-[0] leading-[24px] mb-2">
+                      <h3 className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#222222] text-[18px] tracking-[0] leading-[24px] mb-2">
                         {day.day}
                       </h3>
                       <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#6a6a6a] text-[15px] tracking-[0] leading-[20px]">
@@ -162,7 +157,7 @@ export  const Itenary = () => {
                   </CardContent>
                 </Card>
               ))}
-              <a href={`${data.pdf}`} download={`${data.title}.pdf`} className="bg-[#222222] text-white rounded-[8px] px-12 py-5 h-auto [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-xl tracking-[-0.32px] leading-[19.6px] hover:bg-[#333333] transition-colors">
+              <a href={`${data.pdf}`} download={`${data.title}.pdf`} className="bg-[#222222] text-white rounded-[8px] px-4 py-3 h-auto [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-md tracking-[-0.32px] leading-[19.6px] hover:bg-[#333333] transition-colors">
                 Download Itinerary
               </a>
              
@@ -171,7 +166,7 @@ export  const Itenary = () => {
 
            <div className="flex-shrink-0 py-10">
               <Calendar />
-               <div className="flex wrap items-center gap-4 mt-12">
+               <div className="flex wrap items-center gap-4 mt-8">
               <Button 
                 onClick={() => setShowBookingForm(true)}
                 className="bg-[linear-gradient(90deg,rgba(34,34,34,1)_0%,rgba(57,57,57,1)_100%)] text-white rounded-[200px] px-4  h-auto [font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-base hover:opacity-90 transition-opacity">
@@ -229,49 +224,43 @@ export  const Itenary = () => {
         </section>
 
         {/* Gallery Section */}
-        <section >
+        {/* <section >
           <div className=" justify-between gap-12 max-w-[1200px] mx-auto">
             <div className="flex-1">
-              <h2 className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#222222] text-2xl  md:text-4xl  tracking-[-1.00px] leading-tight sm:leading-normal md:leading-relaxed lg:leading-[60px] text-center mb-2">
+              <h2 className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#222222] text-2xl    tracking-[-1.00px] leading-tight sm:leading-normal md:leading-relaxed lg:leading-[60px] text-center mb-2">
                 Memories Captured
               </h2>
-              <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#383838] text-lg sm:text-xl md:text-xl text-center tracking-[-0.50px] mb-5">
+              <p className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#383838] text-lg text-center tracking-[-0.50px] mb-5">
                 Quite Scenes That Stay With You 
               </p>
               <img className="block md:hidden w-full h-auto" alt={data.galleryTitle} src={Image}/>
-              <img className="w-full h-auto hidden md:block" alt={data.galleryTitle} src={data.galleryImage}/>
+              <img className="w-[70%] h-[400px] hidden md:block m-auto" alt={data.galleryTitle} src={data.galleryImage}/>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Things to Know Section */}
         <section className="container mx-auto px-4 md:px-8 py-16">
-          <h2 className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-black text-2xl md:text-[34px] tracking-[0] leading-[60px] text-center mb-10">
-            Things to Know
+          <h2 className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-black text-2xl md:text-[24px] tracking-[0] leading-[60px]  mb-5">
+            Before You Go
           </h2>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[1000px] mx-auto items-center">
             {thingsToKnowCards.map((card, index) => (
               <Card
                 key={index}
-                className="rounded-xl border border-[#00000026] shadow-[0px_4px_34px_#0000001a] p-6"
+                className="rounded-xl w-70 border border-[#00000026] shadow-[0px_4px_34px_#0000001a] p-4"
               >
-                <CardContent className="p-0 space-y-4">
-                  <img className="hidden md:block w-12 h-10" alt={card.title} src={card.icon} />
-                  <h3 className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#222222] text-[20px] tracking-[0] leading-[28px]">
+                <CardContent className="p-0 space-y-2 h-40 ">
+                  <img className="w-8 h-6" alt={card.title} src={card.icon} />
+                  <h3 className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#222222] text-[15px] tracking-[0] leading-[28px]">
                     {card.title}
                   </h3>
-                  <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#7b7b7b] text-base tracking-[0] leading-[22px]">
+                  <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#7b7b7b] text-sm tracking-[0] leading-[22px]">
                     {card.description}
                   </p>
-                  {card.title === "Good to Know" && (
-                    <a
-                      href="#"
-                      className="hidden md:block [font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#2222227d] text-lg tracking-[0] leading-[27px] underline"
-                    >
-                      Learn more
-                    </a>
-                  )}
+                 
+                
                 </CardContent>
               </Card>
             ))}
@@ -279,9 +268,9 @@ export  const Itenary = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="container mx-auto px-4 md:px-8 py-16">
+        <section className="container mx-auto px-4 md:px-6 py-10">
           <div className="bg-[#222222] rounded-[40px] py-12 md:py-20 px-6 md:px-16 text-center max-w-[1200px] mx-auto">
-            <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-2xl md:text-[32px] text-center tracking-[-0.80px] leading-tight md:leading-[64px] mb-12 max-w-4xl mx-auto">
+            <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-xl  text-center tracking-[-0.80px] leading-tight md:leading-[64px] mb-8 max-w-4xl mx-auto">
               <span className="text-[#dbdbdb4c] tracking-[-0.60px]">
                 Reserve this experience for yourself with{" "}
               </span>
@@ -291,7 +280,7 @@ export  const Itenary = () => {
             </p>
             <Button 
               onClick={() => setShowBookingForm(true)}
-              className="bg-transparent border-2 border-white text-white rounded-[40px] px-8 md:px-12 py-4 md:py-2 h-auto [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-xl md:text-[22px] tracking-[-0.80px] leading-[40px] hover:bg-white/10 transition-colors">
+              className="bg-transparent border-2 border-white text-white rounded-[40px] px-4 md:px-12 py-0 md:py-2 h-auto [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-sm md:text-[22px] tracking-[-0.80px] leading-[40px] hover:bg-white/10 transition-colors">
               Reserve For Free
             </Button>
           </div>
@@ -308,7 +297,7 @@ export  const Itenary = () => {
           price={data.price || "Contact for pricing"}
         />
       )}
-      <img src={image} alt="" />
+      <img className="w-[50%]" src={image} alt="" />
     </div>
     </>
   );

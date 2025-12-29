@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Badge } from "../ui/badge";
-
+import logo from '../../assets/EXPERIENCES.png'
 const navItems = [
   { label: "Home", to: "#" },
   { label: "About", to: "/about" },
-  { label: "Experiences", to: "/experiences", badge: "3" },
+  { label: "Experiences", to: "/experiences", badge: "4" },
   { label: "Contact", to: "/contact" },
   { label: "Login", to: "/login" },
 ];
@@ -17,7 +17,7 @@ export const Header = () => {
     <header className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
       <nav className="flex items-center justify-between px-4 sm:px-8 py-4 sm:py-6 bg-white relative">
         <div className="flex items-center gap-4 sm:gap-7">
-          <div className="w-20 sm:w-28 h-4 sm:h-5.5 bg-[url(https://c.animaapp.com/min3uh9qPFGdoq/img/untitled-design-7-removebg-preview-png.png)] bg-cover bg-center" />
+          <div style={{backgroundImage:`url(${logo})`}} className="w-20 sm:w-35 h-4 sm:h-7.5 bg-cover bg-center" />
           <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3">
             <div className="flex flex-col w-10 sm:w-14 items-center justify-center overflow-hidden">
               <img className="w-10 sm:w-14 h-[18.62px] sm:h-[26.31px]" alt="Component" src="https://c.animaapp.com/min3uh9qPFGdoq/img/component-1.svg" />

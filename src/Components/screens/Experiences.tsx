@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { heroVariants, staggerContainer, fadeUp } from "../lib/animations";
 import { useScrollAnimations } from "../lib/useScrollAnimations";
+import { Travellers } from "../Home_sections/Travellers";
 const experienceData = [
   {
     title: "A London Christmas",
@@ -59,11 +60,11 @@ export const Experiences = () => {
     <>
 
      <div id=""
-      className=" "
+      className="mb-10 "
       data-model-id="101:368"
     >    
       <div id='winter-first' className="w-full relative">
-        <section className=" w-full h-[700px] bg-[url('https://c.animaapp.com/miu74dag18RXJR/img/rectangle-24.png')]">
+        <section className=" w-full h-[500px] bg-[url('https://c.animaapp.com/miu74dag18RXJR/img/rectangle-24.png')]">
       <Navbar/>
 
           
@@ -74,7 +75,7 @@ export const Experiences = () => {
             custom={0.2}
             variants={heroVariants}
             className="absolute top-[259px] left-1/2 -translate-x-1/2 w-full max-w-[559px] flex items-center justify-center z-10">
-            <h1 className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-black text-[40px] text-center tracking-[-0.30px] leading-[70px]">
+            <h1 className="[font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-black text-[50px] text-center tracking-[-0.30px] leading-[70px]">
               Winter Elsewhere?
             </h1>
           </motion.div>
@@ -86,14 +87,7 @@ export const Experiences = () => {
             variants={heroVariants}
             className="absolute top-[356px] left-1/2 -translate-x-1/2 z-10">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                variant="outline"
-                className="h-[54px] px-[35px] rounded-[50px] border-[3px] border-solid border-black bg-transparent hover:bg-black hover:text-white transition-colors"
-              >
-                <span className="[font-family:'BDO_Grotesk-Light',Helvetica] font-light text-[18px] tracking-[0] leading-[80px]">
-                  explore experiences
-                </span>
-              </Button>
+             
             </motion.div>
           </motion.div>
 
@@ -152,10 +146,10 @@ export const Experiences = () => {
                   <Button
                     variant="ghost"
                     onClick={() => navigate(`/itenary/${experience.id}`)}
-                    className="w-[123px] h-[30px] bg-[#ffffff52] hover:bg-[#ffffff70] rounded-[42px] backdrop-blur-[19.5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(19.5px)_brightness(100%)] transition-colors p-0"
+                    className="w-[113px] h-[30px] bg-[#ffffff52] hover:bg-[#ffffff70] rounded-[42px] backdrop-blur-[19.5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(19.5px)_brightness(100%)] transition-colors p-0"
                   >
-                  <span className="flex items-center justify-between w-full px-3">
-                    <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#f0f0f0] text-[10px] tracking-[0] leading-7">
+                  <span className="flex items-center justify-between w-full ">
+                    <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#f0f0f0] pl-3 text-[10px] tracking-[0] leading-7">
                       View Itinerary
                     </span>
                     <span className="flex items-center justify-center w-[28px] h-[28px] bg-[#d9d9d9] rounded-[19px] ml-2">
@@ -188,6 +182,7 @@ export const Experiences = () => {
     </motion.section>
     </div>
     </div>
+    <Travellers></Travellers>
     </>
   );
 };

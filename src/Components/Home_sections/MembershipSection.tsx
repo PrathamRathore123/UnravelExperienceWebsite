@@ -1,4 +1,4 @@
-
+import {Link} from "react-router-dom";
 export const MembershipSection = () => {
   return (
     <div className="relative w-full h-[420px] md:h-[500px] flex items-center justify-center text-white overflow-hidden">
@@ -28,9 +28,9 @@ export const MembershipSection = () => {
           Green Impact in your name
         </p>
 
-        <button className="px-6 py-3 bg-white text-black rounded-full text-sm md:text-base font-medium shadow-md hover:bg-gray-200 transition">
+        <Link to="/signup"><button className="px-6 py-3 bg-white text-black rounded-full text-sm md:text-base font-medium shadow-md hover:bg-gray-200 transition">
           Become an Insider
-        </button>
+        </button></Link>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import { Button } from "../ui/buttons";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import HeroImage from "../../assets/HeroSectionIMage.jpg";
-
+import { Link } from "react-router-dom";
 export const HeroSection = () => {
   const [shutterComplete, setShutterComplete] = useState(false);
 
@@ -12,7 +12,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative  h-[100vh] md:min-h-screen flex items-center justify-center mt-30 md:mt-[118px] mb-32 mx-6">
+    <section className="relative  h-[100vh] md:min-h-screen flex items-center justify-center mt-30 md:mt-[108px] mb-30 mx-6">
       {/* Black shutter reveal */}
       <motion.div
         initial={{ scaleY: 1 }}
@@ -45,13 +45,13 @@ export const HeroSection = () => {
        
 
 
-          <div className="relative z-10 flex flex-col md:items-center gap-8 px-8">
+          <div className="relative  z-10 flex flex-col md:items-center gap-8 px-8">
           {/* Subline */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="[font-family:'Roboto_Mono',Helvetica] font-normal text-[#ffffffb2] text-sm tracking-[0.70px] leading-[19.6px]"
+            className="[font-family:'Roboto_Mono',Helvetica] font-normal text-[#ffffffb2] text-sm tracking-[0.70px] leading-[10.6px]"
           >
             TRAVEL, UNRAVELED
           </motion.div>
@@ -61,7 +61,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.7, ease: [0.65, 0, 0.35, 1] }}
-            className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-white text-2xl text-3xl lg:text-[40px] md:text-center tracking-[-0.88px] leading-tight md:leading-[50px] max-w-[647px]"
+            className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-white  text-3xl lg:text-[40px] md:text-center tracking-[-0.88px] leading-tight md:leading-[50px] max-w-[647px]"
           >
             Less planning. More living.
           
@@ -86,28 +86,16 @@ export const HeroSection = () => {
             transition={{ delay: 1.0, duration: 0.5 }}
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button className="h-14 md:px-7 bg-white text-black md:rounded-[30px] [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-[15px] tracking-[0.70px] hover:bg-gray-100 transition-colors">
+             <Link to={'/experiences'}> <Button className="h-10 md:px-6 bg-white text-black md:rounded-[30px] [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-[12px] tracking-[0.70px] hover:bg-gray-100 transition-colors">
                 Explore Winter Experiences
-              </Button>
+              </Button></Link>
             </motion.div>
           </motion.a>
           </div>
         </motion.div>
       )}
 
-      {/* Scroll indicator marquee */}
-      <motion.div
-        className="hidden md:block    absolute bottom-14 left-1/2 -translate-x-1/2 overflow-hidden w-80"
-      >
-        <motion.p
-          initial={{ x: '0%', opacity: 0.3, filter: 'blur(2px)' }}
-          animate={{ x: '-110%', opacity: [0.3, 1, 0.3], filter: ['blur(1px)', 'blur(0px)', 'blur(1px)'] }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-          className="text-white whitespace-nowrap  text-[12px]  "
-        >
-          -scroll to Reveal-scroll to Reveal-scroll to Reveal-scroll to Reveal-scroll Reveal-scroll to Reveal-scroll to Reveal -scroll to Reveal-scroll to Reveal-scroll to Reveal-scroll to Reveal-scroll Reveal-scroll to Reveal-scroll to Reveal -scroll to Reveal-scroll to Reveal-scroll to Reveal-scroll to Reveal-scroll Reveal-scroll to Reveal-scroll to Reveal
-        </motion.p>
-      </motion.div>
+     
     </section>
   );
 };

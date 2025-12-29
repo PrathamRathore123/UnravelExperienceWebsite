@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {UserRound} from "lucide-react"
-import  Image  from "../../assets/UnravelLogo.png";
+import  Image  from "../../assets/EXPERIENCES.png";
 import  image from '../../assets/HeroSectionIMage.jpg'
 export const Navbar = () => {
  
@@ -47,7 +47,7 @@ text-base
           <li className="hidden md:block hover:opacity-100">
             <Link to="/experiences" className="hidden md:block flex items-center gap-1">
               Experiences
-              <sup className="bg-gray-900 text-white rounded-full px-2 py-[2px] text-[10px]">5</sup>
+              <sup className="bg-gray-900 text-white rounded-full px-2 py-[2px] text-[10px]">4</sup>
             </Link>
           </li>
           <li className="hidden md:block hover:opacity-100"><Link to="/contact">Contact</Link></li>

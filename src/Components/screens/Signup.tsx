@@ -3,7 +3,7 @@ import { useGoogleLogin } from '@react-oauth/google'
 import { Navbar } from '../ui/Navbar';
 import { useNavigate } from 'react-router-dom';
 import image from '../../assets/WhatsApp.jpg'
-import Logo from '../../assets/UnravelLogo.png' 
+import Logo from '../../assets/EXPERIENCES.png' 
 
 export  function Signup() {
   const [showPassword, setShowPassword] = useState(false);

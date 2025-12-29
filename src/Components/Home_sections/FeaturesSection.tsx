@@ -13,16 +13,16 @@ export const FeaturesSection = () => {
       </div>
 
       {/* Main Heading */}
-      <h1 className="text-[34px] md:text-[40px] font-medium leading-tight text-black max-w-[650px]">
+      <h1 className="text-[34px] md:text-[30px] font-medium leading-tight text-black max-w-[650px]">
         Think of it as texting a friend 
         <br />
-        who's really, <span className="font-[600] text-black" style={{ fontFamily: "Caveat" }}>really good at</span>
+        who's really, <span className="font-[600] text-black text-[42px]" style={{ fontFamily: "Caveat" }}>really good at</span>
         <br />
         <span style={{ fontFamily: "Caveat" }} className="text-[42px]">travel.</span>
       </h1>
 
       {/* Paragraph */}
-      <p className="text-gray-700 text-[17px] leading-[1.5] max-w-[700px] mt-6">
+      <p className="text-gray-700 text-[15px] leading-[1.5] max-w-[700px] mt-6">
         Unravel One is your digital travel companion powered by AI, backed by humans. 
         It learns how you travel, suggests experiences you'll actually love, 
         and books them for you.
@@ -47,11 +47,11 @@ export const FeaturesSection = () => {
         {/* Manage Everything */}
         <div className=" lg:w-[100%] flex justify-center items-center flex-col text-center ">
        
-          <div className=" w-70  h-[300px] bg-gradient-to-br flex justify-center items-center  from-gray-50 to-gray-100 rounded-3xl mb-8 overflow-hidden">
+          <div className=" w-70  h-[300px] bg-gradient-to-br flex justify-center items-center  from-gray-50 to-gray-100 rounded-3xl mb-6 overflow-hidden">
           <img className="h-[100%] " src={mess2}  />
           </div>
       
-        <h2 className="text-[24px] md:text-[24px] font-semibold text-black">
+        <h2 className="text-[24px]  font-semibold text-black">
         Manage Everything
       </h2>
       <p className="text-gray-700 text-[16px] md:text-[17px] mt-2 ">
@@ -86,7 +86,28 @@ export const FeaturesSection = () => {
           </div>
       </div>
     </div>
-   
+
+    <div className="flex items-center justify-center  bg-white px-4">
+      <div className="text-center max-w-xl">
+        {/* Headline */}
+        <h1 className="text-xl   text-gray-900 ">
+          One conversation. Everything handled.
+        </h1>
+
+        {/* Subtext */}
+        <p className=" text-gray-900  text-base md:text-xl">
+          Travel like someone&apos;s got your back.
+        </p>
+
+        {/* Button */}
+        <div className="mt-6">
+          <button className="inline-flex items-center gap-2 bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition">
+            Meet Unravel One
+            <span className="text-lg">→</span>
+          </button>
+        </div>
+      </div>
+    </div>
 </>
   );
 };

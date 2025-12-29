@@ -4,7 +4,7 @@ import { Textarea } from "../ui/Textarea";
 import { Navbar } from "../ui/Navbar";
 import { useState } from "react";
 
-
+import { Travellers } from "../Home_sections/Travellers";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -259,24 +259,8 @@ export const Contact = () => {
         </div>
       </section>
 
-      <section className="relative w-full h-[400px] md:h-[435px] overflow-hidden">
-        <img
-          className="absolute inset-0 w-full h-full object-cover"
-          alt="Location background"
-          src="https://c.animaapp.com/miww62p4QlXFLl/img/rectangle-83.png"
-        />
-
-        <div className="relative z-10 flex flex-col items-center justify-center h-full px-4">
-          <p className="[font-family:'Roboto_Mono',Helvetica] font-bold text-white text-base  tracking-[0.70px] leading-[13.3px] mb-8 md:mb-16">
-            WE&apos;RE BASED IN
-          </p>
-
-          <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-white text-2xl  tracking-[-0.88px] leading-tight md:leading-[35px] max-w-[1133px]">
-            Bangalore, but we work everywhere.
-          </h2>
-        </div>
-      </section>
- <div className="w-[300px] h-[60px] md:w-[613px] md:h-[117px] mt-15  bg-[url(https://c.animaapp.com/miww62p4QlXFLl/img/untitled-design-7-removebg-preview-png-1.png)] bg-cover bg-center mx-auto" />
+     
+<Travellers></Travellers>
 
      
     </div>
