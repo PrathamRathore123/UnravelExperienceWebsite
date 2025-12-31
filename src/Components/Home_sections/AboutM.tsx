@@ -1,5 +1,5 @@
 
-import rectangle256 from "../../assets/rectangle-256.png";
+import rectangle256 from "../../assets/image_ofstar.jpg";
 
 export const AboutM = ()=> {
   return (

@@ -3,8 +3,8 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/Textarea";
 import { Navbar } from "../ui/Navbar";
 import { useState } from "react";
-
 import { Travellers } from "../Home_sections/Travellers";
+import  Video  from "../../assets/12421321_3840_2160_30fps.mp4";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -32,7 +32,7 @@ export const Contact = () => {
       } else {
         alert('Failed to submit form');
       }
-    } catch (error) {
+    } catch {
       alert('Error submitting form');
     }
     setIsSubmitting(false);
@@ -45,8 +45,11 @@ export const Contact = () => {
       className="relative w-full min-h-screen bg-white"
       data-model-id="127:379"
     >
-      <section className="relative w-full h-[500px] md:h-[600px] bg-no-repeat bg-cover overflow-hidden " style={{backgroundImage:"linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url(https://c.animaapp.com/miww62p4QlXFLl/img/rectangle-258.png)"}}>      
-<Navbar/>
+       <div className="absolute z-10 w-full">  <Navbar/></div>
+      <section className="relative w-full h-[500px] md:h-[600px] bg-no-repeat bg-cover overflow-hidden" >   
+      
+       <div className="w-full h-[600px] ">  <video  autoPlay loop muted src={Video}></video></div>
+
         <div className="absolute top-[150px] md:top-[236px] left-1/2 -translate-x-1/2 w-full max-w-[1242px] px-4">
           <h1 className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#f6f6f6] text-2xl md:text-[40px] tracking-[-1.92px] leading-tight md:leading-[40.2px]">
             Let&#39;s figure this out together

@@ -1,4 +1,4 @@
-import image from "../../assets/a-man-wearing-a-brown-coat-and-a-brown-hat-.png"
+import image from "../../assets/pexels-tima-miroshnichenko-5717640.jpg";
 
 export const TestimonialsSection = () => {
   return (

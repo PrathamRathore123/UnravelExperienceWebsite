@@ -1,5 +1,5 @@
 
-import image from "../../assets/WhatsApp.jpg"
+import image from "../../assets/pexels-steve-13129479.jpg"
 import Logo from "../../assets/EXPERIENCES.png"
 export const Travellers=()=> {
   return (

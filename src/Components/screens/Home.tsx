@@ -1,4 +1,3 @@
-
 import { HeroSection } from "../Home_sections/HeroSection";
 import { ExperiencesSection } from "../Home_sections/ExperiencesSection";
 import { TestimonialsSection } from "../Home_sections/TestimonialsSection";
@@ -15,7 +14,7 @@ import { AboutM } from "../Home_sections/AboutM.tsx";
 
 export const HomeLandingPage = () => {
   return (
-    <div className="relative w-full  bg-white ">
+    <div className="relative w-full bg-white">
       <div className="block md:hidden">
         <Navbar/>
       </div>
@@ -23,22 +22,16 @@ export const HomeLandingPage = () => {
           <Header />
         </div>
         <HeroSection />
-         <div className="hidden md:block sticky top-0 z-50 w-full"><Navbar /></div>
-
-      
+        <div className="hidden md:block sticky top-0 z-50 w-full"><Navbar /></div>
         <FeaturesSection />
-       
-        <div className="hidden md:block">  <AboutSection /></div>
+      <div className="hidden md:block">  <AboutSection /></div>
         <div className="block md:hidden"><AboutM></AboutM> </div>
         <ExperiencesSection />
         <PackagesSection />
         <NewWaysToWander />
         <MembershipSection />
-
         <MomentsDump />
         <TestimonialsSection />
-
-      
       <Travellers></Travellers>
     </div>
   );
