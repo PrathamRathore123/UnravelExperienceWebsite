@@ -9,7 +9,7 @@ import { itenaryData } from "../data/itenaryData";
 import { BookingForm } from "../ui/Bookingform";
 import {ItenaryCard} from "../ui/ItenaryCard"
 import image from "../../assets/EXPERIENCES.png"
-import Image from "../../assets/image.png"
+
 interface Day {
   day: string;
   title: string;

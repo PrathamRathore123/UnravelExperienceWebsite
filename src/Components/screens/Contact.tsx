@@ -50,7 +50,7 @@ export const Contact = () => {
       
        <div className="w-full h-[600px] ">  <video  autoPlay loop muted src={Video}></video></div>
 
-        <div className="absolute top-[150px] md:top-[236px] left-1/2 -translate-x-1/2 w-full max-w-[1242px] px-4">
+        <div className="absolute top-[150px] md:top-[236px] left-1/2  -translate-x-1/2 w-full max-w-[1242px] px-4">
           <h1 className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#f6f6f6] text-2xl md:text-[40px] tracking-[-1.92px] leading-tight md:leading-[40.2px]">
             Let&#39;s figure this out together
           </h1>
