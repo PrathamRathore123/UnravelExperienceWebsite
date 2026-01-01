@@ -1,5 +1,5 @@
 
-import  Starry from "../../assets/image_ofstar.jpg"
+import  Starry from "../../assets/Image_of_star.jpg"
 import { Link } from "react-router-dom";
 export const AboutSection = () => {
   return (
