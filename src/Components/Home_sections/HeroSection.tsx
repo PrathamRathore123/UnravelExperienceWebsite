@@ -29,7 +29,7 @@ export const HeroSection = () => {
         transition={{ duration: 0.8 }}
       >
         <div  className="absolute inset-0  " >
-          <video src={Video} autoPlay loop muted></video>
+          <video src={Video} autoPlay loop muted className="w-full h-full object-cover"></video>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-50% via-black/70  to-black/70  " >
       

@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {UserRound} from "lucide-react"
 import  Image  from "../../assets/EXPERIENCES.png";
-import  image from '../../assets/HeroSectionIMage.jpg'
+
 export const Navbar = () => {
  
   const [open, setOpen] = useState(false);
@@ -141,7 +141,7 @@ const NavbarDropdown = () => {
           <Link to="/contact">Contact</Link>
         </div>
         <p className="text-center sm:px-14 my-4 ">No junk Trips. Just well-composed Strategic plan ready to experience whatever you need to feel.</p>
-         <div style={{backgroundImage:`url(${image})`}} className="overflow-hidden w-full h-25 rounded-lg bg-center bg-cover">
+         <div style={{backgroundImage:`url()`}} className="overflow-hidden w-full h-25 rounded-lg bg-center bg-cover">
          
          </div>
       </div>
