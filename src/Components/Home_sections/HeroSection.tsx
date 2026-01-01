@@ -1,7 +1,7 @@
 import { Button } from "../ui/buttons";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import HeroImage from "../../assets/HeroSectionIMage.jpg";
+import Video from "../../assets/1766996316596102.mp4";
 import { Link } from "react-router-dom";
 export const HeroSection = () => {
   const [shutterComplete, setShutterComplete] = useState(false);
@@ -28,7 +28,9 @@ export const HeroSection = () => {
         whileInView={{ y: -50 }}
         transition={{ duration: 0.8 }}
       >
-        <div style={{backgroundImage:`url(${HeroImage})`}} className="absolute inset-0  bg-cover bg-center" />
+        <div  className="absolute inset-0  " >
+          <video src={Video} autoPlay loop muted></video>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-50% via-black/70  to-black/70  " >
       
         

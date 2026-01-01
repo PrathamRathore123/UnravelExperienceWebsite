@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { Button } from "../ui/buttons";
 import { Calendar } from "../ui/Calendar";
 import { Card, CardContent } from "../ui/card";
-import { itenaryData } from "../data/itenaryData";
+import { itenaryData } from "../../data/itenaryData";
 import { BookingForm } from "../ui/Bookingform";
 import {ItenaryCard} from "../ui/ItenaryCard"
 import image from "../../assets/EXPERIENCES.png"
@@ -151,7 +151,7 @@ export  const Itenary = () => {
                         {day.day}
                       </h3>
                       <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#6a6a6a] text-[15px] tracking-[0] leading-[20px]">
-                        {day.description}
+                        {day.title}
                       </p>
                     </div>
                   </CardContent>
