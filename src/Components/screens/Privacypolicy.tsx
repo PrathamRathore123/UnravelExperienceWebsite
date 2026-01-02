@@ -4,8 +4,8 @@ export default function Privacypolicy() {
   return (
    <>
       <Navbar></Navbar>
-      <div className="h-full w-[100%] text-center">
-          <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
+      <div className="h-full w-[65%] m-auto ">
+          <h1 className="text-3xl font-bold mb-4 text-center">Privacy Policy</h1>
           <p>Welcome to Unravel Experiences (“Company,” “we,” “our,” or “us”). Your privacy is important to us, and we are committed to protecting your personal data and information when you use our services, including our mobile application, website, customer support, or any other traveling-related services. This Privacy policy sums up how we collect, use, store, and protect your personal data or information. By using our services, you agree to the terms mentioned in this Privacy Policy. 
 With our Privacy Policy, we ensure your personal data remains confidential, secure, and only for intended purposes. This Privacy policy also outlines your rights to the data you provide to us and how it is used.</p>
 
@@ -183,6 +183,8 @@ With our Privacy Policy, we ensure your personal data remains confidential, secu
             <li>Unravel Experiences is not responsible for additional costs incurred by travelers, such as visa fees, flight tickets, or accommodation booked separately.</li>
           </ul>
       </div>
+      <br />
+
       </>
   )
 }
