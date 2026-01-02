@@ -82,30 +82,33 @@ export  const Itenary = () => {
         {/* Navigation */}
      
         {/* Hero Section */}
-        <section className="flex flex-col lg:flex-row gap-10 container  px-4 md:px-8 py-12">
-          <div className="grid grid-cols-2 gap-2 md:gap-x-2  max-w-[1100px] mx-auto mb-8 lg:mb-28">
+        <section className="flex flex-col lg:flex-row gap-10 container  px-4 md:px-8 py-12 m-auto">
+         <img className="block md:hidden h-100 w-full object-cover rounded-[24px] " src={data.heroImages[0]} alt="" />
+          <div className="hidden md:block">
+
+          <div className=" grid grid-cols-2 gap-2 md:gap-x-2  max-w-[1100px] mx-auto mb-8 lg:mb-28 ">
             <img
-              className="w-full h-[100px] sm:h-[220px]  md:rounded-tl-[150px] object-cover"
+              className="w-full h-[130px] sm:h-[220px]  rounded-tl-[150px] object-cover"
               alt={data.title}
               src={data.heroImages[0]}
             />
             <img
-              className="w-full h-[100px] sm:h-[220px]  object-cover md:rounded-tr-[20px]"
+              className=" w-full h-[130px] sm:h-[220px]  object-cover rounded-tr-[75px] md:rounded-tr-[20px]"
               alt={data.title}
               src={data.heroImages[1]}
             />
             <img
-              className="w-full h-[100px] sm:h-[220px]  object-cover rounded-bl-[75px] md:rounded-bl-[20px]"
+              className="w-full h-[130px] sm:h-[220px]  object-cover rounded-bl-[75px] md:rounded-bl-[20px]"
               alt={data.title}
               src={data.heroImages[2]}
             />
             <img
-              className="w-full h-[100px] sm:h-[220px] rounded-br-[75px] md:rounded-br-[150px] object-cover"
+              className="w-full h-[130px] sm:h-[220px] rounded-br-[75px] md:rounded-br-[150px] object-cover"
               alt={data.title}
               src={data.heroImages[3]}
             />
           </div>
-
+</div>
           <div className="max-w-[1200px] md:mx-auto ">
             <div>
               <h1 className=" [font-family:'DDM Sans',sans-serif] font-bold text-black text-2xl md:text-[40px] text-center md:tracking-[-1.50px] leading-tight  ">
@@ -133,7 +136,7 @@ export  const Itenary = () => {
           </h2>
 
           <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-12">
-            <div className="flex-1">
+            <div className="flex-1 ">
               {data.journeyDays.map((day: Day, index: number) => (
                 
                 <Card 
@@ -245,11 +248,11 @@ export  const Itenary = () => {
             Before You Go
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[1000px] mx-auto items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[1000px] mx-auto ">
             {thingsToKnowCards.map((card, index) => (
               <Card
                 key={index}
-                className="rounded-xl w-70 border border-[#00000026] shadow-[0px_4px_34px_#0000001a] p-4"
+                className="rounded-xl w-70 border border-[#00000026] shadow-[0px_4px_34px_#0000001a] p-4 m-auto sm:m-0"
               >
                 <CardContent className="p-0 space-y-2 h-40 ">
                   <img className="w-8 h-6" alt={card.title} src={card.icon} />

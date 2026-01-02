@@ -14,7 +14,7 @@ export const MembershipSection = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-3xl">
-        <p className="text-sm md:text-base tracking-wide mb-4">
+        <p className="text-[10px] md:text-base tracking-wide mb-4">
           A digital membership for travel in the new world.
         </p>
 
@@ -23,13 +23,13 @@ export const MembershipSection = () => {
           perks that grow with you
         </h2>
 
-        <p className="text-sm md:text-base text-gray-200 mb-8">
+        <p className="text-[12px] md:text-base text-gray-200 mb-8">
           Complimentary upgrades • Premium transfers • Airport fit check • First access •
           Green Impact in your name
         </p>
 
         <Link to="/signup"><button className="px-6 py-3 bg-white text-black rounded-full text-sm md:text-base font-medium shadow-md hover:bg-gray-200 transition">
-          Become an Insider
+         Join Unravel Access
         </button></Link>
       </div>
     </div>

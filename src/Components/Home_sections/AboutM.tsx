@@ -16,9 +16,7 @@ export const AboutM = ()=> {
         {/* Logo Card */}
         <div className="w-full aspect-square rounded-2xl overflow-hidden mb-6 shadow-[0_12px_32px_rgba(0,0,0,0.25)]" style={{ backgroundImage: `url(${rectangle256})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className="w-full h-full flex items-center justify-center ">
-            <h1 className="text-white text-3xl font-extrabold tracking-wide">
-              UNRAVEL
-            </h1>
+           
           </div>
         </div>
         {/* Main Text */}

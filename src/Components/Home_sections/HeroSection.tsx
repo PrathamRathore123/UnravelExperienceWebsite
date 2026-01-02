@@ -31,7 +31,7 @@ export const HeroSection = () => {
         <div  className="absolute inset-0  " >
           <video src={Video} autoPlay loop muted className="w-full h-full object-cover"></video>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-50% via-black/70  to-black/70  " >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black/90" >
       
         
       </div>
@@ -81,18 +81,19 @@ export const HeroSection = () => {
           </motion.p>
 
           {/* CTA button slide-up */}
-          <motion.a
-            href={'#Winter'}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.0, duration: 0.5 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-             <Link to={'/experiences'}> <Button className="h-10 md:px-6 bg-white text-black md:rounded-[30px] [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-[12px] tracking-[0.70px] hover:bg-gray-100 transition-colors">
+            <Link to={'/experiences'}>
+              <Button className="h-10 md:px-6 bg-white text-black md:rounded-[30px] [font-family:'Inter_Variable-Bold',Helvetica] font-bold text-[12px] tracking-[0.70px] hover:bg-gray-100 transition-colors">
                 Explore Winter Experiences
-              </Button></Link>
-            </motion.div>
-          </motion.a>
+              </Button>
+            </Link>
+          </motion.div>
           </div>
         </motion.div>
       )}

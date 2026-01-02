@@ -1,10 +1,11 @@
 
-import { useState, useEffect, useRef } from "react";
+import { useRef,useState,useEffect } from "react";
 import first from "../../assets/1.png";
 import second from "../../assets/2.png";
 import third from "../../assets/3.png";
 import fourth from "../../assets/4.png";
 import fifth from "../../assets/5.png";
+import ScrollAnimation from "../ui/ScrollAnimation";
 
 const cards = [
   {
@@ -38,13 +39,13 @@ export const NewWaysToWander = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
-    }, 3000); // Change slide every 3 seconds
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
+  };
 
-    return () => clearInterval(interval);
-  }, []);
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
+  };
 
   useEffect(() => {
     if (sliderRef.current) {
@@ -61,11 +62,12 @@ export const NewWaysToWander = () => {
       {/* Coming Soon + Heading */}
       <div className="flex flex-col md:flex-row md:items-start justify-between mb-16 gap-8">
         <p className="text-sm tracking-widest text-black font-bold  mt-2">• COMING SOON</p>
-        <h2 className="text-xl  md:text-2xl font-semibold leading-snug max-w-2xl">
-          We're designing fresh travel styles for the romantics.<br />
-          The restless. The "let's just go" people.
-          <span className="text-gray-500"> Be the first to know when they drop.</span>
-        </h2>
+       <ScrollAnimation>
+         <h2 className="text-xl  md:text-2xl font-semibold leading-snug max-w-2xl">
+          We're designing fresh travel styles for the romantics. <br />
+          The restless. The "let's just go" people. <br />
+           Be the first to know when they drop. <br />
+        </h2></ScrollAnimation>
       </div>
       {/* Section Title */}
       <h3 className="text-xl font-medium mb-10">New ways to wander</h3>
@@ -85,7 +87,13 @@ export const NewWaysToWander = () => {
         ))}
       </div>
       {/* Mobile Slider */}
-      <div className="md:hidden">
+      <div className="md:hidden relative">
+        <button
+          onClick={prevSlide}
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md z-10"
+        >
+          ‹
+        </button>
         <div
           ref={sliderRef}
           className="flex gap-4 overflow-x-hidden scrollbar-hide"
@@ -104,6 +112,12 @@ export const NewWaysToWander = () => {
             </div>
           ))}
         </div>
+        <button
+          onClick={nextSlide}
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 shadow-md z-10"
+        >
+          ›
+        </button>
       </div>
     </div>
   );

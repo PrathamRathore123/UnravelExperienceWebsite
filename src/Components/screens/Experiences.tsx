@@ -8,6 +8,9 @@ import { motion } from "framer-motion";
 import { heroVariants, staggerContainer, fadeUp } from "../lib/animations";
 import { useScrollAnimations } from "../lib/useScrollAnimations";
 import { Travellers } from "../Home_sections/Travellers";
+import ScrollAnimation from "../ui/ScrollAnimation";
+
+
 const experienceData = [
   {
     title: "A London Christmas",
@@ -42,7 +45,7 @@ const experienceData = [
     delay: "600ms",
     description: "You've Seen It In Your Favourite Movie. Now Live It.",
     days: "5 Days | New York City",
-    id: "london"
+    id: "newyork"
   },
 ];
 
@@ -59,10 +62,10 @@ export const Experiences = () => {
   return (
     <>
 
-     <div id=""
+     <div
       className="mb-10 "
       data-model-id="101:368"
-    >    
+    >
       <div id='winter-first' className="w-full relative">
         <section className=" w-full h-[500px] bg-[url('https://c.animaapp.com/miu74dag18RXJR/img/rectangle-24.png')]">
       <Navbar/>
@@ -99,16 +102,12 @@ export const Experiences = () => {
        variants={fadeUp}
        className="w-full flex items-center justify-center px-4 py-12">
       <p className="max-w-[786px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black  text-xl  text-center tracking-[0]  ">
-        <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black   tracking-[0] leading-relaxed ">
-          There are places that only{" "}
-        </span>
-        <span className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold">
-          reveal themselves in December
-        </span>
-        <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black  tracking-[0] ">
-          . When the crowds thin out, the lights come on, and the cold gives you
-          an excuse to stay close to the fire, the wine, the person next to you.
-        </span>
+        <ScrollAnimation>
+          <span className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black   tracking-[0] leading-relaxed ">
+            There are places that only reveal themselves in December. When the crowds thin out, the lights come on, and the cold gives you
+            an excuse to stay close to the fire, the wine, the person next to you.
+          </span>
+        </ScrollAnimation>
       </p>
     </motion.section>
     <motion.section 
@@ -124,7 +123,7 @@ export const Experiences = () => {
             variants={fadeUp}
             initial="rest"
             whileHover="hover"
-            className="relative h-[500px] md:h-[400px] w-[70%] overflow-hidden rounded-[20px] border-0 shadow-none m-auto"
+            className="relative h-[400px] md:h-[400px] w-[100%] md:w-[70%] overflow-hidden rounded-[20px] border-0 shadow-none m-auto"
           >
           <Card className="h-full">
             <CardContent className="p-0 h-full ">
@@ -171,13 +170,13 @@ export const Experiences = () => {
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeUp}
         className="w-full flex items-center justify-center  px-4">
-      <h2 className="max-w-[670px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-xl md:text-2xl text-center tracking-[-1.00px] leading-[50px]">
-        <span className="text-[#0000004c] tracking-[-0.60px]">
-          Reserve any Upcoming Experience from above for yourself with{" "}
-        </span>
-        <span className="text-[#000000d1] tracking-[-0.60px]">
+      <h2 className="max-w-[670px] [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-xl md:text-2xl text-center tracking-[-1.00px] leading-[30px] md:leading-[50px]">
+         <ScrollAnimation> 
+          <span className="text-[#0000004c] tracking-[-0.60px]">
+          Reserve any Upcoming Experience from above for yourself with
           not giving a single penny on reservation
         </span>
+        </ScrollAnimation>
       </h2>
     </motion.section>
     </div>

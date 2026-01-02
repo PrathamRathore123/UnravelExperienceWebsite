@@ -46,9 +46,10 @@ export const Contact = () => {
       data-model-id="127:379"
     >
        <div className="absolute z-10 w-full">  <Navbar/></div>
-      <section className="relative w-full h-[500px] md:h-[600px] bg-no-repeat bg-cover overflow-hidden" >   
+      <section className="relative w-full h-[400px] md:h-[600px] bg-no-repeat bg-cover overflow-hidden" >   
       
-       <div className="w-full h-[600px] ">  <video  autoPlay loop muted src={Video}></video></div>
+         <video className="object-cover w-full h-full"  autoPlay loop muted src={Video}></video>
+         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/70 to-black/40"></div>
 
         <div className="absolute top-[150px] md:top-[236px] left-1/2  -translate-x-1/2 w-full max-w-[1242px] px-4">
           <h1 className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#f6f6f6] text-2xl md:text-[40px] tracking-[-1.92px] leading-tight md:leading-[40.2px]">
@@ -56,7 +57,7 @@ export const Contact = () => {
           </h1>
         </div>
 
-          <p className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] absolute top-[250px] md:top-[307px] left-1/2 -translate-x-1/2 w-full max-w-[850px] px-4 text-center [font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-[#cacaca] text-base  leading-[28px]">
+          <p className="translate-y-[-5rem] md:translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] absolute top-[250px] md:top-[307px] left-1/2 -translate-x-1/2 w-full max-w-[850px] px-4 text-center [font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-[#cacaca] text-xs md:text-base  leading-[28px]">
             Whether you know exactly where you&#39;re going or just have a feeling
             you want to chase we&#39;re here.
           </p>

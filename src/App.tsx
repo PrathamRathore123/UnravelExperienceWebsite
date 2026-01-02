@@ -11,7 +11,9 @@ import { Login } from './Components/screens/Login'
 import {Itenary} from './Components/screens/Itenary'
 import { Signup } from './Components/screens/Signup'
 import { NotFound } from './Components/screens/NotFound'
-
+import Privacypolicy from './Components/screens/Privacypolicy'
+import Cancellation from './Components/screens/Cancellation'
+import TermsConditions from './Components/screens/TermsConditions'
 function App() {
   return (
     <GoogleOAuthProvider clientId="YOUR_GOOGLE_CLIENT_ID">
@@ -25,6 +27,9 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path='/signup' element={<Signup/>}/>
             <Route path='/itenary/:id' element={<Itenary/>}/>
+             <Route path="/privacy-policy" element={<Privacypolicy />} />
+              <Route path="/terms-of-service" element={<TermsConditions />} />
+               <Route path="/cancellations" element={<Cancellation />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
