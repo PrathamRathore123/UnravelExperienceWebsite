@@ -116,7 +116,7 @@ export const Experiences = () => {
       viewport={{ once: true, amount: 0.1 }}
       variants={staggerContainer}
       className="w-full py-12 px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] max-w-[1387px] ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px]  items-center  ">
         {experienceData.map((experience, index) => (
           <motion.div
             key={index}
@@ -174,7 +174,7 @@ export const Experiences = () => {
          <ScrollAnimation> 
           <span className="text-[#0000004c] tracking-[-0.60px]">
           Reserve any Upcoming Experience from above for yourself with
-          not giving a single penny on reservation
+          {"   "}not giving a single penny on reservation
         </span>
         </ScrollAnimation>
       </h2>
