@@ -11,10 +11,16 @@ import { FeaturesSection } from "../Home_sections/FeaturesSection";
 import { Navbar } from '../ui/Navbar'
 import { Travellers } from "../Home_sections/Travellers";
 import { AboutM } from "../Home_sections/AboutM.tsx";
+import Perks from "../ui/Perks.tsx";
 
 export const HomeLandingPage = () => {
   return (
+    <>
+    <div className="h-10">
+    <Perks></Perks>
+    </div>
     <div className="relative w-full bg-white">
+      
       <div className="block md:hidden">
         <Navbar/>
       </div>
@@ -34,5 +40,6 @@ export const HomeLandingPage = () => {
         <TestimonialsSection />
       <Travellers></Travellers>
     </div>
+    </>
   );
 };

@@ -9,6 +9,7 @@ import { heroVariants, staggerContainer, fadeUp } from "../lib/animations";
 import { useScrollAnimations } from "../lib/useScrollAnimations";
 import { Travellers } from "../Home_sections/Travellers";
 import ScrollAnimation from "../ui/ScrollAnimation";
+import Perks from "../ui/Perks";
 
 
 const experienceData = [
@@ -66,7 +67,9 @@ export const Experiences = () => {
       className="mb-10 "
       data-model-id="101:368"
     >
+       <Perks/>
       <div id='winter-first' className="w-full relative">
+       
         <section className=" w-full h-[500px] bg-[url('https://c.animaapp.com/miu74dag18RXJR/img/rectangle-24.png')]">
       <Navbar/>
 

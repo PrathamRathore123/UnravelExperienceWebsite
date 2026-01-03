@@ -9,7 +9,7 @@ import { itenaryData } from "../../data/itenaryData";
 import { BookingForm } from "../ui/Bookingform";
 import {ItenaryCard} from "../ui/ItenaryCard"
 import image from "../../assets/EXPERIENCES.png"
-
+import Perks from "../ui/Perks";
 interface Day {
   day: string;
   title: string;
@@ -75,9 +75,11 @@ export  const Itenary = () => {
   }, []);
   return (
     <>
+    <div id="start"/>
+    <Perks/>
   <Navbar/>
   <br />
-    <div id="start" className="relative w-full bg-white min-h-screen" data-model-id="462:506">
+    <div  className="relative w-full bg-white min-h-screen" data-model-id="462:506">
       <div className="w-full">
         {/* Navigation */}
      
@@ -124,7 +126,7 @@ export  const Itenary = () => {
                 {data.location}
               </div>
             </div>
-
+<br />
              <ItenaryCard/>
           </div>
         </section>

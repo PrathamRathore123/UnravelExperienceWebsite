@@ -64,11 +64,12 @@ export  function Signup() {
     <>
      <Navbar></Navbar>
    
-    <br /><br /><br /><br /><br />
+    <br /><br /><br />
+
     
     
       
-      <div className="w-[100%] h-[120vh] md:min-h-screen flex flex-row justify-center gap-8 md:gap-20 items-center mb-20 md:px-4">
+      <div className="w-[100%] h-full md:h-[90vh] flex flex-row justify-center gap-8 md:gap-20 items-center mb-40 md:px-4">
       
         <div className="text-left ">
           <img className=' ml-2 w-20' src={Logo} alt="" />
@@ -91,7 +92,7 @@ export  function Signup() {
 
         {/* SIGN UP CARD */}
 
-    <div className="absolute md:static top-[50%] w-[80%] mt-15 max-w-[470px] bg-white shadow-lg border border-gray-100 rounded-xl p-8">
+    <div className="absolute md:static top-[50%] w-[80%]  max-w-[470px] bg-white shadow-lg border border-gray-100 rounded-xl p-8">
           <h2 className="text-[20px] font-semibold mb-6">Sign Up</h2>
 
           {error && <div className="bg-red-100 text-red-700 p-2 rounded mb-4 text-sm">{error}</div>}
