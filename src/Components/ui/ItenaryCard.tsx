@@ -1,7 +1,7 @@
 import { CalendarDays, CloudSnow, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { BookingForm } from "./Bookingform";
-import Logo  from "../../assets/Unravelwhitelogo.png";
+import logo  from "../../assets/unravellogo.png";
 interface ItenaryCardProps {
   data: any;
 }
@@ -61,7 +61,7 @@ export const ItenaryCard = ({ data }: ItenaryCardProps) => {
           >
             Book now with
             <span  className=" font-bold text-transparent [-webkit-text-stroke:0.2px_white] bg-gray-900  px-3 py-1 flex rounded-full text-sm font-bold">
-              <img className="h-3 m-auto" src={Logo} alt="" />&nbsp;ONE
+              <img className="h-3 m-auto" src={logo} alt="" />&nbsp;ONE
             </span>
           </button>
         </div>
