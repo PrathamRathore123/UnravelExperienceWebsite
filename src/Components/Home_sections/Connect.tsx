@@ -19,9 +19,6 @@ export default function HeroSection() {
             Explore Winter Experiences
           </button>
 
-          <button className="px-6 py-2 rounded-full border border-white text-white text-sm hover:bg-white hover:text-black transition">
-            Talk To Unravel One
-          </button>
         </div>
       </div>
     </section>

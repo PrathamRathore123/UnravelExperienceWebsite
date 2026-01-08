@@ -1,15 +1,15 @@
-import { ChevronRightIcon,ChevronLeftIcon} from "lucide-react";
+import { ChevronLeftIcon} from "lucide-react";
 import {useState,useEffect} from "react";
 import { Navbar } from "../ui/Navbar";
 import { useParams } from "react-router-dom";
 import { Button } from "../ui/buttons";
-import { Calendar } from "../ui/Calendar";
 import { Card, CardContent } from "../ui/card";
 import { itenaryData } from "../../data/itenaryData";
 import { BookingForm } from "../ui/Bookingform";
 import {ItenaryCard} from "../ui/ItenaryCard"
 import image from "../../assets/EXPERIENCES.png"
 import Perks from "../ui/Perks";
+import ScrollAnimation from "../ui/ScrollAnimation";
 interface Day {
   day: string;
   title: string;
@@ -85,34 +85,18 @@ export  const Itenary = () => {
      
         {/* Hero Section */}
         <section className="flex flex-col lg:flex-row gap-10 container  px-4 md:px-8 py-12 m-auto">
-         <img className="block md:hidden h-100 w-full object-cover rounded-[24px] " src={data.heroImages[0]} alt="" />
-          <div className="hidden md:block">
-
-          <div className=" grid grid-cols-2 gap-2 md:gap-x-2  max-w-[1100px] mx-auto mb-8 lg:mb-28 ">
+     
+          
             <img
-              className="w-full h-[130px] sm:h-[220px]  rounded-tl-[150px] object-cover"
+              className="w-full h-[430px] sm:h-[520px] sm:w-[600px] md:m-auto  rounded-[75px] object-cover"
               alt={data.title}
               src={data.heroImages[0]}
             />
-            <img
-              className=" w-full h-[130px] sm:h-[220px]  object-cover rounded-tr-[75px] md:rounded-tr-[20px]"
-              alt={data.title}
-              src={data.heroImages[1]}
-            />
-            <img
-              className="w-full h-[130px] sm:h-[220px]  object-cover rounded-bl-[75px] md:rounded-bl-[20px]"
-              alt={data.title}
-              src={data.heroImages[2]}
-            />
-            <img
-              className="w-full h-[130px] sm:h-[220px] rounded-br-[75px] md:rounded-br-[150px] object-cover"
-              alt={data.title}
-              src={data.heroImages[3]}
-            />
-          </div>
-</div>
+           
+          
+
           <div className="max-w-[1200px] md:mx-auto ">
-            <div>
+            <div className="mb-3">
               <h1 className=" [font-family:'DDM Sans',sans-serif] font-bold text-black text-2xl md:text-[40px] text-center md:tracking-[-1.50px] leading-tight  ">
                 {data.title}
               </h1>
@@ -126,8 +110,8 @@ export  const Itenary = () => {
                 {data.location}
               </div>
             </div>
-<br />
-             <ItenaryCard/>
+
+             <ItenaryCard data={data}/>
           </div>
         </section>
        
@@ -169,19 +153,7 @@ export  const Itenary = () => {
               
             </div>
 
-           <div className="flex-shrink-0 py-10">
-              <Calendar />
-               <div className="flex wrap items-center gap-4 mt-8">
-              <Button 
-                onClick={() => setShowBookingForm(true)}
-                className="bg-[linear-gradient(90deg,rgba(34,34,34,1)_0%,rgba(57,57,57,1)_100%)] text-white rounded-[200px] px-4  h-auto [font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-base hover:opacity-90 transition-opacity">
-                Book with Unravel One
-                <div className="ml-3 w-[38px] h-[38px] bg-[#d9d9d9] rounded-full flex items-center justify-center">
-                  <ChevronRightIcon className="w-4 h-4 text-black" />
-                </div>
-              </Button>
-            </div>
-            </div>
+         
           </div>
           {selectedDay && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
@@ -276,12 +248,13 @@ export  const Itenary = () => {
         <section className="container mx-auto px-4 md:px-6 py-10">
           <div className="bg-[#222222] rounded-[40px] py-12 md:py-20 px-6 md:px-16 text-center max-w-[1200px] mx-auto">
             <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-xl  text-center tracking-[-0.80px] leading-tight md:leading-[64px] mb-8 max-w-4xl mx-auto">
-              <span className="text-[#dbdbdb4c] tracking-[-0.60px]">
+            <ScrollAnimation>
+                <span className="text-[#dbdbdb4c] tracking-[-0.60px]">
                 Reserve this experience for yourself with{" "}
-              </span>
-              <span className="text-[#ffffffd1] tracking-[-0.60px]">
+          
                 not giving a single penny on reservation
               </span>
+              </ScrollAnimation>
             </p>
             <Button 
               onClick={() => setShowBookingForm(true)}

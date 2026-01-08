@@ -7,6 +7,11 @@ interface BookingFormProps {
   price?: string;
 }
 
+interface LocationState {
+  tripTitle?: string;
+  price?: string;
+}
+
 interface FormData {
   name: string;
   email: string;
@@ -20,8 +25,8 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
   const location = useLocation();
   const navigate = useNavigate();
 
-  const tripTitle = propTripTitle || (location.state as any)?.tripTitle || "Palm City Villa";
-  const price = propPrice || (location.state as any)?.price || "$1,200";
+  const tripTitle = propTripTitle || (location.state as LocationState)?.tripTitle || "Palm City Villa";
+  const price = propPrice || (location.state as LocationState)?.price || "$1,200";
 
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -37,6 +42,8 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
   const [isFlipped, setIsFlipped] = useState(false);
   const [isMobile, setIsMobile] = useState<boolean>(typeof window !== "undefined" ? window.innerWidth <= 768 : false);
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string>("");
+  const [showErrorPopup, setShowErrorPopup] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -63,7 +70,8 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
   const nextStep = () => {
     if (currentStep === 1) {
       if (!formData.name || !formData.email || !formData.phone) {
-        alert("Please fill in all required fields.");
+        setErrorMessage("Please fill in all required fields.");
+        setShowErrorPopup(true);
         return;
       }
       setCurrentStep(2);
@@ -79,7 +87,8 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
     if (currentStep !== 2 || isLoading) return;
 
     if (!formData.name || !formData.email || !formData.phone || !formData.startDate) {
-      alert("Please fill in all required fields.");
+      setErrorMessage("Please fill in all required fields.");
+      setShowErrorPopup(true);
       return;
     }
 
@@ -104,10 +113,12 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
       if (response.ok) {
         setIsSubmitted(true);
       } else {
-        alert(`Booking failed (${response.status}). Please try again.`);
+        setErrorMessage(`Booking failed (${response.status}). Please try again.`);
+        setShowErrorPopup(true);
       }
-    } catch (err) {
-      alert("Network error. Please try again.");
+    } catch {
+      setErrorMessage("Network error. Please try again.");
+      setShowErrorPopup(true);
     } finally {
       setIsLoading(false);
     }
@@ -180,7 +191,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
                       Guests: {formData.guests}
                     </div>
                   </div>
-                  <div className="text-xs italic text-gray-500 bg-black/10 px-2 py-1 rounded-full">Click to see map →</div>
+                  <div className="text-xs italic text-gray-500 bg-black/10 px-2 py-1 rounded-full">Click to See All Details →</div>
                 </div>
               </div>
             </div>
@@ -189,13 +200,13 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
             <div className="card-face card-back bg-gray-100 border border-gray-200 shadow-lg">
               <div className="relative h-full">
                 {/* timeline */}
-                <div className="absolute top-3 left-4 right-4 flex items-center">
+                <div className="absolute w-50 top-3 left-4 right-4 m-auto flex items-center">
                   <div className="w-1.5 h-1.5 rounded-full bg-gray-400"></div>
                   <div className="flex-1 h-px bg-gray-300 mx-2 relative">
-                    <div className="absolute -top-2 left-[10%] text-[10px] text-gray-500">
+                    <div className="absolute top-1 -left-5 text-[10px] text-gray-500">
                       {formData.startDate ? new Date(formData.startDate).toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "Check-in"}
                     </div>
-                    <div className="absolute -top-2 right-[10%] text-[10px] text-gray-500">
+                    <div className="absolute top-1 -right-5 text-[10px] text-gray-500">
                       {formData.endDate ? new Date(formData.endDate).toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "Check-out"}
                     </div>
                   </div>
@@ -203,10 +214,10 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
                 </div>
 
                 {/* left column */}
-                <div className="absolute left-4 top-14 w-1/2">
+                <div className="absolute left-4 top-5 w-1/2">
                   <div className="text-2xl font-light text-amber-600 italic -rotate-[1deg]">Unravel</div>
 
-                  <div className="mt-4 p-2 border border-gray-300 rounded-sm -rotate-[1deg] bg-white/60">
+                  <div className="mt-3 p-2 border border-gray-300 rounded-sm -rotate-[1deg] bg-white/60">
                     <div className="text-[9px] text-gray-500">WHEN</div>
                     <div className="text-sm font-bold text-gray-800">
                       {formData.startDate ? new Date(formData.startDate).toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" }) : "Travel Date"}
@@ -215,7 +226,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
                   </div>
 
                   <div
-                    className="mt-4 rounded-md overflow-hidden border-2 border-emerald-200 shadow-md transform -rotate-[2deg]"
+                    className="mt-3 rounded-md overflow-hidden border-2 border-emerald-200 shadow-md transform -rotate-[2deg]"
                     style={{ width: isMobile ? 160 : 200, height: isMobile ? 120 : 140, background: "linear-gradient(135deg,#b8e6b8,#90d690)" }}
                   >
                     <img
@@ -226,7 +237,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
                     <div className="absolute bottom-6 left-8 w-7 h-7 rounded-full bg-blue-500 text-white flex items-center justify-center shadow-md border-2 border-white">📍</div>
                   </div>
 
-                  <div className="mt-3 text-[10px] text-gray-500">WHERE</div>
+                  <div className="mt-2 text-[10px] text-gray-500">WHERE</div>
                   <div className="text-sm font-bold text-gray-800">{tripTitle}</div>
                   <div className="text-[10px] text-gray-600">Confirmed Booking</div>
                 </div>
@@ -244,8 +255,8 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
 
                   <div className="mt-16 text-sm text-gray-800 leading-relaxed font-cursive transform rotate-[0.5deg] border-2 border-dashed border-gray-300 p-3 rounded">
                     hey, come hang at our<br />
-                    community meetup in {tripTitle.toLowerCase()}!<br /><br />
-                    (doesn't this postcard give vintage Amie vibes? hah)<br /><br />
+                    community meetup in {tripTitle.toLowerCase()}!<br />
+                    (doesn't this postcard give vintage Amie vibes? hah)<br />
                     see you there?<br /><br />
                     <strong>denninho</strong>
                   </div>
@@ -255,7 +266,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
                       e.stopPropagation();
                       handleContinueExploring();
                     }}
-                    className="absolute bottom-4 right-0 px-3 py-1 rounded-full text-xs font-medium shadow-md"
+                    className="absolute bottom-4 right-6 px-3 py-1 rounded-full text-xs font-medium shadow-md"
                     style={{ background: "linear-gradient(135deg,#ff6b35,#f7931e)", color: "white" }}
                   >
                     Continue
@@ -435,6 +446,29 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
             )}
           </div>
         </form>
+
+        {/* Custom Error Popup */}
+        {showErrorPopup && (
+          <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 backdrop-blur-sm">
+            <div className="bg-white rounded-xl p-6 shadow-2xl max-w-sm mx-4">
+              <div className="flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 text-center mb-2">Error</h3>
+              <p className="text-gray-600 text-center mb-6">{errorMessage}</p>
+              <button
+                onClick={() => setShowErrorPopup(false)}
+                className="w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition-colors font-medium"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -108,16 +108,15 @@ export  const Login=()=> {
         </div>
         {/* RIGHT SIDE */}
         <div className="flex flex-col mt-20  md:pl-10 md:items-center md:items-start">
-          <img className="h-[30px] w-[130px] pl-2 mb-2  " src={Logo} alt="" />
-         <p className="text-[grey] ml-2 " >WE ARE UNRAVEL</p>
+         
           <h1 className="hidden md:block text-2xl md:text-[28px] font-semibold leading-tight ml-2 text-left">
-            Good to see <br /> you
+            Welcome Back
           </h1>
-          <h1 className="block md:hidden text-4xl md:text-[28px] font-semibold leading-tight ml-2 text-left">
-            Not just an <br/> atelier, we are <br/> Effortless
+          <h1 className="block md:hidden text-center text-4xl md:text-[28px] font-semibold leading-tight ml-2 ">
+           Welcome Back
           </h1>
-          <p className="hidden md:block text-[11px] text-gray-500 mt-1 text-left">Your next trip is waiting</p>
-          <p className= "block md:hidden text-[11px] w-[70%] text-gray-500 pl-2 mt-1 text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati esse sequi sed adipisci minus animi suscipit ut vero, eaque ducimus?</p>
+          <p className="hidden md:block text-[11px] text-gray-500 mt-1 text-left">Your unravel perks are ready when you are Log in to start planning</p>
+          <p className= "block md:hidden text-[21px]  text-gray-500  mt-1 text-center">Your unravel perks are ready when you are Log in to start planning </p>
           
           <img
             src={images}

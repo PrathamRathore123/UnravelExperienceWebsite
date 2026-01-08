@@ -2,8 +2,7 @@ import  { useState } from 'react'
 import { useGoogleLogin } from '@react-oauth/google'
 import { Navbar } from '../ui/Navbar';
 import { useNavigate } from 'react-router-dom';
-import image from '../../assets/WhatsApp.jpg'
-import Logo from '../../assets/EXPERIENCES.png' 
+import { Star } from 'lucide-react';
 
 export  function Signup() {
   const [showPassword, setShowPassword] = useState(false);
@@ -64,35 +63,73 @@ export  function Signup() {
     <>
      <Navbar></Navbar>
    
-    <br /><br /><br />
-
-    
+    <br className='hidden md:block'  /> 
+ <br className='hidden md:block'  />
+     <br />
+   
+      
+      <div className="w-[100%] sm:h-[100vh] md:h-[90vh] flex flex-row justify-center gap-8 md:gap-20 md:items-center mb-40 md:px-4">
     
       
-      <div className="w-[100%] h-full md:h-[90vh] flex flex-row justify-center gap-8 md:gap-20 items-center mb-40 md:px-4">
-      
-        <div className="text-left ">
-          <img className=' ml-2 w-20' src={Logo} alt="" />
-          <p className='ml-2 text-[grey]'>WE ARE UNRAVEL</p>
+        {/* LEFT SECTION */}
+        <div className=" p-5 md:w-[50%]">
+          <img
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+            alt="Travel"
+            className="rounded-xl mb-6 hidden md:block h-40 w-full object-cover"
+          />
 
-          <h1 className="hidden md:block ml-2 text-2xl md:text-[28px] font-semibold leading-tight">Travel</h1>
-          <h1 className="block md:hidden ml-2 text-2xl md:text-[28px] font-semibold leading-tight">Not just an <br />atelier, we are <br />Effortless.</h1>
-          
-          <p className="hidden md:block ml-2 text-xl md:text-[26px] -mt-1">better</p>
-          <p className="block md:hidden ml-2 text-xs md:text-[13px] text-gray-600 mt-2 max-w-[264px] mb-35 leading-tight  md:mb-0">
-            Get first access to Unravel One and the kind of perks most people don’t know exist.
+          <h2 className="text-2xl font-serif font-semibold mb-4">
+            Welcome to Unravel Access
+          </h2>
+
+          <p className="text-gray-600 mb-6">
+            Travel should feel effortless, personal, and rewarding. Unravel Access
+            elevates every journey with premium services and seamless experiences.
           </p>
 
-
-          <img
-            src={image}
-            className="w-[100%] h-100 md:max-w-[430px] md:blur-none blur-xs md:h-[260px]  md:rounded-xl object-cover mt-6"
+          <ul className="space-y-4 hidden sm:block text-gray-700">
+            <li className="flex gap-3">
+              <span className='text-white bg-black flex justify-center items-center w-7 h-7  rounded-full'> <Star /></span>
+              <span>
+                <strong>Complimentary upgrades</strong><br />
+                Surprise room and car upgrades whenever available.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span className='text-white bg-black flex justify-center items-center w-7 h-7  rounded-full'><Star /></span>
+              <span>
+                <strong>Hometown to airport, on us</strong><br />
+                One-way private transfers from your home to the airport.
+              </span>
+            </li>
+            <li className="flex gap-3">
+               <span className='text-white bg-black flex justify-center items-center w-7 h-7  rounded-full'><Star /></span>
+              <span>
+                <strong>Airport fit check</strong><br />
+                Partner brands ensure you look sharp before boarding.
+              </span>
+            </li>
+            <li className="flex gap-3">
+               <span className='text-white bg-black flex justify-center items-center w-7 h-7  rounded-full'><Star /></span>
+              <span>
+                <strong>Green impact in your name</strong><br />
+                We offset your carbon footprint on every journey.
+              </span>
+            </li>
+          </ul>
+          
+           <img
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+            alt="Travel"
+            className="rounded-xl mt-26 block md:hidden h-80 blur w-full object-cover"
           />
         </div>
 
+
         {/* SIGN UP CARD */}
 
-    <div className="absolute md:static top-[50%] w-[80%]  max-w-[470px] bg-white shadow-lg border border-gray-100 rounded-xl p-8">
+    <div className="absolute z-[999] md:static top-[250px] sm:top-[55%] md:top-[50%] w-[80%]  max-w-[470px] bg-white shadow-lg border border-gray-100 rounded-xl p-8">
           <h2 className="text-[20px] font-semibold mb-6">Sign Up</h2>
 
           {error && <div className="bg-red-100 text-red-700 p-2 rounded mb-4 text-sm">{error}</div>}
@@ -126,16 +163,7 @@ export  function Signup() {
               </div>
             </div>
 
-            <label className="text-[13px] mb-1">Username</label>
-            <input
-              type="text"
-              name="username"
-              placeholder="johndoe"
-              value={formData.username}
-              onChange={handleChange}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm mb-4"
-              required
-            />
+          
 
             <label className="text-[13px] mb-1">Email</label>
             <input
