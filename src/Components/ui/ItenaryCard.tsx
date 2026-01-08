@@ -1,7 +1,7 @@
 import { CalendarDays, CloudSnow, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { BookingForm } from "./Bookingform";
-import Logo  from "../../assets/Unravelwhitelogo.PNG";
+import Logo  from "../../assets/Unravelwhitelogo.png";
 interface ItenaryCardProps {
   data: any;
 }
