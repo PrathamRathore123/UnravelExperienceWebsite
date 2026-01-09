@@ -23,10 +23,7 @@ export const TestimonialsSection = () => {
               there was an S-Class waiting for us. Unravel had upgraded our ride as a
               surprise, just like that, No extra charge. It was such a nice touch."
             </p>
-            <p className="  text-sm    block md:hidden   md:text-xl font-semibold text-white leading-relaxed backdrop-blur-md">
-              "Working with Unravel felt less like partnership and more like being understood - they listned ,refined, and crafted something
-               that felt effortlessly ours"
-            </p>
+            
             </div>
           </div>
         </div>

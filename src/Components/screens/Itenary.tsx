@@ -165,10 +165,10 @@ export  const Itenary = () => {
           >
             <button
               onClick={() => setSelectedDay(null)}
-              className="md:absolute mb-4 top-4 right-4 bg-black text-white w-8 h-8 rounded-full flex items-center justify-center"
+              className="md:absolute  top-4 right-4 bg-black text-white w-8 h-8 rounded-full flex items-center justify-center"
             ><ChevronLeftIcon></ChevronLeftIcon> </button>
 
-            <div className="flex flex-col md:flex-row  gap-3">
+            <div className="flex flex-col md:flex-row md:gap-4   ">
                 <h3 className="text-center block md:hidden text-[25px] font-bold text-[#222] ">
                   {selectedDay.day}
                 </h3>
@@ -178,7 +178,7 @@ export  const Itenary = () => {
               <img
                 src={selectedDay.image}
                 alt=""
-                className=" w-[100%] md:w-[300px] md:h-[220px] m-auto rounded-2xl object-cover"
+                className=" w-[300px] h-[220px] m-auto rounded-2xl object-cover"
               />
 
               <div className="flex-1">
@@ -190,7 +190,7 @@ export  const Itenary = () => {
                   {selectedDay.title}
                 </p>
 
-                <p className=" text-[15px] leading-[22px] text-[#444] whitespace-pre-line">
+                <p className="mt-4 sm:mt-0 overflow-x-auto text-[15px] leading-[22px] text-[#444] whitespace-pre-line">
                   {selectedDay.description}
                 </p>
               </div>
@@ -233,7 +233,7 @@ export  const Itenary = () => {
                   <h3 className="[font-family:'BDO_Grotesk-Medium',Helvetica] font-medium text-[#222222] text-[15px] tracking-[0] leading-[28px]">
                     {card.title}
                   </h3>
-                  <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#7b7b7b] text-sm tracking-[0] leading-[22px]">
+                  <p className=" [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#7b7b7b] text-sm tracking-[0] leading-[22px]">
                     {card.description}
                   </p>
                  
