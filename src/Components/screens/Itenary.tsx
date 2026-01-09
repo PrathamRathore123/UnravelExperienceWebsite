@@ -255,7 +255,7 @@ export  const Itenary = () => {
           
                 not giving a single penny on reservation
               </span>
-              </ScrollAnimation>
+             
             </p>
             <Button 
               onClick={() => setShowBookingForm(true)}
