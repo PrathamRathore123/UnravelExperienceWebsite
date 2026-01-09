@@ -9,7 +9,7 @@ import { BookingForm } from "../ui/Bookingform";
 import {ItenaryCard} from "../ui/ItenaryCard"
 import image from "../../assets/EXPERIENCES.png"
 import Perks from "../ui/Perks";
-import ScrollAnimation from "../ui/ScrollAnimation";
+
 interface Day {
   day: string;
   title: string;
@@ -248,13 +248,14 @@ export  const Itenary = () => {
         <section className="container mx-auto px-4 md:px-6 py-10">
           <div className="bg-[#222222] rounded-[40px] py-12 md:py-20 px-6 md:px-16 text-center max-w-[1200px] mx-auto">
             <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-xl  text-center tracking-[-0.80px] leading-tight md:leading-[64px] mb-8 max-w-4xl mx-auto">
+            
            
                 <span className="text-[#dbdbdb4c] tracking-[-0.60px]">
                 Reserve this experience for yourself with{" "}
           
                 not giving a single penny on reservation
               </span>
-          
+              </ScrollAnimation>
             </p>
             <Button 
               onClick={() => setShowBookingForm(true)}

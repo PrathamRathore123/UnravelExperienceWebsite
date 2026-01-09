@@ -19,11 +19,15 @@ export const TestimonialsSection = () => {
             <div  className='backdrop-blur-lg   p-3 w-full h-[60%] flex flex-col justify-center md:p-15 '> 
             <p className="text-md font-semibold mb-3 backdrop-blur-md">★★★★★</p>
             <p className="  text-md font-semibold  leading-relaxed backdrop-blur-md">
+            <p className=" text-md font-semibold  leading-relaxed backdrop-blur-md">
               "I had asked for a regular airport transfer, nothing fancy, but when we landed,
               there was an S-Class waiting for us. Unravel had upgraded our ride as a
               surprise, just like that, No extra charge. It was such a nice touch."
             </p>
-         
+            <p className="  text-sm    block md:hidden   md:text-xl font-semibold text-white leading-relaxed backdrop-blur-md">
+              "Working with Unravel felt less like partnership and more like being understood - they listned ,refined, and crafted something
+               that felt effortlessly ours"
+            </p>
             </div>
           </div>
         </div>
