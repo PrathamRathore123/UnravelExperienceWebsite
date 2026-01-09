@@ -4,12 +4,11 @@ import { useNavigate, useLocation } from "react-router-dom";
 interface BookingFormProps {
   onClose?: () => void;
   tripTitle?: string;
-  price?: string;
 }
 
 interface LocationState {
   tripTitle?: string;
-  price?: string;
+ 
 }
 
 interface FormData {
@@ -21,12 +20,11 @@ interface FormData {
   guests: number | string;
 }
 
-export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: propTripTitle, price: propPrice }) => {
+export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: propTripTitle }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
   const tripTitle = propTripTitle || (location.state as LocationState)?.tripTitle || "Palm City Villa";
-  const price = propPrice || (location.state as LocationState)?.price || "$1,200";
 
   const [formData, setFormData] = useState<FormData>({
     name: "",

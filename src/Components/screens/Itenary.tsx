@@ -270,10 +270,9 @@ export  const Itenary = () => {
       </div>
       
       {showBookingForm && (
-        <BookingForm 
+        <BookingForm
           onClose={() => setShowBookingForm(false)}
           tripTitle={data.title}
-          price={data.price || "Contact for pricing"}
         />
       )}
       <img className="w-[50%]" src={image} alt="" />
