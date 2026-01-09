@@ -162,7 +162,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
         `}</style>
 
         <div
-          className={`card-3d flex gap-12 items-center p-6`}
+          className={`card-3d flex flex-wrap gap-12 m-auto justify-center items-center p-6`}
           onClick={() => setIsFlipped((s) => !s)}
         >
           <div
@@ -215,7 +215,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
 
                 {/* left column */}
                 <div className="absolute left-4 top-5 w-1/2">
-                  <div className="text-2xl font-light text-amber-600 italic -rotate-[1deg]">Unravel</div>
+                  <div className="text-2xl font-light text-black italic -rotate-[1deg]">Unravel</div>
 
                   <div className="mt-3 p-2 border border-gray-300 rounded-sm -rotate-[1deg] bg-white/60">
                     <div className="text-[9px] text-gray-500">WHEN</div>
@@ -306,11 +306,11 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
   // ===== MAIN FORM UI (no theme logic) =====
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-white/90 to-gray-100/90 backdrop-blur-sm p-4">
-      <div className="w-full max-w-md sm:max-w-lg rounded-xl p-6 sm:p-8 shadow-xl border border-gray-200 bg-white/95 max-h-[90vh] overflow-y-auto">
+      <div className="w-full max-w-md  sm:max-w-lg rounded-xl p-6 sm:p-8 shadow-xl border border-gray-200 bg-white/95 max-h-[90vh] overflow-y-auto">
         <div className="flex justify-between items-start mb-5">
           <div>
             <h2 className="text-xl sm:text-2xl font-light text-gray-800">{tripTitle}</h2>
-            <p className="text-sm text-gray-600">{price}/night</p>
+          
           </div>
 
           <div className="flex items-center gap-2">
@@ -329,7 +329,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
           {[1, 2].map((s) => (
             <div
               key={s}
-              className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold ${currentStep >= s ? "bg-gradient-to-br from-orange-500 to-yellow-400 text-white" : "bg-gray-200 text-gray-600"}`}
+              className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold ${currentStep >= s ? "bg-gradient-to-br from-gray-800 to-black text-white" : "bg-gray-200 text-gray-600"}`}
             >
               {s}
             </div>
@@ -348,7 +348,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
                   onChange={handleInputChange}
                   required
                   placeholder="Full Name"
-                  className="w-full rounded-xl px-4 py-3 border border-gray-200 bg-gray-50 outline-none focus:border-orange-400 transition-colors"
+                  className="w-full rounded-xl px-4 py-3 border border-gray-200 bg-gray-50 outline-none focus:border-black transition-colors"
                 />
 
                 <input
@@ -358,7 +358,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
                   onChange={handleInputChange}
                   required
                   placeholder="Email Address"
-                  className="w-full rounded-xl px-4 py-3 border border-gray-200 bg-gray-50 outline-none focus:border-orange-400 transition-colors"
+                  className="w-full rounded-xl px-4 py-3 border border-gray-200 bg-gray-50 outline-none focus:border-black transition-colors"
                 />
 
                 <input
@@ -368,7 +368,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
                   onChange={handleInputChange}
                   required
                   placeholder="Phone Number"
-                  className="w-full rounded-xl px-4 py-3 border border-gray-200 bg-gray-50 outline-none focus:border-orange-400 transition-colors"
+                  className="w-full rounded-xl px-4 py-3 border border-gray-200 bg-gray-50 outline-none focus:border-black transition-colors"
                 />
               </div>
             </div>
@@ -388,7 +388,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
                     min={minDate}
                     onChange={handleInputChange}
                     required
-                    className="w-full rounded-xl px-3 py-3 border border-gray-200 bg-gray-50 focus:border-orange-400 transition-colors"
+                    className="w-full rounded-xl px-3 py-3 border border-gray-200 bg-gray-50 focus:border-black transition-colors"
                   />
                 </div>
 
@@ -400,7 +400,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
                     value={formData.endDate}
                     min={formData.startDate || minDate}
                     onChange={handleInputChange}
-                    className="w-full rounded-xl px-3 py-3 border border-gray-200 bg-gray-50 focus:border-orange-400 transition-colors"
+                    className="w-full rounded-xl px-3 py-3 border border-gray-200 bg-gray-50 focus:border-black transition-colors"
                   />
                 </div>
               </div>
@@ -414,7 +414,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
                   value={formData.guests}
                   onChange={handleInputChange}
                   required
-                  className="w-full rounded-xl px-4 py-3 border border-gray-200 bg-gray-50 focus:border-orange-400 transition-colors"
+                  className="w-full rounded-xl px-4 py-3 border border-gray-200 bg-gray-50 focus:border-black transition-colors"
                 />
               </div>
             </div>
@@ -428,11 +428,11 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
             )}
 
             {currentStep < 2 ? (
-              <button type="button" onClick={nextStep} className="flex-1 rounded-xl px-4 py-3 bg-gradient-to-br from-orange-500 to-yellow-400 text-white shadow-lg hover:shadow-xl transition-shadow">
+              <button type="button" onClick={nextStep} className="flex-1 rounded-xl px-4 py-3 bg-gradient-to-br from-gray-800 to-black text-white shadow-lg hover:shadow-xl transition-shadow">
                 Next Step
               </button>
             ) : (
-              <button type="submit" disabled={isLoading} className="flex-1 rounded-xl px-4 py-3 bg-gradient-to-br from-orange-500 to-yellow-400 text-white shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 transition-all">
+              <button type="submit" disabled={isLoading} className="flex-1 rounded-xl px-4 py-3 bg-gradient-to-br from-gray-800 to-black text-white shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 transition-all">
                 {isLoading ? (
                   <>
                     <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">

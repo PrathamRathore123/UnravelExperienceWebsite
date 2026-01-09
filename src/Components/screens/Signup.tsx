@@ -3,7 +3,7 @@ import { useGoogleLogin } from '@react-oauth/google'
 import { Navbar } from '../ui/Navbar';
 import { useNavigate } from 'react-router-dom';
 import { Star } from 'lucide-react';
-
+import image from '../../assets/Signuppage.jpg';
 export  function Signup() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -74,7 +74,7 @@ export  function Signup() {
         {/* LEFT SECTION */}
         <div className=" p-5 md:w-[50%]">
           <img
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+            src={image}
             alt="Travel"
             className="rounded-xl mb-6 hidden md:block h-40 w-full object-cover"
           />

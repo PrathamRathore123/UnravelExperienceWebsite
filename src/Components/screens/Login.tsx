@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useGoogleLogin } from '@react-oauth/google';
 import { Navbar } from "../ui/Navbar";
 import { useNavigate } from 'react-router-dom';
-import images from '../../assets/WhatsApp.jpg';
+import images from '../../assets/Loginpage.jpg';
 import Logo from '../../assets/EXPERIENCES.png'
 
 
@@ -58,7 +58,7 @@ export  const Login=()=> {
     
     <div className="w-full min-h-screen bg-white flex flex-col items-center justify-start  md:px-14 py-10 font-sans">
       
-      <div className="w-full min-h-screen flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20">
+      <div className="w-full min-h-screen flex flex-col md:flex-row justify-center items-center  gap-8 md:gap-20">
         
         <div className="absolute top-[55%] md:static z-8 w-[80%] max-w-[470px] bg-white shadow-2xl mx-2 rounded-xl p-5 md:p-7 border border-gray-100">
           <h2 className="text-[30px] font-semibold mb-10">Login</h2>
@@ -107,7 +107,7 @@ export  const Login=()=> {
           </button>
         </div>
         {/* RIGHT SIDE */}
-        <div className="flex flex-col mt-20  md:pl-10 md:items-center md:items-start">
+        <div className="flex flex-col mt-20 md:mt-10 md:pl-10 md:items-center md:items-start">
          
           <h1 className="hidden md:block text-2xl md:text-[28px] font-semibold leading-tight ml-2 text-left">
             Welcome Back
@@ -125,7 +125,7 @@ export  const Login=()=> {
         </div>
       </div>
     </div>
-    <img src={Logo} alt="" />
+    <img className="h-30" src={Logo} alt="" />
     </>
   );
 }
