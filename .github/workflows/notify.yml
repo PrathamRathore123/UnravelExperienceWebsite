@@ -1,0 +1,13 @@
+name: Notify VPS to Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger deployment (noop)
+        run: echo "Code pushed, VPS will pull on schedule"
