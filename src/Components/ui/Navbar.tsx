@@ -50,7 +50,7 @@ text-base
               <sup className="bg-gray-900 text-white rounded-full px-2 py-[2px] text-[10px]">4</sup>
             </Link>
           </li>
-          <li className="hidden md:block hover:opacity-100"><Link to="/contact">Contact</Link></li>
+          <li className="hidden md:block hover:opacity-100"><Link to="/contact">Pratham</Link></li>
       
 
         {/* HAMBURGER + DROPDOWN ANCHOR */}
