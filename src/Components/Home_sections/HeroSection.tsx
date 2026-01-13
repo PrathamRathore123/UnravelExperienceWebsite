@@ -2,9 +2,12 @@ import { Button } from "../ui/buttons";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Video from "../../assets/1766996316596102.mp4";
+import Poster from "../../assets/pexels-steve-13129479.jpg";
 import { Link } from "react-router-dom";
+import { useLazyVideo } from "../../hooks/useLazyVideo";
 export const HeroSection = () => {
   const [shutterComplete, setShutterComplete] = useState(false);
+  const { videoRef, isVisible } = useLazyVideo();
 
   useEffect(() => {
     const timer = setTimeout(() => setShutterComplete(true), 1200);
@@ -29,7 +32,16 @@ export const HeroSection = () => {
         transition={{ duration: 0.8 }}
       >
         <div  className="absolute inset-0  " >
-          <video src={Video} autoPlay loop muted className="w-full h-full object-cover"></video>
+          <video
+            ref={videoRef}
+            src={isVisible ? Video : undefined}
+            poster={Poster}
+            preload="none"
+            autoPlay={isVisible}
+            loop
+            muted
+            className="w-full h-full object-cover"
+          ></video>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black/90" >
       

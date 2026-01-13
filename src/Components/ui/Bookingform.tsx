@@ -102,7 +102,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
         special_requests: "",
       };
 
-      const response = await fetch("http://localhost:8000/api/receive-customer-booking/", {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/receive-customer-booking/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(bookingData),

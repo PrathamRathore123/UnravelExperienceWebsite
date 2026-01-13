@@ -16,7 +16,7 @@ import Cancellation from './Components/screens/Cancellation'
 import TermsConditions from './Components/screens/TermsConditions'
 function App() {
   return (
-    <GoogleOAuthProvider clientId="YOUR_GOOGLE_CLIENT_ID">
+    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
       <BrowserRouter>
           <ScrollToTop />
           <Routes>

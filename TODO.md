@@ -1,3 +1,6 @@
-- [x] Update image paths in Frontend/src/data/itenaryData.ts to remove "/assets/" prefix for all journey day images
-- [x] Fix Lapland image file extensions and casing to match actual files (.HEIC, .heic, .JPG)
-- [x] Verify images display correctly after path updates
+# Video Optimization Tasks
+
+- [x] Create custom useLazyVideo hook using IntersectionObserver
+- [x] Update HeroSection.tsx to use lazy loading, add preload="none", and poster image
+- [x] Ensure video plays only when visible
+- [x] Test that page loads instantly and video loads on visibility
