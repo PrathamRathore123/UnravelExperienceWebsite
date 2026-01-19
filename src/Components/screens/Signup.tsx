@@ -1,5 +1,4 @@
 import  { useState } from 'react'
-import { useGoogleLogin } from '@react-oauth/google'
 import { Navbar } from '../ui/Navbar';
 import { useNavigate } from 'react-router-dom';
 import { Star } from 'lucide-react';
@@ -229,12 +228,7 @@ export  function Signup() {
             </button>
           </form>
 
-          <button 
-            onClick={() => googleLogin()}
-            className="w-40 border border-gray-300 mt-5 rounded-md py-2 text-sm flex items-center justify-center gap-2"
-          >
-            <img src="/google.png" className="w-4" /> Login With Google
-          </button>
+
         </div>
         </div>
 

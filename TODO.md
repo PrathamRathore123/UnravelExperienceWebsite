@@ -1,0 +1,6 @@
+- [x] Remove GoogleOAuthProvider wrapper from App.tsx and its import
+- [x] Remove useGoogleLogin import, googleLogin function, and "Login With Google" button from Signup.tsx
+- [ ] Remove useGoogleLogin import, googleLogin function, and "Login With Google" button from Login.tsx
+- [ ] Remove "@react-oauth/google" dependency from package.json
+- [ ] Remove google.png from Frontend/public/
+- [ ] Run npm install to update package-lock.json

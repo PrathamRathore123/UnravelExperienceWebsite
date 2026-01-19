@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useGoogleLogin } from '@react-oauth/google';
 import { Navbar } from "../ui/Navbar";
 import { useNavigate } from 'react-router-dom';
 import images from '../../assets/Loginpage.jpg';
@@ -41,17 +40,7 @@ export  const Login=()=> {
     }
   };
 
-  const googleLogin = useGoogleLogin({
-    onSuccess: async (tokenResponse) => {
-      console.log('Google Login Success:', tokenResponse);
-      const userInfo = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
-        headers: { Authorization: `Bearer ${tokenResponse.access_token}` },
-      }).then(res => res.json());
-      console.log('User Info:', userInfo);
-  
-    },
-    onError: (error) => console.error('Login Failed:', error)
-  });
+
   return (
     <>
     <Navbar/>
@@ -99,12 +88,7 @@ export  const Login=()=> {
             </button>
           </form>
           <p className="text-[11px] text-right text-gray-500 cursor-pointer">Forgot Your Password</p>
-          <button 
-            onClick={() => googleLogin()}
-            className="w-40 mt-5 border border-gray-300 rounded-md py-2 text-sm flex items-center justify-center gap-2"
-          >
-            <img src="/google.png" className="w-4" /> Login With Google
-          </button>
+
         </div>
         {/* RIGHT SIDE */}
         <div className="flex flex-col mt-20 md:mt-10 md:pl-10 md:items-center md:items-start">

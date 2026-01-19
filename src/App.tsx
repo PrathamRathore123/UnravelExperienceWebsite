@@ -1,6 +1,5 @@
 import './App.css'
 import { BrowserRouter as BrowserRouter, Routes, Route } from 'react-router-dom'
-import { GoogleOAuthProvider } from '@react-oauth/google'
 import { Footer } from './Components/ui/Footer'
 import { ScrollToTop } from './Components/ui/ScrollToTop'
 import { HomeLandingPage } from './Components/screens/Home'
