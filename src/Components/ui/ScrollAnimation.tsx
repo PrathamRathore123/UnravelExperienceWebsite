@@ -90,7 +90,7 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({ children }) => {
     if (isValidElement(node)) {
       return cloneElement(node, {
         children: renderNode((node as ReactElement<{ children?: ReactNode }>).props.children),
-      } as any);
+      } as React.HTMLAttributes<HTMLElement>);
     }
 
     return node;
@@ -101,7 +101,7 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({ children }) => {
     <div ref={containerRef}>
       {cloneElement(children, {
         children: renderNode((children as ReactElement<{ children?: ReactNode }>).props.children),
-      } as any)}
+      } as React.HTMLAttributes<HTMLElement>)}
     </div>
   );
 };

@@ -15,8 +15,7 @@ import Cancellation from './Components/screens/Cancellation'
 import TermsConditions from './Components/screens/TermsConditions'
 function App() {
   return (
-    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
-      <BrowserRouter>
+    <BrowserRouter>
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<HomeLandingPage />} />
@@ -33,7 +32,7 @@ function App() {
           </Routes>
           <Footer />
       </BrowserRouter>
-    </GoogleOAuthProvider>
+    
   )
 }
 

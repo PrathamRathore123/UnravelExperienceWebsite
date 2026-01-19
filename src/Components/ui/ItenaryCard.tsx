@@ -2,8 +2,16 @@ import { CalendarDays, CloudSnow, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { BookingForm } from "./Bookingform";
 import logo  from "../../assets/unravellogo.png";
+
+interface ItenaryData {
+  box: string;
+  Weather: string;
+  inclusion: string;
+  title: string;
+}
+
 interface ItenaryCardProps {
-  data: any;
+  data: ItenaryData;
 }
 
 export const ItenaryCard = ({ data }: ItenaryCardProps) => {

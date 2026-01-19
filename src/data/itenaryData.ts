@@ -1,4 +1,27 @@
-export const itenaryData: any = {
+interface JourneyDay {
+  day: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+interface Itinerary {
+  title: string;
+  subtitle: string;
+  duration: string;
+  location: string;
+  pdf: string;
+  box: string;
+  Weather: string;
+  inclusion: string;
+  heroImages: string[];
+  journeyDays: JourneyDay[];
+  galleryTitle?: string;
+  gallerySubtitle: string;
+  galleryImage: string;
+}
+
+export const itenaryData: Record<string, Itinerary> = {
   london: {
     title: "A London Christmas",
     subtitle: "London in December doesn't try to impress you. It just is",

@@ -10,13 +10,14 @@ const useIsInView = (options?: IntersectionObserverInit) => {
       setIsInView(entry.isIntersecting);
     }, options); // Options can define root margin, threshold, etc.
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [options]);

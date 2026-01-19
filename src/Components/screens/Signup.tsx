@@ -43,21 +43,12 @@ export  function Signup() {
       } else {
         setError(Object.values(data).flat().join(', '));
       }
-    } catch (err) {
+    } catch {
       setError('Network error. Please try again.');
     }
   };
 
-  const googleLogin = useGoogleLogin({
-    onSuccess: async (tokenResponse) => {
-      console.log('Google Login Success:', tokenResponse);
-      const userInfo = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
-        headers: { Authorization: `Bearer ${tokenResponse.access_token}` },
-      }).then(res => res.json());
-      console.log('User Info:', userInfo);
-    },
-    onError: (error) => console.error('Login Failed:', error)
-  });
+  
   return (
     <>
      <Navbar></Navbar>
