@@ -33,7 +33,7 @@ const experienceData = [
   },
   {
     title: "A Week With Santa",
-    image: "https://c.animaapp.com/miu74dag18RXJR/img/rectangle-129-1.png",
+    image: "IMG_7714.jpg",
     delay: "400ms",
     description:
       "If You've Ever Wanted To Feel Eight Years Old Again, This Is How.",

@@ -102,16 +102,19 @@ export const BookingForm: React.FC<BookingFormProps> = ({ onClose, tripTitle: pr
         special_requests: "",
       };
 
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/receive-customer-booking/`, {
+      const response = await fetch(`http://localhost:3000/submit-booking`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(bookingData),
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (response.ok && result.success) {
         setIsSubmitted(true);
       } else {
-        setErrorMessage(`Booking failed (${response.status}). Please try again.`);
+        const errorMsg = result.error || `Booking failed (${response.status}). Please try again.`;
+        setErrorMessage(errorMsg);
         setShowErrorPopup(true);
       }
     } catch {

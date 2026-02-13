@@ -33,9 +33,6 @@ export const itenaryData: Record<string, Itinerary> = {
     inclusion:'Curated luxury accommodations, private chauffeurs, exclusive seasonal experiences, and personalized support from Unravel One throughout your journey.',
     heroImages: [
       "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-15.png",
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-18.png",
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-17.png",
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-16.png",
     ],
     journeyDays: [
       {
@@ -47,19 +44,19 @@ export const itenaryData: Record<string, Itinerary> = {
       {
         day: "Day 2",
         title:"A British Christmas",
-        description: "The morning is yours.Covent Garden. A quiet café. Your call. In the evening, your guide takes you on a private Christmas lights tour. See London glowing —Covent Garden&#39;s windows, Regent Street&#39;s arches, the hidden corners only locals know.Hot chocolate in hand. Mulled wine if you prefer.3-hour private experience",
+        description: "The morning is yours.Covent Garden. A quiet café. Your call. In the evening, your guide takes you on a private Christmas lights tour. See London glowing —Covent Garden's windows, Regent Street's arches, the hidden corners only locals know.Hot chocolate in hand. Mulled wine if you prefer.3-hour private experience",
         image: "https://c.animaapp.com/mirmmjt1sI61N8/img/picture---6e231363-bc06-4099-b173-b736f0a14333-jpeg.png",
       },
       {
         day: "Day 3",
         title:"The Markets Trail",
-        description: "Today, you're chasing London&#39;s markets.Your private guide and driver take you through Portobello in Notting Hill, Borough Market's food scene, Camden's creative chaos, and Old Spitalfields.Tastings. Local finds. Stories behind every stall.",
+        description: "Today, you're chasing London's markets.Your private guide and driver take you through Portobello in Notting Hill, Borough Market's food scene, Camden's creative chaos, and Old Spitalfields.Tastings. Local finds. Stories behind every stall.",
         image: "https://c.animaapp.com/mirmmjt1sI61N8/img/picture---6e231363-bc06-4099-b173-b736f0a14333-jpeg-4.png",
       },
       {
         day: "Day 4",
        title:"Art, Adventure & Winter Wonderland",
-        description: "Start at Frameless, where digital art surrounds you in light and color.Then feel the Thames rush beneath you on the Rib Experience, high-speed, city skyline,unforgettable.In the evening, your driver takes you to Hyde Park's Winter Wonderland. Rides, games,twinkling stalls. Stay as long as you want. Your driver brings you back when you&#39;re ready.",
+        description: "Start at Frameless, where digital art surrounds you in light and color.Then feel the Thames rush beneath you on the Rib Experience, high-speed, city skyline,unforgettable.In the evening, your driver takes you to Hyde Park's Winter Wonderland. Rides, games,twinkling stalls. Stay as long as you want. Your driver brings you back when you're ready.",
         image: "https://c.animaapp.com/mirmmjt1sI61N8/img/picture---6e231363-bc06-4099-b173-b736f0a14333-jpeg-1.png",
       },
       {
@@ -90,7 +87,7 @@ export const itenaryData: Record<string, Itinerary> = {
         day: "Day 9",
         title:" Farewell, London",
         description: "After breakfast, your driver takes you to the airport.Leave with warm memories and the quiet promise to return.Because Christmas in London always calls you back.",
-        image: "https://c.animaapp.com/mirmmjt1sI61N8/img/picture---6e231363-bc06-4099-b173-b736f0a14333-jpeg-3.png",
+        image: "/sabrina-mazzeo.jpg",
       },
     ],
     galleryTitle: "A London Dump",
@@ -108,10 +105,7 @@ export const itenaryData: Record<string, Itinerary> = {
     inclusion:'Handpicked boutique stays, private chauffeurs, insider access to Parisian traditions, and seamless trip management with Unravel One.',
    
     heroImages: [
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-15.png",
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-18.png",
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-17.png",
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-16.png",
+     "/Paris.JPG.jpeg",
     ],
     journeyDays: [
       {
@@ -171,10 +165,7 @@ export const itenaryData: Record<string, Itinerary> = {
     Weather:' Arctic conditions with temperatures plunging to -15 to -5°C; expect snow-covered landscapes, Northern Lights potential, and crisp, magical winter air.',
     inclusion:' Cozy Arctic lodges, private chauffeurs for ground transfers, once-in-a-lifetime winter activities, and full concierge service through Unravel One.',
     heroImages: [
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-15.png",
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-18.png",
       "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-17.png",
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-16.png",
     ],
     journeyDays: [
       {
@@ -193,13 +184,13 @@ export const itenaryData: Record<string, Itinerary> = {
        {
         day: "Day 3 ",
         title:"Snowshoes, Hot Cocoa and Forest Saunas",
-        description: "Start the day with a snowshoe trek through hidden Arctic forests. Your guide leads. The snow crunches. Hot cocoa and marshmallows in the middle of nowhere.The afternoon is yours. Nap. Read. Stare out the window at a landscape that doesn&#39;t feel real. In the evening, a sauna and jacuzzi experience in the middle of the forest. Steam rising into freezing air. Stars overhead.The kind of warmth that stays with you.",
+        description: "Start the day with a snowshoe trek through hidden Arctic forests. Your guide leads. The snow crunches. Hot cocoa and marshmallows in the middle of nowhere.The afternoon is yours. Nap. Read. Stare out the window at a landscape that doesn't feel real. In the evening, a sauna and jacuzzi experience in the middle of the forest. Steam rising into freezing air. Stars overhead.The kind of warmth that stays with you.",
         image: "/LaplandItenaryImages/day3.jpg",
       },
        {
         day: "Day 4",
         title:"A Day in Levi",
-        description: "Day trip to Levi, a winter town that feels like it was designed for this season.Visit Arcadania and choose your own adventure. Ski.Snowboard. Try something you&#39;ve never done. Or just soak in the vibe of a place that knows how to do winter right.Return to Rovaniemi in the evening. Tired in the best way."  ,
+        description: "Day trip to Levi, a winter town that feels like it was designed for this season.Visit Arcadania and choose your own adventure. Ski.Snowboard. Try something you've never done. Or just soak in the vibe of a place that knows how to do winter right.Return to Rovaniemi in the evening. Tired in the best way."  ,
         image: "/LaplandItenaryImages/day4.jpg",
       },
        {
@@ -211,7 +202,7 @@ export const itenaryData: Record<string, Itinerary> = {
           {
         day: "Day 6",
         title:"Ice Floating and Aurora Picnic",
-        description: "The morning is yours. If you&#39;re feeling brave, add an ice floating experience. Floating in Arctic waters in a survival suit.Surreal. Unforgettable.In the evening, your guide drives you out of the city to the perfect spot for an Aurora Borealis picnic. Open skies.Lappish snacks. Warm drinks. And hopefully, the lights.The kind of night that makes you believe in things you stopped believing in years ago.",
+        description: "The morning is yours. If you're feeling brave, add an ice floating experience. Floating in Arctic waters in a survival suit.Surreal. Unforgettable.In the evening, your guide drives you out of the city to the perfect spot for an Aurora Borealis picnic. Open skies.Lappish snacks. Warm drinks. And hopefully, the lights.The kind of night that makes you believe in things you stopped believing in years ago.",
         image: "/LaplandItenaryImages/day6.jpg",
       },
           {
@@ -235,10 +226,7 @@ export const itenaryData: Record<string, Itinerary> = {
     Weather:' Cold and brisk with temperatures from -3 to 8°C; January and February bring snow and icy winds, while March begins to thaw.',
     inclusion:' Carefully selected hotels, private chauffeurs, iconic holiday experiences, and dedicated travel companion support from Unravel One.',
     heroImages: [
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-15.png",
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-18.png",
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-17.png",
-      "https://c.animaapp.com/mirmmjt1sI61N8/img/rectangle-16.png",
+      "/luke-scarpino.jpg"
     ],
     journeyDays: [
       {
@@ -250,7 +238,7 @@ export const itenaryData: Record<string, Itinerary> = {
       {
         day: "Day 2 ",
         title:"Lights, Ice and Broadway",
-        description: "Breakfast at Lotte. Then a private walking tour through Central Park, Gapstow Bridge, and the Upper East Side. Every corner looks like a movie because it probably was one. Spend the afternoon on Fifth Avenue. Legendary window displays. Christmas markets. The energy of the city at full volume. Later, ice skating at Rockefeller Center or Bryant Park. Then Broadway. Choose from &amp; Juliet,The Lion King, or Moulin Rouge!The kind of night you&#39;ll talk about for years.",
+        description: "Breakfast at Lotte. Then a private walking tour through Central Park, Gapstow Bridge, and the Upper East Side. Every corner looks like a movie because it probably was one. Spend the afternoon on Fifth Avenue. Legendary window displays. Christmas markets. The energy of the city at full volume. Later, ice skating at Rockefeller Center or Bryant Park. Then Broadway. Choose from &amp; Juliet,The Lion King, or Moulin Rouge!The kind of night you'll talk about for years.",
         image: "/NewYorkItenaryImages/DAY2.jpg",
       },
        {
@@ -262,7 +250,7 @@ export const itenaryData: Record<string, Itinerary> = {
         {
         day: "Day 4 ",
         title:"Christmas Day at Aman New York",
-        description: "Slow breakfast at Lotte Palace. Optional Christmas mass at St. Patrick&#39;s Cathedral, right across the street. Spend the afternoon however you want. Bryant Park Winter Village. Hot cocoa. A horse carriage ride through Central Park. Summit One Vanderbilt for that interactive art installation everyone&#39;s talking about.In the evening, an exclusive festive dinner at Aman New York. Private table. Candle-lit. A Christmas menu crafted just for this night.Return to Lotte Palace for your final night. Maybe a quiet toast overlooking the city lights.",
+        description: "Slow breakfast at Lotte Palace. Optional Christmas mass at St. Patrick's Cathedral, right across the street. Spend the afternoon however you want. Bryant Park Winter Village. Hot cocoa. A horse carriage ride through Central Park. Summit One Vanderbilt for that interactive art installation everyone's talking about.In the evening, an exclusive festive dinner at Aman New York. Private table. Candle-lit. A Christmas menu crafted just for this night.Return to Lotte Palace for your final night. Maybe a quiet toast overlooking the city lights.",
         image: "/NewYorkItenaryImages/DAY4.jpg",
       },
         {

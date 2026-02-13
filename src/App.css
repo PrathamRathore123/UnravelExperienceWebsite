@@ -9,3 +9,8 @@ html {
   -ms-user-select: none;     /* IE/Edge */
   user-select: none;         /* Standard */
 }
+img{
+  -webkit-user-drag: none;   /* Chrome, Safari */
+  user-drag: none;
+  pointer-events: none;  
+}
