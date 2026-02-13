@@ -26,8 +26,8 @@ jobs:
 
       - name: Deploy to Nginx
         run: |
-          sudo rm -rf /var/www/react-app/*
-          sudo cp -r dist/* /var/www/react-app/
+           rm -rf /var/www/html/*
+           cp -r dist/* /var/www/html/
 
       - name: Reload Nginx
         run: sudo systemctl reload nginx
