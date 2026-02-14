@@ -15,24 +15,26 @@ export const Footer = () => {
   return (
     <>
     <footer className="w-full md:flex md:justify-around    bg-white text-black py-10">
-       {/* CONTACT */}
+
         <div className="  rounded-t-2xl p-4 md:p-0  h-full md:w-[40%] bg-gray-100  rounded-md bg-clip-padding  backdrop-blur-xl bg-opacity-20 border border-gray-100 md:border-none md:bg-white space-y-4  ">
           <div className=" flex items-center space-x-4 ">
-            <Instagram size={16} />
-            <Linkedin size={16} />
+           <a href="https://www.instagram.com/unravelexperiences/?utm_source=ig_web_button_share_sheet"> <Instagram size={16} /></a>
+           <a href="https://www.linkedin.com/company/unravel-experiences/"><Linkedin size={16} /></a>
           </div><p className="text-[10px] tracking-widest">CONTACT</p>
           <p className="text-sm leading-relaxed">
          No.43, Wework Galaxy <br />
 Residency Road, Bangalore 560025
           </p>
           <p className="text-sm leading-relaxed">
-            travel@unravelexperiences.com <br />
+            <a href="">Email Me</a>
+
+            <a href="mailto:travel@unravelexperience.com">travel@unravelexperiences.com</a> <br />
             <span className="text-xs">
              Planning a trip or just curious? Drop us a line anytime
             </span>
           </p>
         </div>
-        {/* MULTILAYOUT */}
+      
         <div className="flex flex-col md:flex-row justify-center px-5 gap-5 md:gap-10 p-2 md:p-0 md:w-[40%]">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>

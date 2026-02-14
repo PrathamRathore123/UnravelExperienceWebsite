@@ -15,7 +15,7 @@ const cards = [
   },
   {
     title: "Originals",
-    subtitle: "Private villas. Private chefs. Zero plans needed.",
+    subtitle: "Our version of slow living",
     img: second,
   },
   {
