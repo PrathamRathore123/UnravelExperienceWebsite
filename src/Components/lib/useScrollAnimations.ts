@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const useScrollAnimations = () => {
   useEffect(() => {
-    // Animate elements on scroll
+   
     const elements = document.querySelectorAll('[data-scroll-animate]');
     
     elements.forEach((el) => {

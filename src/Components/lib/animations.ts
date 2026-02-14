@@ -5,7 +5,7 @@ export const pageTransition = {
   exit: { opacity: 0, y: -20, transition: { duration: 0.4 } },
 };
 
-// Hero entry animations
+
 export const heroVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -15,7 +15,7 @@ export const heroVariants = {
   },
 };
 
-// Stagger children
+
 export const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
@@ -24,7 +24,7 @@ export const staggerContainer = {
   },
 };
 
-// Card hover animation
+
 export const cardHover = {
   rest: { scale: 1, y: 0 },
   hover: {
@@ -34,26 +34,25 @@ export const cardHover = {
   },
 };
 
-// Button animations
+
 export const buttonVariants = {
   rest: { scale: 1 },
   hover: { scale: 1.05, transition: { duration: 0.18 } },
   tap: { scale: 0.95 },
 };
 
-// Fade up animation
+
 export const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-// Scale fade animation
+
 export const scaleFade = {
   hidden: { opacity: 0, scale: 0.95 },
   visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
 };
 
-// Slide animations
 export const slideIn = (direction: 'left' | 'right' | 'up' | 'down' = 'up') => {
   const directions = {
     left: { x: -50, y: 0 },

@@ -6,10 +6,10 @@ const useIsInView = (options?: IntersectionObserverInit) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      // Update state when the intersection status changes
+     
       setIsInView(entry.isIntersecting);
-    }, options); // Options can define root margin, threshold, etc.
-
+    }, options); 
+    
     const currentRef = ref.current;
     if (currentRef) {
       observer.observe(currentRef);

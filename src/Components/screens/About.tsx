@@ -26,7 +26,7 @@ export const About = () => {
       >
 
 
-        {/* Hero Section */}
+        
         <section className=" w-full min-h-[400px] md:h-[570px] px-4 py-8 md:py-0">
           <p className="block md:hidden float-right [font-family:'Roboto_Mono',Helvetica] font-bold text-black text-xs pr-5"> 52°30'59"N / 13°22'34"E</p>
           <div className="w-full flex  flex-col lg:flex-row gap-4 lg:gap-20 lg:justify-center items-center">
@@ -59,7 +59,7 @@ export const About = () => {
           </div>
         </section>
         <br />
-        {/* Why We Exist Section */}
+        
         <section className="relative w-full bg-gradient-to-b from-white to-[#f4f4f4]">
           <div className="max-w-[1708px] mx-auto px-4 md:px-12">
             <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-3xl md:text-4xl tracking-[-0.32px] leading-tight md:leading-[17px] mb-4">
@@ -109,7 +109,7 @@ export const About = () => {
           <br /><br /><br />
         </section>
 
-        {/* How We Think About Travel */}
+       
         <section className="relative w-[100%] py-20">
           <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#2b2b2b] text-3xl md:text-3xl tracking-[-1.92px] leading-tight md:leading-[91.2px] mb-12 md:mb-16">
             How We Think About Travel
@@ -154,7 +154,7 @@ export const About = () => {
           </div>
         </section>
 
-        {/* What Makes Us Different */}
+     
         <section className="relative w-full py-20 bg-[#f6f3f0]">
           <div className="max-w-[1708px] mx-auto px-4 md:px-12">
             <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-3xl md:text-3xl tracking-[-0.32px] leading-[54px] mb-10">
@@ -199,7 +199,7 @@ export const About = () => {
           </div>
         </section>
 
-        {/* What We Don't Do */}
+       
         <section className="relative w-full py-20">
           <div className="max-w-[1708px] mx-auto px-4 md:px-12">
             <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#222222] text-3xl tracking-[-0.32px] leading-[45px] mb-4">
@@ -240,7 +240,7 @@ export const About = () => {
           </div>
         </section>
 
-        {/* How We Choose Experiences */}
+       
         <section className=" w-full py-20 bg-[#f6f3f0]">
            <h2 className="md:pl-15 text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-black text-[23px] md:text-2xl tracking-[-0.32px] md:leading-[7px] mb-6 md:mb-10">
                 How We Choose Experiences
@@ -295,7 +295,7 @@ export const About = () => {
           </div>
         </section>
 
-        {/* Founder Note */}
+     
         <section className="relative w-full py-20">
           <div className="max-w-[1708px] mx-auto px-4 md:px-12">
             <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#303030] text-2xl  tracking-[-0.64px] leading-[36.8px] mb-8 md:mb-12">
@@ -319,7 +319,7 @@ export const About = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        
         <section className="relative w-full h-[460px] bg-[#f6f3f0] rounded-t-[24px] overflow-hidden">
           <div style={{backgroundImage:`url(${BackImg})`}} className="bg-gradient-to-b from-black/60 to-black/60 absolute w-full h-full top-0 left-0 bg-cover bg-center" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-8 z-10">
@@ -350,7 +350,7 @@ export const About = () => {
           </div>
         </section>
 
-        {/* Footer */}
+        
         <div style={{backgroundImage:`url(${logo})`}} className="w-[300px] h-[60px] md:w-[613px] md:h-[117px]  bg-contain bg-no-repeat m-4 md:m-12 my-8 md:my-16" />
 
       </div>

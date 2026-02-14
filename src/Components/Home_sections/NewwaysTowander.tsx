@@ -49,7 +49,7 @@ export const NewWaysToWander = () => {
 
   useEffect(() => {
     if (sliderRef.current) {
-      const cardWidth = 272; // w-64 = 256px + gap 16px = 272px
+      const cardWidth = 272; 
       sliderRef.current.scrollTo({
         left: currentIndex * cardWidth,
         behavior: 'smooth'
@@ -59,7 +59,7 @@ export const NewWaysToWander = () => {
 
   return (
     <div className="w-full px-6 md:px-20 lg:px-32 py-20 text-black">
-      {/* Coming Soon + Heading */}
+   
       <div className="flex flex-col md:flex-row md:items-start justify-between mb-16 gap-8">
         <p className="text-sm tracking-widest text-black font-bold  mt-2">• COMING SOON</p>
        <ScrollAnimation>
@@ -69,9 +69,9 @@ export const NewWaysToWander = () => {
            Be the first to know when they drop. <br />
         </h2></ScrollAnimation>
       </div>
-      {/* Section Title */}
+     
       <h3 className="text-xl font-medium mb-10">New ways to wander</h3>
-      {/* Card Grid/Slider */}
+   
       <div className="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 md:gap-10 hidden md:block">
         {cards.map((card, index) => (
           <div key={index} className="flex flex-col items-center text-center cursor-pointer group">
@@ -86,7 +86,7 @@ export const NewWaysToWander = () => {
           </div>
         ))}
       </div>
-      {/* Mobile Slider */}
+     
       <div className="md:hidden relative">
         <button
           onClick={prevSlide}

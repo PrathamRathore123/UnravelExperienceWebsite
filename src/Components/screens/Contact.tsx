@@ -58,8 +58,8 @@ export const Contact = () => {
         </div>
 
           <p className="translate-y-[-5rem] md:translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] absolute top-[250px] md:top-[307px] left-1/2 -translate-x-1/2 w-full max-w-[850px] px-4 text-center [font-family:'BDO_Grotesk-DemiBold',Helvetica] font-bold text-[#cacaca] text-xs md:text-base  leading-[28px]">
-            Whether you know exactly where you&#39;re going or just have a feeling
-            you want to chase we&#39;re here.
+            Whether you know exactly where you're going or just have a feeling
+            you want to chase we're here.
           </p>
 
         <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms] absolute top-[280px] md:top-[699px] left-1/2 -translate-x-1/2 w-[200px] md:w-[236px] h-[45px] md:h-[51px] bg-[#2929297a] rounded-[75px] backdrop-blur-[3px] flex items-center justify-center">
@@ -80,8 +80,8 @@ export const Contact = () => {
           </p>
 
           <p className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms] text-center [font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-black text-base  tracking-[0] leading-[30px] max-w-[634px] mx-auto mb-16">
-            Didn&#39;t find what you&#39;re looking for? Tell us what you&#39;re
-            imagining, and we&#39;ll build something that fits.
+            Didn't find what you're looking for? Tell us what you're
+            imagining, and we'll build something that fits.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-[686px_1fr] gap-0 max-w-[1566px] mx-auto">
@@ -98,8 +98,8 @@ export const Contact = () => {
               </h4>
 
                 <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#323131] text-base  tracking-[-0.07px] leading-[25px]">
-                  If you&#39;re looking to plan for a group, organize corporate
-                  travel, or explore a partnership let&#39;s talk. <br />
+                  If you're looking to plan for a group, organize corporate
+                  travel, or explore a partnership let's talk. <br />
                   Drop us a line at{" "}
                   <a
                     href="mailto:Travel@unravelexperiences.com"
@@ -122,7 +122,7 @@ export const Contact = () => {
                 <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-base  tracking-[-0.07px] leading-[25px]">
                   <span className="text-[#323131]">
                     Chat with Unravel One on WhatsApp. Ask questions, explore
-                    curated itineraries, or just see what&#39;s possible.
+                    curated itineraries, or just see what's possible.
                     <br />
                     Think of it as{" "}
                   </span>
@@ -131,7 +131,7 @@ export const Contact = () => {
                   </span>
                   <span className="text-[#323131]">
                     {" "}
-                    who&#39;s really good at this.
+                    who's really good at this.
                   </span>
                 </p>
 
@@ -158,7 +158,7 @@ export const Contact = () => {
 
                 <p className="[font-family:'BDO_Grotesk-Regular',Helvetica] font-normal text-[#323131] text-[15px] tracking-[-0.07px] leading-[30px]">
                   Just need flights, hotels or transfers? The essentials,
-                  sorted. Tell us what you&apos;re looking for, and we&apos;ll
+                  sorted. Tell us what you're looking for, and we'll
                   handle it from start to finish. Reach out at{" "}
                   <span className="[font-family:'BDO_Grotesk-Bold',Helvetica] font-bold underline">
                     +91 9886174621

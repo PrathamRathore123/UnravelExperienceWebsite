@@ -4,13 +4,13 @@ html {
 }
 
 * {
-  -webkit-user-select: none; /* Chrome, Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge */
-  user-select: none;         /* Standard */
+  -webkit-user-select: none; 
+    -moz-user-select: none;   
+  -ms-user-select: none;     
+  user-select: none;        
 }
 img{
-  -webkit-user-drag: none;   /* Chrome, Safari */
+  -webkit-user-drag: none;   
   user-drag: none;
   pointer-events: none;  
 }

@@ -7,12 +7,12 @@ export const FeaturesSection = () => {
     <>
  <div className="w-full flex flex-col items-center text-center px-4 py-20">
 
-      {/* Top Tag */}
+    
       <div className="bg-gray-200 text-gray-600 text-sm px-4 py-1 rounded-full mb-6">
         Your trip, in one conversation.
       </div>
 
-      {/* Main Heading */}
+      
       <h1 className="text-[34px] md:text-[30px] font-medium leading-tight text-black max-w-[650px]">
         Think of it as texting a friend 
         <br />
@@ -21,7 +21,7 @@ export const FeaturesSection = () => {
         <span style={{ fontFamily: "Caveat" }} className="text-[42px]">travel.</span>
       </h1>
 
-      {/* Paragraph */}
+     
       <p className="text-gray-700 text-[15px] leading-[1.5] max-w-[700px] mt-6">
         Unravel One is your digital travel companion powered by AI, backed by humans. 
         It learns how you travel, suggests experiences you'll actually love, 
@@ -31,7 +31,7 @@ export const FeaturesSection = () => {
 
     <div className="w-full px-6 md:px-20 pb-20 bg-white">
       <div className="max-w-7xl md:mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-50 gap-y-20">
-        {/* Discover & Book */}
+        
         <div className="text-center lg:w-[100%] flex justify-center items-center flex-col">
           <div className="  w-70  h-[300px] flex justify-center items-center  h-[260px] bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl mb-8 overflow-hidden">
           <img className="h-[100%] " src={mess1} />
@@ -44,7 +44,7 @@ export const FeaturesSection = () => {
       </p>
       </div>
 
-        {/* Manage Everything */}
+       
         <div className=" lg:w-[100%] flex justify-center items-center flex-col text-center ">
        
           <div className=" w-70  h-[300px] bg-gradient-to-br flex justify-center items-center  from-gray-50 to-gray-100 rounded-3xl mb-6 overflow-hidden">
@@ -58,7 +58,7 @@ export const FeaturesSection = () => {
         Your documents Reminder and Real-time updates. All in one place
       </p>
 </div>
-        {/* 24/7 Support */}
+
         <div className="text-center  lg:w-[100%] flex justify-center items-center flex-col">
           <div className="  w-70  h-[300px] bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl mb-8 p-6 overflow-hidden flex justify-center items-center ">
           <img className="h-[100%]" src={mess3}  />
@@ -71,7 +71,7 @@ export const FeaturesSection = () => {
       </p>
         </div>
 
-        {/* Human When You Need It */}
+       
         <div className="text-center lg:w-[100%] flex justify-center items-center flex-col ">
       
           <div className=" w-70  h-[300px] bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl mb-8 p-6 overflow-hidden flex justify-center items-center   ">
@@ -89,17 +89,17 @@ export const FeaturesSection = () => {
 
     <div className="flex items-center justify-center  bg-white px-4">
       <div className="text-center max-w-xl">
-        {/* Headline */}
+        
         <h1 className="text-xl   text-gray-900 ">
           One conversation. Everything handled.
         </h1>
 
-        {/* Subtext */}
+     
         <p className=" text-gray-900  text-base md:text-xl">
           Travel like someone&apos;s got your back.
         </p>
 
-        {/* Button */}
+     
         <div className="mt-6">
           <a href="https://wa.me/+919740556008?text=Hello%20can%20i%20get%20more%20info%20on%20this"
    target="_blank">

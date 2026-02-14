@@ -25,22 +25,21 @@ const packages = [
 const PackageCard = ({ pkg, index, cardProgress, cardsRef }: { pkg: typeof packages[0], index: number, cardProgress: number[], cardsRef: React.MutableRefObject<(HTMLDivElement | null)[]> }) => {
   const progress = cardProgress[index];
   
-  // Progress 0-1: Coming from bottom (entrance)
-  // Progress 1-2: Going to top (exit)
+ 
   let translateY, rotateX, scale, opacity;
   
   if (progress <= 1) {
-    // Entrance animation: flip up from bottom
-    translateY = 200 - (progress * 200); // From 200px to 0px
-    rotateX = 90 - (progress * 90); // From 90deg to 0deg
-    scale = 0.8 + (progress * 0.2); // From 0.8 to 1
+    
+    translateY = 200 - (progress * 200); 
+    rotateX = 90 - (progress * 90); 
+    scale = 0.8 + (progress * 0.2); 
     opacity = 1;
   } else {
-    // Exit animation: continue flipping up and move upwards
-    const exitProgress = progress - 1; // 0 to 1
-    translateY = 0 - (exitProgress * 200); // From 0px to -200px
-    rotateX = 0 - (exitProgress * 90); // From 0deg to -90deg
-    scale = 1 - (exitProgress * 0.2); // From 1 to 0.8
+    
+    const exitProgress = progress - 1; 
+    translateY = 0 - (exitProgress * 200); 
+    rotateX = 0 - (exitProgress * 90);
+    scale = 1 - (exitProgress * 0.2); 
     opacity = 1;
   }
 
@@ -62,7 +61,7 @@ const PackageCard = ({ pkg, index, cardProgress, cardsRef }: { pkg: typeof packa
           transition={{ duration: 0.3 }}
           className="w-[100%] h-[100%] rounded-2xl overflow-hidden shadow-lg cursor-pointer relative"
         >
-          {/* Idle slow zoom */}
+        
           <motion.img
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
@@ -155,27 +154,27 @@ export const PackagesSection = () => {
           const windowHeight = window.innerHeight;
           
           const cardCenter = rect.top + rect.height / 2;
-          const triggerStart = windowHeight * 0.9; // Start animation when card is near bottom
-          const triggerMiddle = windowHeight * 0.5; // Card fully visible at center
-          const triggerEnd = windowHeight * 0.1; // Start exit animation when card is near top
+          const triggerStart = windowHeight * 0.9;
+          const triggerMiddle = windowHeight * 0.5; 
+          const triggerEnd = windowHeight * 0.1; 
           
           let progress = 0;
           
-          // Coming from bottom (0 to 1)
+     
           if (cardCenter <= triggerStart && cardCenter >= triggerMiddle) {
             progress = (triggerStart - cardCenter) / (triggerStart - triggerMiddle);
             progress = Math.max(0, Math.min(1, progress));
           } 
-          // Fully visible in center (1)
+          
           else if (cardCenter < triggerMiddle && cardCenter >= triggerEnd) {
             progress = 1;
           }
-          // Exiting upwards (1 to 2)
+          
           else if (cardCenter < triggerEnd) {
             const exitProgress = (triggerEnd - cardCenter) / (triggerEnd);
             progress = 1 + Math.min(1, exitProgress); // 1 to 2
           }
-          // Not yet visible (0)
+         
           else {
             progress = 0;
           }
@@ -190,7 +189,7 @@ export const PackagesSection = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -199,17 +198,17 @@ export const PackagesSection = () => {
    <>
    <AnimatedParagraph />
    <div className="w-full flex flex-col  items-center py-16 px-6 " style={{ perspective: '1000px' }}>
-      {/* Cards Row - Stagger grid appearance */}
+     
      <div className="flex flex-col items-center gap-5 w-full mb-10 ">
         {packages.map((pkg, index) => (
           <PackageCard key={index} pkg={pkg} index={index} cardProgress={cardProgress} cardsRef={cardsRef} />
         ))}
       </div>
 
-      {/* Subtitle */}
+   
       <AnimatedSubtitle />
 
-      {/* Button */}
+    
       <AnimatedButton  />
     </div>
     </>

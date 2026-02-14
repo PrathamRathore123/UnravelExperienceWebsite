@@ -16,7 +16,7 @@ export const HeroSection = () => {
 
   return (
     <section className="relative  h-[100vh] md:min-h-screen flex items-center justify-center mt-30 md:mt-[108px] mb-30 mx-6">
-      {/* Black shutter reveal */}
+  
       <motion.div
         initial={{ scaleY: 1 }}
         animate={{ scaleY: 0 }}
@@ -24,7 +24,7 @@ export const HeroSection = () => {
         className="fixed inset-0 bg-black z-50 origin-top"
       />
 
-      {/* Parallax background */}
+      
       <motion.div 
         className="absolute inset-0 rounded-[32px]  overflow-hidden"
         style={{ y: 0 }}
@@ -60,7 +60,7 @@ export const HeroSection = () => {
 
 
           <div className="relative  z-10 flex flex-col md:items-center gap-8 px-8">
-          {/* Subline */}
+       
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export const HeroSection = () => {
             TRAVEL, UNRAVELED
           </motion.div>
 
-          {/* Hero heading */}
+      
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ export const HeroSection = () => {
        
           </motion.h1>
 
-          {/* Subline stagger */}
+         
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -92,7 +92,7 @@ export const HeroSection = () => {
             Starting With Winter. Because Some Places Only Make Sense When it's Cold Outside And The Lights Come On.
           </motion.p>
 
-          {/* CTA button slide-up */}
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

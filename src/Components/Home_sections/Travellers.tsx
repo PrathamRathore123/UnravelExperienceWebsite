@@ -8,7 +8,7 @@ export const Travellers=()=> {
       className="relative w-full h-[60vh]  flex items-center justify-center text-white">
       <img className="absolute w-[100%] h-[100%]  " src={image} alt="" />
 
-      {/* CONTENT */}
+      
       <div className="relative z-10 text-center max-w-3xl px-4">
         <h1 className="text-2xl md:text-3xl font-semibold leading-snug">
           Unravel Experiences
@@ -19,7 +19,7 @@ export const Travellers=()=> {
 
         <p className="mt-6 text-sm opacity-80">Don't miss the next one</p>
 
-        {/* BUTTONS */}
+       
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mt-6">
           <button
             className="px-6 py-2 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-200 transition"

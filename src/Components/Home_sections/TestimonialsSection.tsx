@@ -7,7 +7,7 @@ export const TestimonialsSection = () => {
       <p className="text-lg text-gray-600 mb-12">More stories from the road</p>
 
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Left Card */}
+       
         <div className="relative  h-[500px] w-[100%] md:h-[550px] rounded-xl overflow-hidden shadow-sm">
           <img
             src={image}
@@ -28,9 +28,9 @@ export const TestimonialsSection = () => {
           </div>
         </div>
 
-        {/* Right Column */}
+        
         <div className="flex flex-col gap-15">
-          {/* Card 1 */}
+         
           <div className="p-5 bg-gray-100 rounded-xl shadow-sm">
             <p className="text-xl font-semibold mb-3">★★★★★</p>
             <p className="md:text-md  text-sm font-semibold text-black leading-relaxed">
@@ -40,7 +40,7 @@ export const TestimonialsSection = () => {
             </p>
           </div>
 
-          {/* Card 2 */}
+        
           <div className="p-5 bg-gray-100 rounded-xl shadow-sm">
             <p className="text-xl font-semibold mb-3">★★★★★</p>
             <p className="md:text-md  text-sm font-semibold text-black leading-relaxed">
@@ -49,7 +49,7 @@ export const TestimonialsSection = () => {
             </p>
           </div>
 
-          {/* Card 3 */}
+       
           <div className="p-5 bg-gray-100 rounded-xl shadow-sm">
             <p className="text-xl font-semibold mb-3">★★★★★</p>
             <p className="md:text-md  text-sm font-semibold text-black leading-relaxed">
