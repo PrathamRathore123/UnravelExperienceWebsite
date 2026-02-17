@@ -48,15 +48,7 @@ export const About = () => {
               Unravel
             </h1>
           </div>
-          <div className="  w-full md:flex  gap-2  justify-around items-center py-6 md:py-10 [font-family:'Roboto_Mono',Helvetica] font-bold text-black text-xs md:text-sm tracking-[0.70px]">
-            <p className="hidden md:block"> 52°30'59"N / 13°22'34"E</p>
-            <p className=" pr-5 [font-family:'Roboto_Mono',Helvetica] font-bold text-black  text-xs md:text-sm">
-              EST. YR25
-            </p>
-            <p className=" float-right pl-5 [font-family:'Roboto_Mono',Helvetica] font-bold text-black text-xs md:text-sm">
-              SYSTEM: UNRAVEL.
-            </p>
-          </div>
+         
         </section>
         <br />
         
@@ -292,30 +284,6 @@ export const About = () => {
               />
             </div>
 
-          </div>
-        </section>
-
-     
-        <section className="relative w-full py-20">
-          <div className="max-w-[1708px] mx-auto px-4 md:px-12">
-            <h2 className="text-center [font-family:'BDO_Grotesk-Bold',Helvetica] font-bold text-[#303030] text-2xl  tracking-[-0.64px] leading-[36.8px] mb-8 md:mb-12">
-              A Note from Our Founder
-            </h2>
-
-            <div className="py-12  bg-no-repeat bg-cover bg-[url(https://c.animaapp.com/miuhpmp5biS0W2/img/rectangle-268.png)]">
-
-              <p className="text-center [font-family:'Bell_MT-Bold',Helvetica] font-bold text-[#0000008f] text-2xl  tracking-[-0.32px] leading-[52px] max-w-[934px] mx-auto mb-6 md:mb-8">
-                Travel is personal. And we treat it that way.
-              </p>
-
-              <p className="text-center [font-family:'Bell_MT-Regular',Helvetica] font-normal text-[#0000008f] text-2xl tracking-[-0.32px] leading-[52px] max-w-[934px] mx-auto mb-8 md:mb-12">
-                If you've read this far and something resonates we'd love to help you plan your next trip. Whether it's something from our collection or something we build just for you.
-              </p>
-
-              <p className="text-center rotate-[-4.34deg] opacity-[0.79] [font-family:'Beth_Ellen',Helvetica] font-normal text-[#0101018f] text-2xl md:text-3xl tracking-[-0.32px] leading-[52px] underline">
-                Karthik.S
-              </p>
-            </div>
           </div>
         </section>
 
