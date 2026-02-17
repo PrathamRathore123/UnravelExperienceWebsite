@@ -31,13 +31,13 @@ jobs:
       # 5️⃣ Deploy to VPS
       - name: Deploy to VPS
         run: |
-          # Remove old build safely
-          sudo rm -rf /var/www/react-app/*
+          # Remove old build
+          rm -rf /var/www/react-app/*
 
           # Copy new build
-          sudo cp -r dist/* /var/www/react-app/
+          cp -r dist/* /var/www/react-app/
 
-          # Ensure correct ownership & permissions
+          # Set correct ownership for nginx
           sudo chown -R www-data:www-data /var/www/react-app
           sudo chmod -R 755 /var/www/react-app
 
