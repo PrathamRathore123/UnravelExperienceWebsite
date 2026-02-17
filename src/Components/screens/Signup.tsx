@@ -201,7 +201,7 @@ export  function Signup() {
 
 
 
-    <div className="absolute z-[999] md:static top-[550px] sm:top-[75%] md:top-[50%] w-[80%]  max-w-[470px] bg-white shadow-lg border border-gray-100 rounded-xl p-8">
+    <div className="absolute z-[999] md:static top-[103%] sm:top-[75%] md:top-[50%] w-[80%]  max-w-[470px] bg-white shadow-lg border border-gray-100 rounded-xl p-8">
 
           <h2 className="text-[20px] font-semibold mb-6">Sign Up</h2>
 

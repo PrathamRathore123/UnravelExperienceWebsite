@@ -101,7 +101,7 @@ export const FeaturesSection = () => {
 
      
         <div className="mt-6">
-          <a href="https://wa.me/+919740556008?text=Hello%20can%20i%20get%20more%20info%20on%20this"
+          <a href="https://wa.me/+919740556008?text=Hello"
    target="_blank">
           <button className="inline-flex items-center gap-2 bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition">
             Meet Unravel One

@@ -1,6 +1,7 @@
 
 import image from "../../assets/pexels-steve-13129479.jpg"
 import Logo from "../../assets/EXPERIENCES.png"
+import { Link } from "react-router-dom";
 export const Travellers=()=> {
   return (
     <>
@@ -21,17 +22,19 @@ export const Travellers=()=> {
 
        
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mt-6">
-          <button
+          <Link to="/experiences"
             className="px-6 py-2 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-200 transition"
           >
             Explore Winter Experiences
-          </button>
-
+          </Link>
+  <a href="https://wa.me/+919740556008?text=Hello"
+   target="_blank">
           <button
             className="px-6 py-2 border border-white text-white rounded-full text-sm font-medium hover:bg-white/10 transition"
           >
             Talk To Unravel One
           </button>
+          </a>
         </div>
       </div>
     </section>
