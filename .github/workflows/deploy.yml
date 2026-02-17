@@ -10,7 +10,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      # 1️⃣ Checkout the repo
+      # 1️⃣ Checkout repository
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -19,27 +19,21 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
+          cache: 'npm'
 
       # 3️⃣ Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       # 4️⃣ Build Vite app
-      - name: Build Vite app
+      - name: Build project
         run: npm run build
 
-      # 5️⃣ Deploy to VPS
+      # 5️⃣ Deploy build to Nginx directory
       - name: Deploy to VPS
         run: |
-          # Remove old build
           rm -rf /var/www/react-app/*
-
-          # Copy new build
           cp -r dist/* /var/www/react-app/
-
-          # Set correct ownership for nginx
-          sudo chown -R www-data:www-data /var/www/react-app
-          sudo chmod -R 755 /var/www/react-app
 
       # 6️⃣ Reload Nginx
       - name: Reload Nginx
